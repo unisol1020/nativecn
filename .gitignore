@@ -1,38 +1,62 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Monorepo
+apps/*/credentials.json
+apps/*/build
+packages/*/build
 
-# Dependencies
-node_modules
-.pnp
-.pnp.js
-
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Testing
-coverage
-
-# Turbo
+# Turborepo
 .turbo
 
-# Vercel
-.vercel
+# Expo
+.expo
+__generated__
+web-build
+expo-env.d.ts
 
-# Build Outputs
-.next/
-out/
-build
-dist
-
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Misc
+# macOS
 .DS_Store
-*.pem
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Ruby
+.direnv
+
+# Emacs
+*~
+
+# Vim
+.*.swp
+.*.swo
+.*.swn
+.*.swm
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Xcode
+*.pbxuser
+!default.pbxuser
+*.xccheckout
+*.xcscmblueprint
+xcuserdata
+
+# Android Studio
+*.iml
+.gradle
+.idea/libraries
+.idea/workspace.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+# Eclipse
+.project
+.settings
+
+# VSCode
+.history/

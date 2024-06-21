@@ -1,5 +1,5 @@
 {
-  "name": "mono",
+  "name": "@mono-ui/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
