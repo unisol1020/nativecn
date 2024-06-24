@@ -1,5 +1,23 @@
 {
   "name": "@mono-ui/cli",
   "version": "0.1.0",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "~18.2.79",
+    "react": "18.2.0",
+    "react-native": "0.74.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "react-native-web": {
+      "optional": true
+    }
+  }
 }
