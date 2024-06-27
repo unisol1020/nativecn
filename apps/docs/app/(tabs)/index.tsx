@@ -1,7 +1,7 @@
-import {Text} from 'react-native';
+import {Button} from '@mono-ui/ui';
 
 export default function HomeScreen() {
   return (
-    <Text>123</Text>
+    <Button></Button>
   );
 }
