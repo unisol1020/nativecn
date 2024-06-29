@@ -6,9 +6,10 @@
   "private": true,
   "dependencies": {
     "tailwind-merge": "^2.1.0",
-    "nativewind": "^4.0.33",
+    "nativewind": "^4.0.36",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0"
+    "clsx": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
