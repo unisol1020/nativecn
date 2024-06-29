@@ -1,4 +1,5 @@
-export const TAILWIND_CONFIG = `const { hairlineWidth } = require('nativewind/theme');
+const { hairlineWidth } = require('nativewind/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -65,20 +66,3 @@ module.exports = {
   },
   plugins: [require('tailwindcss-animate')],
 };
-`;
-
-export const BABEL_CONFIG = `module.exports = function (api) {
-  api.cache(true);
-  return {
-    ['babel-preset-expo', { jsxImportSource: 'nativewind' }],
-    plugins: ['nativewind/babel'],
-  };
-};`;
-
-export const UTILS = `import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-`;

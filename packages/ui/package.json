@@ -3,5 +3,31 @@
   "version": "0.1.0",
   "main": "src/index.ts",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "tailwind-merge": "^2.1.0",
+    "nativewind": "^4.0.36",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/react": "~18.2.79",
+    "react": "18.2.0",
+    "react-native": "0.74.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "react-native-web": {
+      "optional": true
+    }
+  }
 }
