@@ -1,9 +1,11 @@
 import { Stack } from 'expo-router';
 
-export default function NotFoundScreen() {
+const NotFoundScreen = () => {
   return (
     <>
       <Stack.Screen options={{ title: 'Oops!' }} />
     </>
   );
 }
+
+export default NotFoundScreen;
