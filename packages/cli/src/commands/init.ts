@@ -15,7 +15,8 @@ const DEPENDENCIES = [
   'class-variance-authority',
   'clsx',
   'nativewind',
-  'tailwind-merge',
+  "tailwindcss-animate",
+  'tailwind-merge'
 ];
 const DEV_DEPENDENCIES = ['tailwindcss'];
 
