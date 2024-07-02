@@ -1,8 +1,7 @@
 {
   "name": "@mono-ui/cli",
-  "version": "0.1.0",
-  "description": "Add nativecn-ui components to your React Native apps.",
-  "homepage": "Add mono-ui components to your React Native apps.",
+  "version": "1.0.0",
+  "description": "Add mono-ui components to your React Native apps.",
   "publishConfig": {
     "access": "public"
   },
