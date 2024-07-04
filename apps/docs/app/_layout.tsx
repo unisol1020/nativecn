@@ -4,12 +4,14 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-import {useColorScheme} from 'react-native';
+import { useColorScheme as NWUseColorScheme } from "nativewind";
+import { useColorScheme } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
-  const colorScheme = useColorScheme();
+  const {setColorScheme} = NWUseColorScheme();
+  const colorScheme= useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
@@ -18,6 +20,8 @@ const RootLayout = () => {
     if (loaded) {
       SplashScreen.hideAsync();
     }
+
+    setColorScheme(colorScheme ?? "dark");
   }, [loaded]);
 
   if (!loaded) {
