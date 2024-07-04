@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import {Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Text} from '@mono-ui/ui';
+import {Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Input, Text} from '@mono-ui/ui';
 
 export default function HomeScreen() {
   return (
@@ -21,6 +21,8 @@ export default function HomeScreen() {
         <Button size="lg">
           <Text className="p-5">123</Text>
         </Button>
+
+        <Input />
       </View>
     </View>
   );
