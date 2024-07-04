@@ -1,14 +1,15 @@
+import {ComponentPropsWithoutRef, createContext, ElementRef, forwardRef, useContext} from 'react';
 import * as React from 'react';
 import { Text as RNText } from 'react-native';
 import { cn } from '../lib/utils';
 
-const TextClassContext = React.createContext<string | undefined>(undefined);
+const TextClassContext = createContext<string | undefined>(undefined);
 
-type TextProps = React.ComponentPropsWithoutRef<typeof RNText> & { asChild?: boolean };
+type TextProps = ComponentPropsWithoutRef<typeof RNText> & { asChild?: boolean };
 
-const Text = React.forwardRef<React.ElementRef<typeof RNText>, TextProps>(
+const Text = forwardRef<ElementRef<typeof RNText>, TextProps>(
   ({ className, asChild = false, ...props }, ref) => {
-    const textClass = React.useContext(TextClassContext);
+    const textClass = useContext(TextClassContext);
 
     return (
       <RNText
