@@ -6,6 +6,7 @@ module.exports = {
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
+    './node_modules/@mono-ui/**/*.{ts,tsx}',
   ],
   presets: [require('nativewind/preset')],
   theme: {

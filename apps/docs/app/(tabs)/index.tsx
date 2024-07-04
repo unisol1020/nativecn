@@ -1,7 +1,5 @@
 import {View} from 'react-native';
-import {Button} from '~/components/Button';
-import {Text} from '~/components/Text';
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '~/components/Card';
+import {Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Text} from '@mono-ui/ui';
 
 export default function HomeScreen() {
   return (

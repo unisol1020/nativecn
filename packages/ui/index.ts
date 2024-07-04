@@ -1,1 +1,1 @@
-export * as Ui from './src';
+export * from './src';
