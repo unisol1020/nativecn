@@ -3,12 +3,10 @@ import { cn } from '../lib/utils';
 import {View} from 'react-native';
 import {ComponentPropsWithoutRef, ElementRef, forwardRef} from 'react';
 
-interface SeparatorRootProps {
+const SeparatorRoot = React.forwardRef<React.ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View> & {
   orientation?: 'horizontal' | 'vertical';
   decorative?: boolean;
-}
-
-const SeparatorRoot = React.forwardRef<React.ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View> & SeparatorRootProps>(
+}>(
   ({ decorative, orientation = 'horizontal', ...props }, ref) => {
 
     return (

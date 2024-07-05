@@ -3,14 +3,12 @@ import {GestureResponderEvent, Platform, Pressable, View} from 'react-native';
 import { cn } from '../lib/utils';
 import {Check} from 'lucide-react-native';
 
-interface RootContext {
+const CheckboxContext = createContext<{
   checked: boolean;
   onCheckedChange: (checked: boolean) => void;
   disabled?: boolean;
   nativeID?: string;
-}
-
-const CheckboxContext = createContext<RootContext | null>(null);
+} | null>(null);
 
 const CheckboxRoot = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithoutRef<typeof Pressable> & {
   checked: boolean;

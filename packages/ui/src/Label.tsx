@@ -2,14 +2,12 @@ import { cn } from '../lib/utils';
 import {ComponentPropsWithoutRef, ElementRef, forwardRef, ReactNode} from 'react';
 import {Pressable, Text, ViewStyle} from 'react-native';
 
-interface LabelRootProps {
+const LabelRoot = forwardRef<
+  ElementRef<typeof Pressable>,
+  Omit<ComponentPropsWithoutRef<typeof Pressable>, 'children' | 'hitSlop' | 'style'> & {
   children: ReactNode;
   style?: ViewStyle;
 }
-
-const LabelRoot = forwardRef<
-  ElementRef<typeof Pressable>,
-  Omit<ComponentPropsWithoutRef<typeof Pressable>, 'children' | 'hitSlop' | 'style'> & LabelRootProps
 >(({ ...props }, ref) => {
   return <Pressable ref={ref} {...props} />;
 });
