@@ -16,7 +16,10 @@ const DEPENDENCIES = [
   'clsx',
   'nativewind',
   "tailwindcss-animate",
-  'tailwind-merge'
+  'tailwind-merge',
+  'lucide-react-native',
+  'react-native-reanimated',
+  'react-native-svg'
 ];
 const DEV_DEPENDENCIES = ['tailwindcss'];
 
