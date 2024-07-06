@@ -9,3 +9,6 @@ export * from './Toggle';
 export * from './Checkbox';
 export * from './Label';
 export * from './Separator';
+export * from './Typography';
+export * from './Switch';
+export * from './Progress';

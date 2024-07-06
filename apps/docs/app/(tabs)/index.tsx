@@ -9,10 +9,17 @@ import {
   CardHeader,
   CardTitle,
   Checkbox,
+  H1,
+  H2,
+  H3,
   Input,
   Label,
+  Large,
+  Lead,
+  P, Progress,
   Separator,
   Skeleton,
+  Switch,
   Text,
   Textarea,
   Toggle,
@@ -24,6 +31,12 @@ import {useState} from 'react';
 export default function HomeScreen() {
   const [pressed, setPressed] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [switchChecked, setSwitchChecked] = useState(false);
+  const [progress, setProgress] = useState(13);
+
+  function onPress() {
+    setProgress(Math.floor(Math.random() * 100));
+  }
 
   return (
     <ScrollView className="flex flex-col items-center py-6">
@@ -84,8 +97,12 @@ export default function HomeScreen() {
         </View>
 
         <View className='flex-row gap-3 items-center'>
-          <Checkbox aria-labelledby='terms' checked={checked} onCheckedChange={setChecked} />
-          <Label nativeID='label'>Checkbox label</Label>
+          <Checkbox nativeID="label" checked={checked} onCheckedChange={setChecked} />
+          <Label
+            onPress={() => {
+              setChecked((prev) => !prev);
+            }}
+            nativeID='label'>Checkbox label</Label>
         </View>
 
         <Label nativeID='label'>This is a label</Label>
@@ -103,6 +120,46 @@ export default function HomeScreen() {
             <Text className='font-normal'>Source</Text>
           </View>
         </View>
+
+        <View className='max-w-lg'>
+          <H1>H1</H1>
+          <View className='p-1.5' />
+          <P>
+            P
+          </P>
+          <View className='p-3' />
+          <H2>H2</H2>
+          <P className='font-medium'>P medium</P>
+          <View className='p-4' />
+          <H3>H3</H3>
+          <View className='p-1.5' />
+          <Lead>
+            Lead
+          </Lead>
+          <View className='p-1.5' />
+          <Large>
+            Large
+          </Large>
+        </View>
+      </View>
+
+      <View className='flex-row items-center gap-2 mt-4'>
+        <Switch checked={switchChecked} onCheckedChange={setSwitchChecked} nativeID='airplane-mode' />
+        <Label
+          nativeID='airplane-mode'
+          onPress={() => {
+            setSwitchChecked((prev) => !prev);
+          }}
+        >
+          Airplane Mode
+        </Label>
+      </View>
+
+      <View className='w-full gap-8 items-center mt-4'>
+        <Progress value={progress} className='web:w-[60%]' />
+        <Button variant='ghost' onPress={onPress}>
+          <Text>Randomize</Text>
+        </Button>
       </View>
     </ScrollView>
   );
