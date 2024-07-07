@@ -1,5 +1,8 @@
 import {ScrollView, View} from 'react-native';
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
   Badge,
   Button,
   Card,
@@ -16,7 +19,10 @@ import {
   Label,
   Large,
   Lead,
-  P, Progress,
+  P,
+  Progress,
+  RadioGroup,
+  RadioGroupItem,
   Separator,
   Skeleton,
   Switch,
@@ -33,13 +39,18 @@ export default function HomeScreen() {
   const [checked, setChecked] = useState(false);
   const [switchChecked, setSwitchChecked] = useState(false);
   const [progress, setProgress] = useState(13);
+  const [value, setValue] = useState('Comfortable');
+
+  function onLabelPress(label: string) {
+    setValue(label);
+  }
 
   function onPress() {
     setProgress(Math.floor(Math.random() * 100));
   }
 
   return (
-    <ScrollView className="flex flex-col items-center py-6">
+    <ScrollView className="bg-white dark:bg-black flex flex-col items-center py-6">
       <View className="flex flex-col gap-6 w-full max-w-sm">
         <Card>
           <CardHeader>
@@ -54,9 +65,32 @@ export default function HomeScreen() {
           </CardFooter>
         </Card>
 
-        <Button size="lg">
-          <Text className="p-5">123</Text>
-        </Button>
+        <View className='flex justify-center items-center gap-5'>
+          <Button>
+            <Text>Default</Text>
+          </Button>
+          <Button variant='destructive'>
+            <Text>Destructive</Text>
+          </Button>
+          <Button variant='destructive' disabled>
+            <Text>Destructive disabled</Text>
+          </Button>
+          <Button variant='secondary'>
+            <Text>Secondary</Text>
+          </Button>
+          <Button variant='outline' size='lg'>
+            <Text>Outline lg</Text>
+          </Button>
+          <Button variant='outline' size='sm'>
+            <Text>Outline sm</Text>
+          </Button>
+          <Button variant='ghost'>
+            <Text>Ghost</Text>
+          </Button>
+          <Button variant='link' size='sm'>
+            <Text>Link sm</Text>
+          </Button>
+        </View>
 
         <Input placeholder="Input" />
 
@@ -161,6 +195,29 @@ export default function HomeScreen() {
           <Text>Randomize</Text>
         </Button>
       </View>
+
+      <Avatar>
+        <AvatarImage
+          source={{
+            uri: 'https://123123',
+          }}
+        />
+        <AvatarFallback>UN</AvatarFallback>
+      </Avatar>
+
+      <View className='flex justify-center items-center mt-4'>
+        <RadioGroup value={value} onValueChange={setValue} className='gap-3'>
+          {["Default", "Comfortable", "Compact"].map((value) => (
+            <View key={value} className={'flex-row gap-2 items-center'}>
+              <RadioGroupItem aria-labelledby={`label-for-${value}`} value={value}/>
+              <Label nativeID={`label-for-${value}`} onPress={() => onLabelPress(value)}>
+                {value}
+              </Label>
+            </View>
+          ))}
+        </RadioGroup>
+      </View>
     </ScrollView>
   );
 }
+
