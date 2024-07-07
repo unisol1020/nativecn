@@ -120,7 +120,6 @@ const Checkbox = forwardRef<
     </CheckboxRoot>
   );
 });
-
 Checkbox.displayName = "Checkbox";
 
 export { Checkbox };

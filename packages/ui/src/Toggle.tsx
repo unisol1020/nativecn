@@ -100,7 +100,6 @@ const Toggle = React.forwardRef<
     />
   </TextClassContext.Provider>
 ));
-
 Toggle.displayName = 'Toggle';
 
 const ToggleIcon = ({

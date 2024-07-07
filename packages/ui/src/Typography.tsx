@@ -18,7 +18,6 @@ const H1 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof T
     );
   }
 );
-
 H1.displayName = 'H1';
 
 const H2 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -37,7 +36,6 @@ const H2 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof T
     );
   }
 );
-
 H2.displayName = 'H2';
 
 const H3 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -56,7 +54,6 @@ const H3 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof T
     );
   }
 );
-
 H3.displayName = 'H3';
 
 const H4 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -75,7 +72,6 @@ const H4 = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof T
     );
   }
 );
-
 H4.displayName = 'H4';
 
 const P = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -102,7 +98,6 @@ const Lead = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof
     );
   }
 );
-
 Lead.displayName = 'Lead';
 
 const Large = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -116,7 +111,6 @@ const Large = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeo
     );
   }
 );
-
 Large.displayName = 'Large';
 
 const Small = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -133,7 +127,6 @@ const Small = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeo
     );
   }
 );
-
 Small.displayName = 'Small';
 
 const Muted = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeof Text>>(
@@ -147,7 +140,6 @@ const Muted = forwardRef<ElementRef<typeof Text>, ComponentPropsWithoutRef<typeo
     );
   }
 );
-
 Muted.displayName = 'Muted';
 
 export { H1, H2, H3, H4, Large, Lead, Muted, P, Small };

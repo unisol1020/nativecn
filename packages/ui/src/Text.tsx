@@ -5,8 +5,8 @@ import { cn } from '../lib/utils';
 
 const TextClassContext = createContext<string | undefined>(undefined);
 
-const Text = forwardRef<ElementRef<typeof RNText>, ComponentPropsWithoutRef<typeof RNText> & { asChild?: boolean }>(
-  ({ className, asChild = false, ...props }, ref) => {
+const Text = forwardRef<ElementRef<typeof RNText>, ComponentPropsWithoutRef<typeof RNText>>(
+  ({ className = false, ...props }, ref) => {
     const textClass = useContext(TextClassContext);
 
     return (

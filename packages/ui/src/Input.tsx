@@ -19,7 +19,6 @@ const Input = forwardRef<
     />
   );
 });
-
 Input.displayName = 'Input';
 
 export { Input };

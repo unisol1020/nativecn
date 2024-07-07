@@ -77,7 +77,6 @@ const SwitchWeb = forwardRef<
     />
   </SwitchRoot>
 ));
-
 SwitchWeb.displayName = 'SwitchWeb';
 
 const RGB_COLORS = {

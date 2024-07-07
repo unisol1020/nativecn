@@ -71,7 +71,6 @@ const Progress = forwardRef<
     </ProgressRoot>
   );
 });
-
 Progress.displayName = "Progress";
 
 const Indicator = ({ value, className }: { value: number | undefined | null; className?: string }) => {

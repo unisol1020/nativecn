@@ -39,7 +39,6 @@ const Label = forwardRef<
     />
   </LabelRoot>
 ));
-
 Label.displayName = "Label";
 
 export { Label };

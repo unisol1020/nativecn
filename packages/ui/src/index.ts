@@ -12,3 +12,5 @@ export * from './Separator';
 export * from './Typography';
 export * from './Switch';
 export * from './Progress';
+export * from './Avatar';
+export * from './RadioGroup';
