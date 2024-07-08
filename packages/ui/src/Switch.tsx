@@ -1,10 +1,23 @@
-import {ComponentPropsWithoutRef, ElementRef, forwardRef} from 'react';
+import {ComponentPropsWithoutRef, ElementRef, forwardRef,} from 'react';
 import {GestureResponderEvent, Platform, Pressable, View} from 'react-native';
 import Animated, {interpolateColor, useAnimatedStyle, useDerivedValue, withTiming,} from 'react-native-reanimated';
 import {cn} from '../lib/utils';
 import {useColorScheme} from 'nativewind';
 
-const SwitchRoot = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithoutRef<typeof Pressable> & {
+const RGB_COLORS = {
+  light: {
+    primary: 'rgb(24, 24, 27)',
+    input: 'rgb(228, 228, 231)',
+  },
+  dark: {
+    primary: 'rgb(250, 250, 250)',
+    input: 'rgb(39, 39, 42)',
+  },
+} as const;
+
+const SwitchRoot = forwardRef<
+  ElementRef<typeof Pressable>,
+  ComponentPropsWithoutRef<typeof Pressable> & {
   checked: boolean;
   onCheckedChange: (checked: boolean) => void;
   disabled?: boolean;
@@ -12,7 +25,8 @@ const SwitchRoot = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithou
    * Platform: WEB ONLY
    */
   onKeyDown?: (ev: KeyboardEvent) => void;
-}>(
+}
+>(
   (
     {
       checked,
@@ -28,20 +42,17 @@ const SwitchRoot = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithou
       if (disabled) return;
       onCheckedChange(!checked);
       onPressProp?.(ev);
-    }
+    };
 
     return (
       <Pressable
         ref={ref}
         aria-disabled={disabled}
-        role='switch'
+        role="switch"
         aria-checked={checked}
-        aria-valuetext={ariaValueText ?? checked ? 'on' : 'off'}
+        aria-valuetext={ariaValueText ?? (checked ? 'on' : 'off')}
         onPress={onPress}
-        accessibilityState={{
-          checked,
-          disabled,
-        }}
+        accessibilityState={{checked, disabled}}
         disabled={disabled}
         {...props}
       />
@@ -49,10 +60,11 @@ const SwitchRoot = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithou
   }
 );
 
-const SwitchThumb = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View>>(
-  ({ ...props }, ref
-  ) => {
-  return <View ref={ref} role='presentation' {...props} />;
+const SwitchThumb = forwardRef<
+  ElementRef<typeof View>,
+  ComponentPropsWithoutRef<typeof View>
+>(({...props}, ref) => {
+  return <View ref={ref} role="presentation" {...props} />;
 });
 
 const SwitchWeb = forwardRef<
@@ -79,32 +91,19 @@ const SwitchWeb = forwardRef<
 ));
 SwitchWeb.displayName = 'SwitchWeb';
 
-const RGB_COLORS = {
-  light: {
-    primary: 'rgb(24, 24, 27)',
-    input: 'rgb(228, 228, 231)',
-  },
-  dark: {
-    primary: 'rgb(250, 250, 250)',
-    input: 'rgb(39, 39, 42)',
-  },
-} as const;
-
 const SwitchNative = forwardRef<
   ElementRef<typeof SwitchRoot>,
   ComponentPropsWithoutRef<typeof SwitchRoot>
 >(({className, ...props}, ref) => {
   const {colorScheme} = useColorScheme();
   const translateX = useDerivedValue(() => (props.checked ? 18 : 0));
-  const animatedRootStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: interpolateColor(
-        translateX.value,
-        [0, 18],
-        [RGB_COLORS[colorScheme!].input, RGB_COLORS[colorScheme!].primary]
-      ),
-    };
-  });
+  const animatedRootStyle = useAnimatedStyle(() => ({
+    backgroundColor: interpolateColor(
+      translateX.value,
+      [0, 18],
+      [RGB_COLORS[colorScheme!].input, RGB_COLORS[colorScheme!].primary]
+    ),
+  }));
   const animatedThumbStyle = useAnimatedStyle(() => ({
     transform: [{translateX: withTiming(translateX.value, {duration: 200})}],
   }));
@@ -123,9 +122,7 @@ const SwitchNative = forwardRef<
         ref={ref}
       >
         <Animated.View style={animatedThumbStyle}>
-          <SwitchThumb
-            className={'h-7 w-7 rounded-full bg-background shadow-md shadow-foreground/25 ring-0'}
-          />
+          <SwitchThumb className="h-7 w-7 rounded-full bg-background shadow-md shadow-foreground/25 ring-0"/>
         </Animated.View>
       </SwitchRoot>
     </Animated.View>
