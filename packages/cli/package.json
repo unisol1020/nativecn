@@ -2,6 +2,7 @@
   "name": "@mono-ui/cli",
   "version": "1.0.0",
   "description": "Add mono-ui components to your React Native apps.",
+  "homepage": "https://github.com/unisol1020/mono-ui#readme",
   "publishConfig": {
     "access": "public"
   },
