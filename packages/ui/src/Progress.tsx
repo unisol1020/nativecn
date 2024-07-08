@@ -1,4 +1,8 @@
-import {ComponentPropsWithoutRef, ElementRef, forwardRef} from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  forwardRef,
+} from 'react';
 import { Platform, View } from 'react-native';
 import Animated, {
   Extrapolation,
@@ -19,11 +23,14 @@ const isValidValueNumber = (value: any, max: number): value is number => {
   return typeof value === 'number' && !isNaN(value) && value <= max && value >= 0;
 }
 
-const ProgressRoot = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View> & {
+const ProgressRoot = forwardRef<
+  ElementRef<typeof View>,
+  ComponentPropsWithoutRef<typeof View> & {
   value?: number | null | undefined;
   max?: number;
   getValueLabel?(value: number, max: number): string;
-}>(
+}
+>(
   (
     { value: valueProp, max: maxProp, getValueLabel = defaultGetValueLabel, ...props },
     ref
@@ -51,9 +58,12 @@ const ProgressRoot = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRe
   }
 );
 
-const ProgressIndicator = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View>>(({ ...props }, ref) => {
+const ProgressIndicator = forwardRef<
+  ElementRef<typeof View>,
+  ComponentPropsWithoutRef<typeof View>
+>(({ ...props }, ref) => {
   return <View ref={ref} role='presentation' {...props} />;
-})
+});
 
 const Progress = forwardRef<
   ElementRef<typeof ProgressRoot>,
@@ -65,13 +75,14 @@ const Progress = forwardRef<
     <ProgressRoot
       ref={ref}
       className={cn('relative h-4 w-full overflow-hidden rounded-full bg-secondary', className)}
+      value={value}
       {...props}
     >
       <Indicator value={value} className={indicatorClassName} />
     </ProgressRoot>
   );
 });
-Progress.displayName = "Progress";
+Progress.displayName = 'Progress';
 
 const Indicator = ({ value, className }: { value: number | undefined | null; className?: string }) => {
   const progress = useDerivedValue(() => value ?? 0);
@@ -90,7 +101,7 @@ const Indicator = ({ value, className }: { value: number | undefined | null; cla
         className={cn('h-full w-full flex-1 bg-primary web:transition-all', className)}
         style={{ transform: `translateX(-${100 - (value ?? 0)}%)` }}
       >
-        <ProgressIndicator className={cn('h-full w-full ', className)} />
+        <ProgressIndicator className={cn('h-full w-full', className)} />
       </View>
     );
   }
