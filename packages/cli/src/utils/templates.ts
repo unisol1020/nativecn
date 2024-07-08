@@ -75,6 +75,8 @@ export const BABEL_CONFIG = `module.exports = function (api) {
   };
 };`;
 
+export const NATIVEWIND_ENV = `/// <reference types="nativewind/types" />`;
+
 export const UTILS = `import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 

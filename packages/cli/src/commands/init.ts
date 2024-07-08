@@ -61,6 +61,8 @@ export async function runInit(cwd: string) {
     'utf8'
   );
 
+  await fs.writeFile(`${cwd}/nativewind-env.d.ts`, templates.NATIVEWIND_ENV, 'utf8');
+
   await fs.writeFile(`${cwd}/babel.config.js`, templates.BABEL_CONFIG, 'utf8');
 
   if (existsSync(`${cwd}/lib/utils.ts`)) {
