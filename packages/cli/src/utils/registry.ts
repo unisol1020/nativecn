@@ -4,13 +4,17 @@ export const ALL_COMPONENTS = [
   'Button',
   'Card',
   'Checkbox',
-  'Dialog',
   'Input',
+  'Label',
+  'Progress',
   'RadioGroup',
+  'Separator',
   'Skeleton',
   'Switch',
-  'Tabs',
-  'Toast',
+  'Text',
+  'Textarea',
+  'Toggle',
+  'Typography',
 ];
 const baseUrl =
   'https://raw.githubusercontent.com/unisol1020/mono-ui/main';
