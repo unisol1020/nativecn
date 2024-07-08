@@ -1,20 +1,25 @@
-import {ComponentPropsWithoutRef, createContext, ElementRef, forwardRef, useContext} from 'react';
-import {GestureResponderEvent, Pressable, View} from 'react-native';
+import {
+  ComponentPropsWithoutRef,
+  createContext,
+  ElementRef,
+  forwardRef,
+  useContext,
+} from 'react';
+import { GestureResponderEvent, Pressable, View } from 'react-native';
 import { cn } from '../lib/utils';
 
 type RadioGroupRootProps = {
   value: string | undefined;
   onValueChange: (val: string) => void;
   disabled?: boolean;
-}
+};
 
 type RadioGroupItemProps = {
   value: string;
   'aria-labelledby': string;
-}
+};
 
 const RadioGroupContext = createContext<RadioGroupRootProps | null>(null);
-
 const RadioItemContext = createContext<{
   itemValue: string | undefined;
 } | null>(null);
@@ -26,7 +31,6 @@ const useRadioGroupContext = () => {
       'RadioGroup compound components cannot be rendered outside the RadioGroup component'
     );
   }
-
   return context;
 };
 
@@ -37,78 +41,61 @@ const useRadioItemContext = () => {
       'RadioItem compound components cannot be rendered outside the RadioItem component'
     );
   }
-
   return context;
 };
 
-const RadioGroupRoot = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View> & RadioGroupRootProps>(
-  ({value, onValueChange, disabled = false, ...viewProps }, ref) => {
-    return (
-      <RadioGroupContext.Provider
-        value={{
-          value,
-          disabled,
-          onValueChange,
+const RadioGroupRoot = forwardRef<
+  ElementRef<typeof View>,
+  ComponentPropsWithoutRef<typeof View> & RadioGroupRootProps
+>(({ value, onValueChange, disabled = false, ...viewProps }, ref) => {
+  return (
+    <RadioGroupContext.Provider value={{ value, disabled, onValueChange }}>
+      <View ref={ref} role="radiogroup" {...viewProps} />
+    </RadioGroupContext.Provider>
+  );
+});
+
+const RadioGroupRootItem = forwardRef<
+  ElementRef<typeof Pressable>,
+  ComponentPropsWithoutRef<typeof Pressable> & RadioGroupItemProps
+>(({ value: itemValue, disabled: disabledProp = false, onPress: onPressProp, ...props }, ref) => {
+  const { disabled, value, onValueChange } = useRadioGroupContext();
+
+  const onPress = (ev: GestureResponderEvent) => {
+    if (disabled || disabledProp) return;
+    onValueChange(itemValue);
+    onPressProp?.(ev);
+  };
+
+  return (
+    <RadioItemContext.Provider value={{ itemValue }}>
+      <Pressable
+        ref={ref}
+        role="radio"
+        onPress={onPress}
+        aria-checked={value === itemValue}
+        disabled={(disabled || disabledProp) ?? false}
+        accessibilityState={{
+          disabled: (disabled || disabledProp) ?? false,
+          checked: value === itemValue,
         }}
-      >
-        <View ref={ref} role='radiogroup' {...viewProps} />
-      </RadioGroupContext.Provider>
-    );
-  }
-);
+        {...props}
+      />
+    </RadioItemContext.Provider>
+  );
+});
 
-const RadioGroupRootItem = forwardRef<ElementRef<typeof Pressable>, ComponentPropsWithoutRef<typeof Pressable> & RadioGroupItemProps>(
-  (
-    { value: itemValue, disabled: disabledProp = false, onPress: onPressProp, ...props },
-    ref
-  ) => {
-    const { disabled, value, onValueChange } = useRadioGroupContext();
+const RadioGroupRootIndicator = forwardRef<
+  ElementRef<typeof View>,
+  ComponentPropsWithoutRef<typeof View> & { forceMount?: true }
+>(({ forceMount, ...props }, ref) => {
+  const { value } = useRadioGroupContext();
+  const { itemValue } = useRadioItemContext();
 
-    const onPress = (ev: GestureResponderEvent) => {
-      if (disabled || disabledProp) return;
-      onValueChange(itemValue);
-      onPressProp?.(ev);
-    }
+  if (!forceMount && value !== itemValue) return null;
 
-    return (
-      <RadioItemContext.Provider
-        value={{
-          itemValue: itemValue,
-        }}
-      >
-        <Pressable
-          ref={ref}
-          role='radio'
-          onPress={onPress}
-          aria-checked={value === itemValue}
-          disabled={(disabled || disabledProp) ?? false}
-          accessibilityState={{
-            disabled: (disabled || disabledProp) ?? false,
-            checked: value === itemValue,
-          }}
-          {...props}
-        />
-      </RadioItemContext.Provider>
-    );
-  }
-);
-
-const RadioGroupRootIndicator = forwardRef<ElementRef<typeof View>, ComponentPropsWithoutRef<typeof View> & {
-  forceMount?: true | undefined;
-}>(
-  ({ forceMount, ...props }, ref) => {
-    const { value } = useRadioGroupContext();
-    const { itemValue } = useRadioItemContext();
-
-    if (!forceMount) {
-      if (value !== itemValue) {
-        return null;
-      }
-    }
-
-    return <View ref={ref} role='presentation' {...props} />;
-  }
-);
+  return <View ref={ref} role="presentation" {...props} />;
+});
 
 const RadioGroup = forwardRef<
   ElementRef<typeof RadioGroupRoot>,
@@ -118,7 +105,7 @@ const RadioGroup = forwardRef<
     <RadioGroupRoot className={cn('web:grid gap-2', className)} {...props} ref={ref} />
   );
 });
-RadioGroup.displayName = "RadioGroup";
+RadioGroup.displayName = 'RadioGroup';
 
 const RadioGroupItem = forwardRef<
   ElementRef<typeof RadioGroupRootItem>,
@@ -134,12 +121,12 @@ const RadioGroupItem = forwardRef<
       )}
       {...props}
     >
-      <RadioGroupRootIndicator className='flex items-center justify-center'>
-        <View className='aspect-square h-[9px] w-[9px] native:h-[10] native:w-[10] bg-primary rounded-full' />
+      <RadioGroupRootIndicator className="flex items-center justify-center">
+        <View className="aspect-square h-[9px] w-[9px] native:h-[10] native:w-[10] bg-primary rounded-full" />
       </RadioGroupRootIndicator>
     </RadioGroupRootItem>
   );
 });
-RadioGroupItem.displayName = "RadioGroupItem";
+RadioGroupItem.displayName = 'RadioGroupItem';
 
 export { RadioGroup, RadioGroupItem };
