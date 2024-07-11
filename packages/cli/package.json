@@ -1,15 +1,15 @@
 {
   "name": "nativecn",
   "version": "1.0.0",
-  "description": "Add mono-ui components to your React Native apps.",
-  "homepage": "https://github.com/unisol1020/mono-ui#readme",
+  "description": "Add nativecn components to your React Native apps.",
+  "homepage": "https://github.com/unisol1020/nativecn#readme",
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unisol1020/mono-ui.git",
+    "url": "https://github.com/unisol1020/nativecn.git",
     "directory": "packages/cli"
   },
   "keywords": [

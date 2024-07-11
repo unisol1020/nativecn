@@ -17,7 +17,7 @@ export const ALL_COMPONENTS = [
   'Typography',
 ];
 const baseUrl =
-  'https://raw.githubusercontent.com/unisol1020/mono-ui/main';
+  'https://raw.githubusercontent.com/unisol1020/nativecn/main';
 
 export async function fetchComponents(components: string[]) {
   try {
