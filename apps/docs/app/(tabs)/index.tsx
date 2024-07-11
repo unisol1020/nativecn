@@ -50,7 +50,7 @@ export default function HomeScreen() {
   }
 
   return (
-    <ScrollView className="bg-white dark:bg-black flex flex-col items-center py-6">
+    <ScrollView className="bg-white dark:bg-black flex flex-col py-6">
       <View className="flex flex-col gap-6 w-full max-w-sm">
         <Card>
           <CardHeader>
