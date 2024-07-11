@@ -1,5 +1,5 @@
 {
-  "name": "@mono-ui/cli",
+  "name": "nativecn",
   "version": "1.0.0",
   "description": "Add mono-ui components to your React Native apps.",
   "homepage": "https://github.com/unisol1020/mono-ui#readme",
@@ -17,9 +17,11 @@
     "ui",
     "tailwind",
     "react-native",
-    "expo"
+    "expo",
+    "nativecn"
   ],
   "type": "module",
+  "exports": "./dist/index.js",
   "bin": "./dist/index.js",
   "scripts": {
     "dev": "tsup --watch",

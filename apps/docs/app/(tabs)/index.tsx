@@ -30,7 +30,7 @@ import {
   Textarea,
   Toggle,
   ToggleIcon
-} from '@mono-ui/ui';
+} from '@nativecn/ui';
 import {Bold} from 'lucide-react-native';
 import {useState} from 'react';
 

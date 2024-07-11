@@ -1,5 +1,5 @@
 {
-  "name": "@mono-ui/docs",
+  "name": "@nativecn/docs",
   "version": "0.2.0",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
-    "@mono-ui/ui": "workspace:*",
+    "@nativecn/ui": "workspace:*",
     "@react-navigation/native": "^6.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",

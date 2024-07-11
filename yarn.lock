@@ -2190,31 +2190,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mono-ui/cli@workspace:packages/cli":
+"@nativecn/docs@workspace:apps/docs":
   version: 0.0.0-use.local
-  resolution: "@mono-ui/cli@workspace:packages/cli"
-  dependencies:
-    "@antfu/ni": "npm:^0.21.8"
-    "@types/prompts": "npm:^2.4.5"
-    chalk: "npm:^5.3.0"
-    commander: "npm:^11.0.0"
-    execa: "npm:^8.0.1"
-    ora: "npm:^7.0.1"
-    prompts: "npm:^2.4.2"
-    tsup: "npm:^7.2.0"
-    zod: "npm:^3.22.2"
-  bin:
-    cli: ./dist/index.js
-  languageName: unknown
-  linkType: soft
-
-"@mono-ui/docs@workspace:apps/docs":
-  version: 0.0.0-use.local
-  resolution: "@mono-ui/docs@workspace:apps/docs"
+  resolution: "@nativecn/docs@workspace:apps/docs"
   dependencies:
     "@babel/core": "npm:^7.20.0"
     "@expo/vector-icons": "npm:^14.0.0"
-    "@mono-ui/ui": "workspace:*"
+    "@nativecn/ui": "workspace:*"
     "@react-navigation/native": "npm:^6.0.2"
     "@types/jest": "npm:^29.5.12"
     "@types/react": "npm:~18.2.45"
@@ -2251,9 +2233,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mono-ui/monorepo@workspace:.":
+"@nativecn/monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@mono-ui/monorepo@workspace:."
+  resolution: "@nativecn/monorepo@workspace:."
   dependencies:
     prettier: "npm:^3.2.5"
     turbo: "npm:^2.0.4"
@@ -2261,9 +2243,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mono-ui/ui@workspace:*, @mono-ui/ui@workspace:packages/ui":
+"@nativecn/ui@workspace:*, @nativecn/ui@workspace:packages/ui":
   version: 0.0.0-use.local
-  resolution: "@mono-ui/ui@workspace:packages/ui"
+  resolution: "@nativecn/ui@workspace:packages/ui"
   dependencies:
     "@tsconfig/recommended": "npm:^1.0.1"
     "@types/react": "npm:~18.2.79"
@@ -9135,6 +9117,24 @@ __metadata:
   checksum: 10c0/e3fb661aa083454f40500473bb69eedb85dc160e763150b9a2c567c7e9ff560ce028a9f833123b618a6ea742e311138b591910e795614a629029e86e180660f3
   languageName: node
   linkType: hard
+
+"nativecn@workspace:packages/cli":
+  version: 0.0.0-use.local
+  resolution: "nativecn@workspace:packages/cli"
+  dependencies:
+    "@antfu/ni": "npm:^0.21.8"
+    "@types/prompts": "npm:^2.4.5"
+    chalk: "npm:^5.3.0"
+    commander: "npm:^11.0.0"
+    execa: "npm:^8.0.1"
+    ora: "npm:^7.0.1"
+    prompts: "npm:^2.4.2"
+    tsup: "npm:^7.2.0"
+    zod: "npm:^3.22.2"
+  bin:
+    nativecn: ./dist/index.js
+  languageName: unknown
+  linkType: soft
 
 "nativewind@npm:^4.0.36":
   version: 4.0.36

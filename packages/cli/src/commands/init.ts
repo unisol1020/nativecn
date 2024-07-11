@@ -14,7 +14,7 @@ import * as templates from '@/src/utils/templates';
 const DEPENDENCIES = [
   'class-variance-authority',
   'clsx',
-  'nativewind',
+  'nativewind@^4.0.1',
   "tailwindcss-animate",
   'tailwind-merge',
   'lucide-react-native',
@@ -62,12 +62,22 @@ export async function runInit(cwd: string) {
   );
 
   await fs.writeFile(`${cwd}/nativewind-env.d.ts`, templates.NATIVEWIND_ENV, 'utf8');
-
   await fs.writeFile(`${cwd}/babel.config.js`, templates.BABEL_CONFIG, 'utf8');
+  await fs.writeFile(`${cwd}/global.css`, templates.GLOBAL_STYLES, 'utf8');
+  await fs.writeFile(`${cwd}/metro.config.js`, templates.METRO_CONFIG, 'utf8');
 
-  if (existsSync(`${cwd}/lib/utils.ts`)) {
-    await fs.writeFile(`${cwd}/lib/utils.ts`, templates.UTILS, 'utf8');
+  const libDir = path.join(cwd, 'lib');
+  const componentsLib = path.join(cwd, 'lib');
+
+  if (!existsSync(libDir)) {
+    await fs.mkdir(libDir, { recursive: true });
   }
+
+  if (!existsSync(componentsLib)) {
+    await fs.mkdir(componentsLib, { recursive: true });
+  }
+
+  await fs.writeFile(`${cwd}/lib/utils.ts`, templates.UTILS, 'utf8');
 
   spinner.succeed();
 
