@@ -55,9 +55,9 @@ yarn install
 
 cd apps/docs
 
-expo run :ios
-expo run :android
-expo run --web
+npx expo start:ios
+npx expo start:android
+npx expo run --web
 ```
 
 
