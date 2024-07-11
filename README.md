@@ -26,6 +26,7 @@ The `nativecn` library includes the following components:
 - Textarea
 - Toggle
 - Typography
+
 ## Installation
 
 To get started with `nativecn` in your project, run:
