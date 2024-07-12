@@ -20,7 +20,7 @@ Also, if you don’t have a components and lib folders, it will create them for 
 npx nativecn init
 ```
 
-# After initialization, ensure to include: **`global.css`** inside the root layout.
+### After initialization, ensure to include: **`global.css`** inside the root layout.
 
 ## add
 
