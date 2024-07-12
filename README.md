@@ -35,18 +35,18 @@ To get started with `nativecn` in your project, run:
 npx nativecn init
 ```
 
-```markdown
-## Adding Components
+`After initialization, ensure to include 'global.css' inside the root layout.`
 
+## Adding Components
+```markdown
 You can add specific components to your project using the following command:
 
 npx nativecn add 'component-name'
 npx nativecn add Button
 ```
 
-```markdown
 ## Documentation
-
+```markdown
 Documentation is currently in progress. However, you can still clone this repository and start using it.
 
 To install dependencies, run:
@@ -60,10 +60,7 @@ npx expo start:android
 npx expo run --web
 ```
 
-
-```markdown
-
 ## Contributing
-
+```markdown
 We welcome contributions!
 ```
