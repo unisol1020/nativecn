@@ -35,7 +35,9 @@ To get started with `nativecn` in your project, run:
 npx nativecn init
 ```
 
-`After initialization, ensure to include 'global.css' inside the root layout.`
+#### After initialization, ensure to include:
+#### <span style="color: #0969da">global.css</span> 
+#### inside the root layout.
 
 ## Adding Components
 You can add specific components to your project using the following command:

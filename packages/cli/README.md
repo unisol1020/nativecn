@@ -20,6 +20,10 @@ Also, if you don’t have a components and lib folders, it will create them for 
 npx nativecn init
 ```
 
+#### After initialization, ensure to include:
+#### <span style="color: #0969da">global.css</span>
+#### inside the root layout.
+
 ## add
 
 Use the `add` command to add components to your project.
