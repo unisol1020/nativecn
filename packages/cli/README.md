@@ -35,3 +35,9 @@ npx nativecn add [Component]
 ```bash
 npx nativecn add Text
 ```
+
+You can also run the command without any arguments to view a list of all available components:
+
+```bash
+npx nativecn add
+```
