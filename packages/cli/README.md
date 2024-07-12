@@ -14,7 +14,7 @@ The `init` command installs dependencies and adds a basics:
 - `nativewind-env.d.ts`
 - `metro.config.js`
 
-Also, if you don’t have a components and lib folder, it will create them for you.
+Also, if you don’t have a components and lib folders, it will create them for you.
 
 ```bash
 npx nativecn init
