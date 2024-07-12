@@ -41,7 +41,7 @@ npx nativecn init
 You can add specific components to your project using the following command:
 
 ```markdown
-npx nativecn add 'component-name'
+npx nativecn add [Component]
 npx nativecn add Text
 ```
 
