@@ -38,19 +38,18 @@ npx nativecn init
 `After initialization, ensure to include 'global.css' inside the root layout.`
 
 ## Adding Components
-```markdown
 You can add specific components to your project using the following command:
 
+```markdown
 npx nativecn add 'component-name'
-npx nativecn add Button
+npx nativecn add Text
 ```
 
 ## Documentation
-```markdown
 Documentation is currently in progress. However, you can still clone this repository and start using it.
-
 To install dependencies, run:
 
+```bash
 yarn install
 
 cd apps/docs
