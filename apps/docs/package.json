@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
-    "@nativecn/ui": "workspace:*",
+    "@nativecn/ui": "*",
     "@react-navigation/native": "^6.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
