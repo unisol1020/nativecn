@@ -10,7 +10,8 @@
     "test": "jest --watchAll",
     "lint": "expo lint",
     "build:web": "expo build:web",
-    "build": "npx expo export -p web"
+    "build": "npx expo export -p web",
+    "postinstall": "npx tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "jest": {
     "preset": "jest-expo"
