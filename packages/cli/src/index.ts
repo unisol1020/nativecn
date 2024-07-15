@@ -7,7 +7,7 @@ function main() {
   program
     .name('nativecn')
     .description('add components and dependencies to your expo project')
-    .version('1.0.0');
+    .version('1.1.0');
   program.addCommand(init);
   program.addCommand(add);
   program.parse(process.argv);
