@@ -14,3 +14,4 @@ export * from './Switch';
 export * from './Progress';
 export * from './Avatar';
 export * from './RadioGroup';
+export * from './ThemeProvider';

@@ -1,40 +1,48 @@
-import {PropsWithChildren, useCallback, useEffect, useMemo, useState} from "react";
-import { useColorScheme } from "nativewind";
-import { DarkTheme, DefaultTheme, ThemeProvider as RNThemeProvider } from '@react-navigation/native';
-import { useColorScheme as RNUseColorScheme } from "react-native";
+import {PropsWithChildren, useEffect, useMemo, useState} from "react";
+import {useColorScheme} from "nativewind";
+import {DarkTheme, DefaultTheme, ThemeProvider as RNThemeProvider} from '@react-navigation/native';
+import {useColorScheme as RNUseColorScheme} from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 DefaultTheme.colors.background = 'white';
 
-export const ThemeProvider = ({ children }: PropsWithChildren) => {
+export const ThemeProvider = ({children}: PropsWithChildren) => {
   const [loaded, setLoaded] = useState(false);
-  const { colorScheme, setColorScheme } = useColorScheme();
+  const {colorScheme, setColorScheme} = useColorScheme();
   const rnColorScheme = RNUseColorScheme();
 
-  const loadTheme = useCallback(async () => {
-    const theme = await AsyncStorage.getItem('theme');
-
-    if (theme) {
-      setColorScheme(theme as "light" | "dark");
-    }
-
-    setLoaded(true);
-  }, [rnColorScheme, setColorScheme]);
-
   useEffect(() => {
-    loadTheme();
-  }, []);
-
-  useEffect(() => {
-    if (loaded && colorScheme) {
+    if (loaded) {
       (async () => {
         const theme = await AsyncStorage.getItem('theme');
-        if (theme !== colorScheme) {
-          await AsyncStorage.setItem('theme', colorScheme);
+
+        if (!theme) {
+          const cs = rnColorScheme === 'dark' ? 'dark' : 'light';
+
+          await AsyncStorage.setItem('theme', cs);
+          setColorScheme(cs)
+          return;
         }
-      })();
+
+        if (colorScheme && theme !== colorScheme) {
+          await AsyncStorage.setItem('theme', colorScheme);
+          return;
+        }
+      })()
     }
   }, [colorScheme, loaded]);
+
+  useEffect(() => {
+    (async () => {
+      const theme = await AsyncStorage.getItem('theme');
+
+      if (theme) {
+        setColorScheme(theme as 'light' | 'dark');
+      }
+
+      setLoaded(true);
+    })()
+  }, []);
 
   const isDarkMode = useMemo(() =>
       (!loaded && rnColorScheme === "dark") || colorScheme === "dark",
@@ -46,4 +54,4 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
       {children}
     </RNThemeProvider>
   );
-}
+};
