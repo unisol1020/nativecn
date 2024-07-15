@@ -36,6 +36,14 @@ const InstallStagesInit = () => {
             <P className="font-normal">npx nativecn add [component]</P>
           </CardContent>
         </Card>
+
+        <P className="font-medium">You can also run the command without any arguments to view a list of all available components:</P>
+
+        <Card>
+          <CardContent className="pt-4 p-4 bg-muted">
+            <P className="font-normal">npx nativecn add</P>
+          </CardContent>
+        </Card>
       </View>
     </ScrollView>
   );
