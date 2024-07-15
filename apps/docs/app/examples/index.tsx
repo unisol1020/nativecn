@@ -1,8 +1,6 @@
 import {ScrollView, View} from 'react-native';
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
+  Avatar, AvatarFallback, AvatarImage,
   Badge,
   Button,
   Card,
@@ -10,48 +8,32 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-  Checkbox,
-  H1,
-  H2,
-  H3,
-  Input,
-  Label,
-  Large,
-  Lead,
-  P,
-  Progress,
-  RadioGroup,
-  RadioGroupItem,
-  Separator,
-  Skeleton,
-  Switch,
+  CardTitle, Checkbox, H1, H2, H3,
+  Input, Label, Large, Lead, P, Progress, RadioGroup, RadioGroupItem, Separator, Skeleton, Switch,
   Text,
-  Textarea,
-  Toggle,
-  ToggleIcon
+  Textarea, Toggle, ToggleIcon
 } from '@nativecn/ui';
 import {Bold} from 'lucide-react-native';
 import {useState} from 'react';
 
-export default function HomeScreen() {
+const ExamplesPage = () => {
   const [pressed, setPressed] = useState(false);
   const [checked, setChecked] = useState(false);
   const [switchChecked, setSwitchChecked] = useState(false);
   const [progress, setProgress] = useState(13);
   const [value, setValue] = useState('Comfortable');
 
-  function onLabelPress(label: string) {
+  const onLabelPress = (label: string) => {
     setValue(label);
   }
 
-  function onPress() {
+  const onPress = () => {
     setProgress(Math.floor(Math.random() * 100));
   }
 
   return (
-    <ScrollView className="bg-white dark:bg-black flex flex-col py-6">
-      <View className="flex flex-col gap-6 w-full max-w-sm">
+    <ScrollView className="bg-white dark:bg-black flex flex-col items-center pt-20 pb-6">
+      <View style={{maxWidth: 1400}} className="flex flex-col gap-6 w-full max-w-sm">
         <Card>
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
@@ -218,6 +200,7 @@ export default function HomeScreen() {
         </RadioGroup>
       </View>
     </ScrollView>
-  );
-}
+  )
+};
 
+export default ExamplesPage;
