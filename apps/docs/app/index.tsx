@@ -12,7 +12,9 @@ export default function HomeScreen() {
 
         <View className="flex flex-row gap-2">
           <Link asChild href="/docs">
-            <Button>Get Started</Button>
+            <Button>
+              <Text>Get Started</Text>
+            </Button>
           </Link>
 
           <Link target="_blank" href="https://github.com/unisol1020/nativecn">

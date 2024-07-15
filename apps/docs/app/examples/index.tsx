@@ -1,6 +1,8 @@
 import {ScrollView, View} from 'react-native';
 import {
-  Avatar, AvatarFallback, AvatarImage,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
   Badge,
   Button,
   Card,
@@ -8,10 +10,26 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle, Checkbox, H1, H2, H3,
-  Input, Label, Large, Lead, P, Progress, RadioGroup, RadioGroupItem, Separator, Skeleton, Switch,
+  CardTitle,
+  Checkbox,
+  H1,
+  H2,
+  H3,
+  Input,
+  Label,
+  Large,
+  Lead,
+  P,
+  Progress,
+  RadioGroup,
+  RadioGroupItem,
+  Separator,
+  Skeleton,
+  Switch,
   Text,
-  Textarea, Toggle, ToggleIcon
+  Textarea,
+  Toggle,
+  ToggleIcon
 } from '@nativecn/ui';
 import {Bold} from 'lucide-react-native';
 import {useState} from 'react';
@@ -32,7 +50,7 @@ const ExamplesPage = () => {
   }
 
   return (
-    <ScrollView className="bg-white dark:bg-black flex flex-col items-center pt-20 pb-6">
+    <ScrollView className="flex flex-col items-center pt-20 pb-6">
       <View style={{maxWidth: 1400}} className="flex flex-col gap-6 w-full max-w-sm">
         <Card>
           <CardHeader>

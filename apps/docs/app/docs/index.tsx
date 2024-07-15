@@ -1,7 +1,7 @@
 import InstallStages from '../../components/InstallStages/InstallStages';
 
 const DocsScreen = () => {
-  return <InstallStages />;
+  return <InstallStages/>;
 };
 
 export default DocsScreen;
