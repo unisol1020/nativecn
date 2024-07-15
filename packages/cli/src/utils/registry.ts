@@ -15,6 +15,7 @@ export const ALL_COMPONENTS = [
   'Textarea',
   'Toggle',
   'Typography',
+  'ThemeProvider',
 ];
 const baseUrl =
   'https://raw.githubusercontent.com/unisol1020/nativecn/main';

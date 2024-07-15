@@ -19,8 +19,7 @@ const DEPENDENCIES = [
   'tailwind-merge',
   'lucide-react-native',
   'react-native-reanimated',
-  'react-native-svg',
-  '@react-native-async-storage/async-storage'
+  'react-native-svg'
 ];
 const DEV_DEPENDENCIES = ['tailwindcss'];
 
@@ -79,7 +78,6 @@ export async function runInit(cwd: string) {
   }
 
   await fs.writeFile(`${cwd}/lib/utils.ts`, templates.UTILS, 'utf8');
-  await fs.writeFile(`${cwd}/lib/ThemeProvider.tsx`, templates.THEME_PROVIDER, 'utf8');
 
   spinner.succeed();
 

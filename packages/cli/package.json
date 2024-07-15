@@ -1,6 +1,6 @@
 {
   "name": "nativecn",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Add nativecn components to your React Native apps.",
   "homepage": "https://github.com/unisol1020/nativecn#readme",
   "publishConfig": {
