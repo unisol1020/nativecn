@@ -205,6 +205,15 @@ const ExamplesPage = () => {
         <AvatarFallback>UN</AvatarFallback>
       </Avatar>
 
+      <Avatar className="mt-4">
+        <AvatarImage
+          source={{
+            uri: 'https://avatars.githubusercontent.com/u/66306912?v=4',
+          }}
+        />
+        <AvatarFallback>UN</AvatarFallback>
+      </Avatar>
+
       <View className='flex justify-center items-center mt-4'>
         <RadioGroup value={value} onValueChange={setValue} className='gap-3'>
           {["Default", "Comfortable", "Compact"].map((value) => (

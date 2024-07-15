@@ -13,7 +13,7 @@ const HeaderItem = ({title, link}: {title: string, link: string}) => {
   return (
     <Link asChild href={link}>
       <Button variant="link">
-        <Lead className={cn('text-sm hover:underline', {
+        <Lead style={{paddingTop: 3}} className={cn('text-sm hover:underline', {
           'text-foreground': ('/' + routeName).startsWith(link),
         })}>{title}</Lead>
       </Button>

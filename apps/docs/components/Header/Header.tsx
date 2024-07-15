@@ -1,9 +1,10 @@
 import {View} from 'react-native';
 import {Link} from 'expo-router';
-import {Button, H4} from '@nativecn/ui';
-import {colorScheme} from 'nativewind';
+import {Button, H4, Text} from '@nativecn/ui';
+import {useColorScheme} from 'nativewind';
 import {BlurView} from 'expo-blur';
 import HeaderItem from '~/components/Header/HeaderItem';
+import {Moon, Sun} from 'lucide-react-native';
 
 const items = [
   {
@@ -17,17 +18,19 @@ const items = [
 ];
 
 const Header = () => {
+  const {colorScheme, toggleColorScheme} = useColorScheme();
+
   return (
     <BlurView
-      tint={colorScheme.get() === "dark" ? "systemChromeMaterialDark" : "systemChromeMaterialLight"}
+      tint={colorScheme === "dark" ? "systemChromeMaterialDark" : "systemChromeMaterialLight"}
       className="absolute flex justify-center items-center w-full"
     >
       <View
         style={{maxWidth: 1400, marginLeft: -54}}
-        className="p-3 flex flex-row items-center w-full"
+        className="p-3 flex flex-row items-center justify-between w-full"
       >
         <View
-          className="flex flex-row items-center"
+          className="flex flex-row items-center w-full"
         >
           <Link asChild href="/">
             <Button variant="link">
@@ -41,6 +44,16 @@ const Header = () => {
             ))}
           </View>
         </View>
+
+        <Button onPress={toggleColorScheme} variant="link">
+          {colorScheme === "dark" ? (
+            <Text>
+              <Moon/>
+            </Text>
+          ) : (
+            <Sun/>
+          )}
+        </Button>
       </View>
     </BlurView>
   )
