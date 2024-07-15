@@ -7,7 +7,7 @@ const DocsMenuItem = ({title, link}: {title: string, link?: string})  => {
   const pathname = usePathname();
 
   if (!link) {
-    return <P className="font-medium py-2">{title}</P>;
+    return <P className="font-medium text-sm py-2">{title}</P>;
   } else {
     return (
       <Link asChild href={link}>
