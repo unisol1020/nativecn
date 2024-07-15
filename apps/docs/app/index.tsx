@@ -18,7 +18,7 @@ export default function HomeScreen() {
           </Link>
 
           <Link target="_blank" href="https://github.com/unisol1020/nativecn">
-            <Button variant="ghost">
+            <Button variant="outline">
               <Text>GitHub</Text>
             </Button>
           </Link>

@@ -8,6 +8,10 @@ const items = [
   {
     title: 'Installation',
     link: '/docs',
+  },
+  {
+    title: 'Dark mode',
+    link: '/docs/dark-mode',
   }
 ];
 

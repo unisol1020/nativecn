@@ -1,21 +1,20 @@
 import {View} from 'react-native';
 import {H2, Lead, Separator} from '@nativecn/ui';
-import InstallStagesInit from '~/components/InstallStagesInit';
 
-const DocsScreen = () => {
+const DarkMode = () => {
   return (
     <View className="flex flex-col w-full h-full gap-4">
-      <H2>React Native</H2>
+      <H2>Dark Mode</H2>
 
-      <Lead className="text-xl">Install and configure React Native</Lead>
+      <Lead className="text-xl">Adding dark mode to your project.</Lead>
 
       <View className="flex flex-row gap-6">
         <Separator orientation="vertical" />
 
-        <InstallStagesInit />
+
       </View>
     </View>
   );
 };
 
-export default DocsScreen;
+export default DarkMode;
