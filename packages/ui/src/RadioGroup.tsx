@@ -122,7 +122,7 @@ const RadioGroupItem = forwardRef<
       {...props}
     >
       <RadioGroupRootIndicator className="flex items-center justify-center">
-        <View className="aspect-square h-[9px] w-[9px] native:h-[10] native:w-[10] bg-primary rounded-full" />
+        <View className="aspect-square h-[10px] w-[10px] native:h-[10] native:w-[10] bg-primary rounded-full" />
       </RadioGroupRootIndicator>
     </RadioGroupRootItem>
   );

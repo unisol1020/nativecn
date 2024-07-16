@@ -6,6 +6,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.24.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react-native": "^0.400.0",
@@ -13,8 +14,7 @@
     "react-native-reanimated": "~3.10.1",
     "react-native-svg": "^15.3.0",
     "tailwind-merge": "^2.1.0",
-    "tailwindcss-animate": "^1.0.7",
-    "@react-native-async-storage/async-storage": "^1.24.0"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
