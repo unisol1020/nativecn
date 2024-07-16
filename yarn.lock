@@ -2230,6 +2230,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nativecn/ui@workspace:packages/ui"
   dependencies:
+    "@react-native-async-storage/async-storage": "npm:^1.24.0"
     "@tsconfig/recommended": "npm:^1.0.1"
     "@types/react": "npm:~18.2.79"
     class-variance-authority: "npm:^0.7.0"

@@ -4,7 +4,7 @@ import {Button, H4, Text} from '@nativecn/ui';
 import {useColorScheme} from 'nativewind';
 import {BlurView} from 'expo-blur';
 import HeaderItem from '~/components/Header/HeaderItem';
-import {Moon, Sun} from 'lucide-react-native';
+import {Github, Moon, Sun} from 'lucide-react-native';
 import darkIcon from '../../assets/images/icon-dark.svg';
 import lightIcon from '../../assets/images/icon-light.svg';
 
@@ -28,11 +28,10 @@ const Header = () => {
       className="absolute flex justify-center items-center w-full"
     >
       <View
-        style={{maxWidth: 1400, marginLeft: -54}}
-        className="p-3 flex flex-row items-center justify-between w-full"
+        className="p-3 max-w-[1400px] ml-[-54px] flex flex-row items-center justify-between w-full px-4"
       >
         <View
-          className="flex flex-row items-center w-full px-4"
+          className="flex flex-row items-center px-4 w-full"
         >
           <Image
             style={{ width: 16, height: 16, marginTop: 2 }}
@@ -40,7 +39,7 @@ const Header = () => {
           />
 
           <Link asChild href="/">
-            <Button style={{paddingLeft: 5}} variant="link">
+            <Button className="pl-[5px]" variant="link">
               <H4>nativecn</H4>
             </Button>
           </Link>
@@ -52,15 +51,23 @@ const Header = () => {
           </View>
         </View>
 
-        <Button onPress={toggleColorScheme} variant="link">
-          {colorScheme === "dark" ? (
-            <Text>
-              <Moon/>
-            </Text>
-          ) : (
-            <Sun/>
-          )}
-        </Button>
+        <View className="flex flex-row ml-[-60px]">
+          <Link target="_blank" href="https://github.com/unisol1020/nativecn">
+            <Button variant="link">
+              <Github className="text-foreground" />
+            </Button>
+          </Link>
+
+          <Button onPress={toggleColorScheme} variant="link">
+            {colorScheme === "dark" ? (
+              <Text>
+                <Moon/>
+              </Text>
+            ) : (
+              <Sun/>
+            )}
+          </Button>
+        </View>
       </View>
     </BlurView>
   )

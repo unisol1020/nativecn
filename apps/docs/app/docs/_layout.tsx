@@ -5,7 +5,7 @@ import DocsMenu from '../../components/DocsMenu/DocsMenu';
 const DocsLayout = () => {
   return (
       <View className="flex w-full h-full items-center gap-6 px-4">
-        <View style={{maxWidth: 1400}} className="flex flex-row pt-20 gap-8 w-full h-full">
+        <View className="max-w-[1400px] flex flex-col md:flex-row pt-20 gap-8 w-full h-full">
           <DocsMenu />
 
           <ScrollView className="h-full w-full">

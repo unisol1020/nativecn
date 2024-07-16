@@ -1,22 +1,28 @@
-import {View} from 'react-native';
-import {Card, CardContent, P} from '@nativecn/ui';
+import React from 'react';
+import { View } from 'react-native';
+import { Card, CardContent, P } from '@nativecn/ui';
+import AutoTextGray from './AutoTextGray'; // Adjust the import based on your AutoTextGray component location
 
 const DarkModeStages = () => {
   return (
     <View className="flex flex-col gap-6">
-      <P className="text-md font-medium">Start by installing <P className="relative rounded bg-muted p-1 font-mono text-sm">async-storage</P>:</P>
+      <P className="text-md font-medium">
+        Start by installing <P className="relative rounded bg-muted p-1 font-mono text-sm">async-storage</P>:
+      </P>
 
       <Card>
         <CardContent className="p-4 bg-muted rounded-lg">
-          <P className="font-normal">yarn add @react-native-async-storage/async-storage</P>
+          <AutoTextGray text="yarn add @react-native-async-storage/async-storage" />
         </CardContent>
       </Card>
 
-      <P className="text-md font-medium">Install <P className="relative rounded bg-muted p-1 font-mono text-sm">ThemeProvider</P>:</P>
+      <P className="text-md font-medium">
+        Install <P className="relative rounded bg-muted p-1 font-mono text-sm">ThemeProvider</P>:
+      </P>
 
       <Card>
         <CardContent className="p-4 bg-muted rounded-lg">
-          <P className="font-normal">npx nativecn add ThemeProvider</P>
+          <AutoTextGray text="npx nativecn add ThemeProvider" />
         </CardContent>
       </Card>
 
@@ -27,20 +33,9 @@ const DarkModeStages = () => {
 
         <Card>
           <CardContent className="p-4 bg-muted rounded-lg flex flex-col">
-            <View className="flex flex-row gap-6">
-              <P style={{color: "red"}} className="font-normal">-</P>
-              <P className="font-normal">{"<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>"}</P>
-            </View>
-
-            <View className="flex flex-row gap-12">
-              <P className="font-normal">{" "}</P>
-              <P className="font-normal">{"<Stack />"}</P>
-            </View>
-
-            <View className="flex flex-row gap-6">
-              <P style={{color: "red"}} className="font-normal">-</P>
-              <P className="font-normal">{"</ThemeProvider>"}</P>
-            </View>
+            <AutoTextGray text="<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>" />
+            <AutoTextGray text="  <Stack />" />
+            <AutoTextGray text="</ThemeProvider>" />
           </CardContent>
         </Card>
       </View>
@@ -52,45 +47,17 @@ const DarkModeStages = () => {
 
         <Card>
           <CardContent className="p-4 bg-muted rounded-lg flex flex-col">
-            <View className="flex flex-row gap-6">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"import {ThemeProvider} from '~/lib/ThemeProvider';"}</P>
-            </View>
-
-            <View className="flex flex-row gap-6">
-              <P style={{color: "green"}} className="font-normal">+</P>
-            </View>
-
-            <View className="flex flex-row gap-6">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"const RootLayout = () => {"}</P>
-            </View>
-
-
-            <View className="flex flex-row gap-8">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"<ThemeProvider>"}</P>
-            </View>
-
-            <View className="flex flex-row gap-12">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"<Stack />"}</P>
-            </View>
-
-            <View className="flex flex-row gap-8">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"</ThemeProvider>"}</P>
-            </View>
-
-            <View className="flex flex-row gap-6">
-              <P style={{color: "green"}} className="font-normal">+</P>
-              <P className="font-normal">{"};"}</P>
-            </View>
+            <AutoTextGray text="import { ThemeProvider } from '~/lib/ThemeProvider';" />
+            <AutoTextGray text="const RootLayout = () => {" />
+            <AutoTextGray text="  <ThemeProvider>" />
+            <AutoTextGray text="    <Stack>" />
+            <AutoTextGray text="  </ThemeProvider>" />
+            <AutoTextGray text="};" />
           </CardContent>
         </Card>
       </View>
     </View>
-  )
+  );
 };
 
 export default DarkModeStages;

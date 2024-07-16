@@ -11,7 +11,7 @@ const DocsMenuItem = ({title, link}: {title: string, link?: string})  => {
   } else {
     return (
       <Link asChild href={link}>
-        <Button style={{paddingLeft: 0, alignItems: 'flex-start'}} variant="link">
+        <Button className="pl-0 items-start	" variant="link">
           <Lead className={cn('text-sm font-normal web:hover:underline', {
             'text-foreground': pathname === link,
           })}>
