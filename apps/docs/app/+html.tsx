@@ -10,6 +10,8 @@ export default function Root({ children }: PropsWithChildren) {
     <html lang="en">
       <head>
         <title>nativecn</title>
+        <meta name=" robots" content=" index, follow" />
+        <meta property="og:type" content="article" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta

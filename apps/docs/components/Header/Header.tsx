@@ -34,7 +34,7 @@ const Header = () => {
       <View className="p-3 max-w-[1400px] ml-[-54px] flex flex-row items-center justify-between w-full px-4">
         <View className="flex flex-row items-center px-4 w-full">
           <Image
-            style={{ width: 16, height: 16, marginTop: 2 }}
+            style={{ width: 16, height: 16, marginTop: 3 }}
             source={
               (colorScheme === "dark"
                 ? darkIcon
@@ -55,7 +55,7 @@ const Header = () => {
           </View>
         </View>
 
-        <View className="flex flex-row ml-[-60px]">
+        <View className="flex flex-row ml-[-56px]">
           <Link target="_blank" href="https://github.com/unisol1020/nativecn">
             <Button variant="link">
               <Github className="text-foreground" />
