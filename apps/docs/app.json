@@ -27,7 +27,10 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "description": "A UI library of beautiful and customizable React Native components.",
+      "name": "nativecn",
+      "shortName": "nativecn"
     },
     "plugins": [
       "expo-router"
