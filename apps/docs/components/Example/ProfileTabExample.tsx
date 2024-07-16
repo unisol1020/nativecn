@@ -20,7 +20,7 @@ const ProfileTabExample = () => {
 
       <Separator />
 
-      <View className="flex-col md:flex-row">
+      <View className="flex-col md:flex-row md:pr-6">
         <View className="flex-col gap-5 mr-3 w-full md:w-1/2">
           <View className="flex-col gap-3">
             <Label nativeID="username">Username</Label>

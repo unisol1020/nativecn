@@ -13,8 +13,8 @@ const AccountTabExample = () => {
 
       <Separator />
 
-      <View className="lex-col md:flex-row">
-        <View className="flex-col gap-5 w-full md:w-1/2">
+      <View className="lex-col md:flex-row md:pr-6">
+        <View className="flex-col gap-5 w-full md:mr-3 md:w-1/2">
           <View className="flex-col gap-3">
             <Label nativeID="name">Name</Label>
 
