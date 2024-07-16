@@ -1,8 +1,8 @@
 {
   "name": "nativecn",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Add nativecn components to your React Native apps.",
-  "homepage": "https://github.com/unisol1020/nativecn#readme",
+  "homepage": "https://nativecn.vercel.app",
   "publishConfig": {
     "access": "public"
   },
@@ -16,6 +16,7 @@
     "components",
     "ui",
     "tailwind",
+    "nativewind",
     "react-native",
     "expo",
     "nativecn"

@@ -15,6 +15,7 @@ export const ALL_COMPONENTS = [
   'Textarea',
   'Toggle',
   'Typography',
+  'Tabs',
   'ThemeProvider',
 ];
 const baseUrl =

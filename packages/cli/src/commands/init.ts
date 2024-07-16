@@ -67,14 +67,9 @@ export async function runInit(cwd: string) {
   await fs.writeFile(`${cwd}/metro.config.js`, templates.METRO_CONFIG, 'utf8');
 
   const libDir = path.join(cwd, 'lib');
-  const componentsLib = path.join(cwd, 'lib');
 
   if (!existsSync(libDir)) {
     await fs.mkdir(libDir, { recursive: true });
-  }
-
-  if (!existsSync(componentsLib)) {
-    await fs.mkdir(componentsLib, { recursive: true });
   }
 
   await fs.writeFile(`${cwd}/lib/utils.ts`, templates.UTILS, 'utf8');
