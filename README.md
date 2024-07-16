@@ -26,6 +26,8 @@ The `nativecn` library includes the following components:
 - Textarea
 - Toggle
 - Typography
+- Tabs
+- `ThemeProvider (for dark mode support)`
 
 ## Installation
 
@@ -43,20 +45,6 @@ You can add specific components to your project using the following command:
 ```bash
 npx nativecn add [Component]
 npx nativecn add Text
-```
-
-## Documentation
-Documentation is currently in progress. However, you can still clone this repository and start using it.
-To install dependencies, run:
-
-```bash
-yarn install
-
-cd apps/docs
-
-npx expo start:ios
-npx expo start:android
-npx expo run --web
 ```
 
 ## Contributing
