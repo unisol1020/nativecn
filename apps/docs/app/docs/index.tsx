@@ -1,6 +1,6 @@
-import {View} from 'react-native';
-import {H3, Lead, Separator} from '@nativecn/ui';
-import InstallStagesInit from '~/components/InstallStagesInit';
+import { View } from "react-native";
+import { H3, Lead, Separator } from "@nativecn/ui";
+import InstallStagesInit from "~/components/InstallStagesInit";
 
 const DocsScreen = () => {
   return (

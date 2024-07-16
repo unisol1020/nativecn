@@ -1,5 +1,5 @@
-import {Slot} from 'expo-router';
-import {ScrollView, View} from 'react-native';
+import { Slot } from "expo-router";
+import { ScrollView, View } from "react-native";
 
 const LayoutExamples = () => {
   return (

@@ -6,17 +6,21 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle, Muted, Skeleton,
-  Small
-} from '@nativecn/ui';
-import {View} from 'react-native';
+  CardTitle,
+  Muted,
+  Skeleton,
+  Small,
+} from "@nativecn/ui";
+import { View } from "react-native";
 
 const LatestActivity = () => {
   return (
     <Card className="w-full md:w-1/2 mt-6 md:ml-3 max-h-[325px]">
       <CardHeader>
         <CardTitle>Latest Activity</CardTitle>
-        <CardDescription>See what's happening with your account.</CardDescription>
+        <CardDescription>
+          See what's happening with your account.
+        </CardDescription>
       </CardHeader>
 
       <CardContent className="flex-col justify-between gap-8">
@@ -24,7 +28,7 @@ const LatestActivity = () => {
           <Avatar>
             <AvatarImage
               source={{
-                uri: 'https://avatars.githubusercontent.com/u/66306912?v=4',
+                uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
               }}
             />
             <AvatarFallback>UN</AvatarFallback>
@@ -41,7 +45,7 @@ const LatestActivity = () => {
           <Avatar>
             <AvatarImage
               source={{
-                uri: 'https://avatars.githubusercontent.com/u/66306912?v=4',
+                uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
               }}
             />
             <AvatarFallback>UN</AvatarFallback>

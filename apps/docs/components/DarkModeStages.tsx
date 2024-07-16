@@ -1,13 +1,17 @@
-import React from 'react';
-import { View } from 'react-native';
-import { Card, CardContent, P } from '@nativecn/ui';
-import AutoTextGray from './AutoTextGray'; // Adjust the import based on your AutoTextGray component location
+import React from "react";
+import { View } from "react-native";
+import { Card, CardContent, P } from "@nativecn/ui";
+import AutoTextGray from "./AutoTextGray";
 
 const DarkModeStages = () => {
   return (
     <View className="flex flex-col gap-6">
       <P className="text-md font-medium">
-        Start by installing <P className="relative rounded bg-muted p-1 font-mono text-sm">async-storage</P>:
+        Start by installing{" "}
+        <P className="relative rounded bg-muted p-1 font-mono text-sm">
+          async-storage
+        </P>
+        :
       </P>
 
       <Card>
@@ -17,7 +21,11 @@ const DarkModeStages = () => {
       </Card>
 
       <P className="text-md font-medium">
-        Install <P className="relative rounded bg-muted p-1 font-mono text-sm">ThemeProvider</P>:
+        Install{" "}
+        <P className="relative rounded bg-muted p-1 font-mono text-sm">
+          ThemeProvider
+        </P>
+        :
       </P>
 
       <Card>
@@ -26,7 +34,9 @@ const DarkModeStages = () => {
         </CardContent>
       </Card>
 
-      <P className="text-md font-medium">Remove old ThemeProvider from root layout:</P>
+      <P className="text-md font-medium">
+        Remove old ThemeProvider from root layout:
+      </P>
 
       <View className="flex flex-col gap-2">
         <P className="text-md ml-2">app/_layout.tsx</P>

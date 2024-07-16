@@ -1,6 +1,6 @@
-import {View} from 'react-native';
-import {H3, Lead, Separator} from '@nativecn/ui';
-import DarkModeStages from '~/components/DarkModeStages';
+import { View } from "react-native";
+import { H3, Lead, Separator } from "@nativecn/ui";
+import DarkModeStages from "~/components/DarkModeStages";
 
 const DarkMode = () => {
   return (

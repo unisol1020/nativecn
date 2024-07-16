@@ -1,6 +1,6 @@
-import {View} from 'react-native';
-import {Input, Label, Large, Lead, Separator} from '@nativecn/ui';
-import LatestActivity from '~/components/Example/LatestActivity';
+import { View } from "react-native";
+import { Input, Label, Large, Lead, Separator } from "@nativecn/ui";
+import LatestActivity from "~/components/Example/LatestActivity";
 
 const AccountTabExample = () => {
   return (
@@ -8,7 +8,9 @@ const AccountTabExample = () => {
       <View className="flex-col gap-3">
         <Large className="font-normal">Profile</Large>
 
-        <Lead className="font-normal text-sm">This is how others will see you on the site.</Lead>
+        <Lead className="font-normal text-sm">
+          This is how others will see you on the site.
+        </Lead>
       </View>
 
       <Separator />

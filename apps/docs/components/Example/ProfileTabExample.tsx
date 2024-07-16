@@ -1,13 +1,25 @@
-import {View} from 'react-native';
-import {Button, Input, Label, Large, Lead, Separator, Textarea, Text} from '@nativecn/ui';
-import {useState} from 'react';
-import LatestActivity from '~/components/Example/LatestActivity';
+import { View } from "react-native";
+import {
+  Button,
+  Input,
+  Label,
+  Large,
+  Lead,
+  Separator,
+  Textarea,
+  Text,
+} from "@nativecn/ui";
+import { useState } from "react";
+import LatestActivity from "~/components/Example/LatestActivity";
 
 const ProfileTabExample = () => {
-  const [urls, setUrls] = useState<string[]>(["https://nativecn.vercel.app/", "https://github.com/unisol1020/nativecn"]);
+  const [urls, setUrls] = useState<string[]>([
+    "https://nativecn.vercel.app/",
+    "https://github.com/unisol1020/nativecn",
+  ]);
 
   const addUrl = () => {
-    setUrls(prev => [...prev, ""]);
+    setUrls((prev) => [...prev, ""]);
   };
 
   return (
@@ -15,7 +27,9 @@ const ProfileTabExample = () => {
       <View className="flex-col gap-3">
         <Large className="font-normal">Profile</Large>
 
-        <Lead className="font-normal text-sm">This is how others will see you on the site.</Lead>
+        <Lead className="font-normal text-sm">
+          This is how others will see you on the site.
+        </Lead>
       </View>
 
       <Separator />
@@ -31,16 +45,25 @@ const ProfileTabExample = () => {
           <View className="flex-col gap-3">
             <Label nativeID="bio">BIO</Label>
 
-            <Textarea nativeID="bio" placeholder="Tell us a little bit about yourself" value={"I own a pc."} />
+            <Textarea
+              nativeID="bio"
+              placeholder="Tell us a little bit about yourself"
+              value={"I own a pc."}
+            />
           </View>
 
           <View className="flex-col gap-3">
             <View className="flex-col gap-3">
               <Label nativeID="url">URLs</Label>
 
-              <View  className="flex-col gap-4">
+              <View className="flex-col gap-4">
                 {urls.map((url, index) => (
-                  <Input key={url + index} nativeID="url" placeholder="nativecn" value={url} />
+                  <Input
+                    key={url + index}
+                    nativeID="url"
+                    placeholder="nativecn"
+                    value={url}
+                  />
                 ))}
               </View>
             </View>
