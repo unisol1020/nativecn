@@ -1,6 +1,11 @@
-import {ComponentPropsWithoutRef, ElementRef, forwardRef, useState} from 'react';
-import { Image, Text, View } from 'react-native';
-import { cn } from '../lib/utils';
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  forwardRef,
+  useState,
+} from "react";
+import { Image, Text, View } from "react-native";
+import { cn } from "../lib/utils";
 
 const Avatar = forwardRef<
   ElementRef<typeof View>,
@@ -9,13 +14,13 @@ const Avatar = forwardRef<
   <View
     ref={ref}
     className={cn(
-      'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
-      className
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+      className,
     )}
     {...props}
   />
 ));
-Avatar.displayName = 'Avatar';
+Avatar.displayName = "Avatar";
 
 const AvatarImage = forwardRef<
   ElementRef<typeof Image>,
@@ -31,12 +36,12 @@ const AvatarImage = forwardRef<
     <Image
       ref={ref}
       onError={() => setHasError(true)}
-      className={cn('aspect-square h-full w-full', className)}
+      className={cn("aspect-square h-full w-full", className)}
       {...props}
     />
   );
 });
-AvatarImage.displayName = 'AvatarImage';
+AvatarImage.displayName = "AvatarImage";
 
 const AvatarFallback = forwardRef<
   ElementRef<typeof View>,
@@ -45,16 +50,16 @@ const AvatarFallback = forwardRef<
   <View
     ref={ref}
     className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted',
-      className
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      className,
     )}
     {...props}
   >
-    <Text className={cn('text-lg text-primary', textClassname)}>
+    <Text className={cn("text-lg text-primary", textClassname)}>
       {children}
     </Text>
   </View>
 ));
-AvatarFallback.displayName = 'AvatarFallback';
+AvatarFallback.displayName = "AvatarFallback";
 
 export { Avatar, AvatarImage, AvatarFallback };

@@ -4,10 +4,10 @@ import {
   ElementRef,
   forwardRef,
   useContext,
-} from 'react';
-import { GestureResponderEvent, Platform, Pressable, View } from 'react-native';
-import { cn } from '../lib/utils';
-import { Check } from 'lucide-react-native';
+} from "react";
+import { GestureResponderEvent, Platform, Pressable, View } from "react-native";
+import { cn } from "../lib/utils";
+import { Check } from "lucide-react-native";
 
 const CheckboxContext = createContext<{
   checked: boolean;
@@ -20,7 +20,7 @@ const useCheckboxContext = () => {
   const context = useContext(CheckboxContext);
   if (!context) {
     throw new Error(
-      'Checkbox compound components cannot be rendered outside the Checkbox component'
+      "Checkbox compound components cannot be rendered outside the Checkbox component",
     );
   }
   return context;
@@ -29,10 +29,10 @@ const useCheckboxContext = () => {
 const CheckboxRoot = forwardRef<
   ElementRef<typeof Pressable>,
   ComponentPropsWithoutRef<typeof Pressable> & {
-  checked: boolean;
-  onCheckedChange: (checked: boolean) => void;
-  disabled?: boolean;
-}
+    checked: boolean;
+    onCheckedChange: (checked: boolean) => void;
+    disabled?: boolean;
+  }
 >(({ disabled = false, checked, onCheckedChange, nativeID, ...props }, ref) => {
   return (
     <CheckboxContext.Provider
@@ -61,7 +61,7 @@ const CheckboxTrigger = forwardRef<
       ref={ref}
       nativeID={nativeID}
       aria-disabled={disabled}
-      role='checkbox'
+      role="checkbox"
       aria-checked={checked}
       onPress={onPress}
       accessibilityState={{ checked, disabled }}
@@ -84,7 +84,7 @@ const CheckboxIndicator = forwardRef<
       ref={ref}
       aria-disabled={disabled}
       aria-hidden={!(forceMount || checked)}
-      role='presentation'
+      role="presentation"
       {...props}
     />
   );
@@ -98,22 +98,24 @@ const Checkbox = forwardRef<
     <CheckboxRoot
       ref={ref}
       className={cn(
-        'web:peer h-4 w-4 native:h-[20] native:w-[20] shrink-0 rounded border border-primary web:ring-offset-background web:focus-visible:outline-none web:focus-visible:ring-2 web:focus-visible:ring-ring web:focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
-        props.checked && 'bg-primary',
-        className
+        "web:peer h-4 w-4 native:h-[20] native:w-[20] shrink-0 rounded border border-primary web:ring-offset-background web:focus-visible:outline-none web:focus-visible:ring-2 web:focus-visible:ring-ring web:focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+        props.checked && "bg-primary",
+        className,
       )}
       {...props}
     >
-      <CheckboxIndicator className={cn('items-center justify-center h-full w-full')}>
+      <CheckboxIndicator
+        className={cn("items-center justify-center h-full w-full")}
+      >
         <Check
           size={12}
-          strokeWidth={Platform.OS === 'web' ? 2.5 : 3.5}
-          className='text-primary-foreground'
+          strokeWidth={Platform.OS === "web" ? 2.5 : 3.5}
+          className="text-primary-foreground"
         />
       </CheckboxIndicator>
     </CheckboxRoot>
   );
 });
-Checkbox.displayName = 'Checkbox';
+Checkbox.displayName = "Checkbox";
 
 export { Checkbox };

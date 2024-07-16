@@ -1,24 +1,25 @@
-import {ComponentPropsWithoutRef, useEffect} from 'react';
+import { ComponentPropsWithoutRef, useEffect } from "react";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withSequence,
   withTiming,
-} from 'react-native-reanimated';
-import {cn} from '../lib/utils';
+} from "react-native-reanimated";
+import { cn } from "../lib/utils";
 
 const Skeleton = ({
   className,
   duration = 1000,
   ...props
-}: Omit<ComponentPropsWithoutRef<typeof Animated.View>, 'style'> & Partial<{duration: number}>) => {
+}: Omit<ComponentPropsWithoutRef<typeof Animated.View>, "style"> &
+  Partial<{ duration: number }>) => {
   const sv = useSharedValue(1);
 
   useEffect(() => {
     sv.value = withRepeat(
-      withSequence(withTiming(0.5, {duration}), withTiming(1, {duration})),
-      -1
+      withSequence(withTiming(0.5, { duration }), withTiming(1, { duration })),
+      -1,
     );
   }, []);
 
@@ -29,10 +30,10 @@ const Skeleton = ({
   return (
     <Animated.View
       style={style}
-      className={cn('rounded-md bg-secondary dark:bg-muted', className)}
+      className={cn("rounded-md bg-secondary dark:bg-muted", className)}
       {...props}
     />
   );
-}
+};
 
 export { Skeleton };
