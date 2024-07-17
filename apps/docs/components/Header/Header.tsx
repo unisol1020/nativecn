@@ -29,7 +29,7 @@ const Header = () => {
           ? "systemChromeMaterialDark"
           : "systemChromeMaterialLight"
       }
-      className="absolute flex justify-center items-center w-full"
+      className="absolute flex justify-center items-center w-full bg-[unset!important]"
     >
       <View className="p-3 max-w-[1400px] ml-[-54px] flex flex-row items-center justify-between w-full px-4">
         <View className="flex flex-row items-center px-4 w-full">
