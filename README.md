@@ -6,6 +6,8 @@ Beautiful and customizable React Native components, inspired by [shadcn-ui](http
 
 `nativecn` is a library of React Native components that are easy to use, highly customizable, and designed to work seamlessly in any React Native project.
 
+📖 Read the docs: https://nativecn.vercel.app
+
 ## Components
 
 The `nativecn` library includes the following components:
