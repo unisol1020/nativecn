@@ -55,7 +55,7 @@ const Header = () => {
           </View>
         </View>
 
-        <View className="flex flex-row ml-[-56px]">
+        <View className="flex flex-row ml-[-58px]">
           <Link target="_blank" href="https://github.com/unisol1020/nativecn">
             <Button variant="link">
               <Github className="text-foreground" />

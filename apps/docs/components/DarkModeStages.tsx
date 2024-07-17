@@ -1,71 +1,79 @@
 import React from "react";
 import { View } from "react-native";
-import { Card, CardContent, P } from "@nativecn/ui";
+import { P } from "@nativecn/ui";
 import AutoTextGray from "./AutoTextGray";
+import Step from "~/components/Step";
+import CopyCard from "~/components/CopyCard";
 
 const DarkModeStages = () => {
   return (
-    <View className="flex flex-col gap-6">
-      <P className="text-md font-medium">
-        Start by installing{" "}
-        <P className="relative rounded bg-muted p-1 font-mono text-sm">
-          async-storage
+    <View className="flex flex-col">
+      <Step step={1}>
+        <P className="text-md font-medium pt-1">
+          Start by installing{" "}
+          <P className="relative rounded bg-muted p-1 font-mono text-sm">
+            async-storage
+          </P>
+          :
         </P>
-        :
-      </P>
 
-      <Card>
-        <CardContent className="p-4 bg-muted rounded-lg">
-          <AutoTextGray text="yarn add @react-native-async-storage/async-storage" />
-        </CardContent>
-      </Card>
+        <CopyCard rawValue="yarn add @react-native-async-storage/async-storage">
+          <AutoTextGray>
+            yarn add @react-native-async-storage/async-storage
+          </AutoTextGray>
+        </CopyCard>
+      </Step>
 
-      <P className="text-md font-medium">
-        Install{" "}
-        <P className="relative rounded bg-muted p-1 font-mono text-sm">
-          ThemeProvider
+      <Step step={2}>
+        <P className="text-md font-medium pt-1">
+          Install{" "}
+          <P className="relative rounded bg-muted p-1 font-mono text-sm">
+            ThemeProvider
+          </P>
+          :
         </P>
-        :
-      </P>
 
-      <Card>
-        <CardContent className="p-4 bg-muted rounded-lg">
-          <AutoTextGray text="npx nativecn add ThemeProvider" />
-        </CardContent>
-      </Card>
+        <CopyCard rawValue="npx nativecn add ThemeProvider">
+          <AutoTextGray>npx nativecn add ThemeProvider</AutoTextGray>
+        </CopyCard>
+      </Step>
 
-      <P className="text-md font-medium">
-        Remove old ThemeProvider from root layout:
-      </P>
+      <Step step={3}>
+        <P className="text-md font-medium pt-1">
+          Remove old ThemeProvider from root layout:
+        </P>
 
-      <View className="flex flex-col gap-2">
-        <P className="text-md ml-2">app/_layout.tsx</P>
+        <View className="flex flex-col gap-2">
+          <P className="text-md ml-2">app/_layout.tsx</P>
 
-        <Card>
-          <CardContent className="p-4 bg-muted rounded-lg flex flex-col">
-            <AutoTextGray text="<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>" />
-            <AutoTextGray text="  <Stack />" />
-            <AutoTextGray text="</ThemeProvider>" />
-          </CardContent>
-        </Card>
-      </View>
+          <CopyCard>
+            <View className="rounded-lg flex flex-col">
+              <AutoTextGray>
+                {`<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n\t<Stack />\n</ThemeProvider>`}
+              </AutoTextGray>
+            </View>
+          </CopyCard>
+        </View>
+      </Step>
 
-      <P className="text-md font-medium">Wrap your root layout:</P>
+      <Step step={4}>
+        <P className="text-md font-medium pt-1">Wrap your root layout:</P>
+        <View className="flex flex-col gap-2">
+          <P className="text-md pl-4">app/_layout.tsx</P>
 
-      <View className="flex flex-col gap-2">
-        <P className="text-md ml-2">app/_layout.tsx</P>
-
-        <Card>
-          <CardContent className="p-4 bg-muted rounded-lg flex flex-col">
-            <AutoTextGray text="import { ThemeProvider } from '~/lib/ThemeProvider';" />
-            <AutoTextGray text="const RootLayout = () => {" />
-            <AutoTextGray text="  <ThemeProvider>" />
-            <AutoTextGray text="    <Stack>" />
-            <AutoTextGray text="  </ThemeProvider>" />
-            <AutoTextGray text="};" />
-          </CardContent>
-        </Card>
-      </View>
+          <CopyCard>
+            <View className="rounded-lg flex flex-col">
+              <AutoTextGray>
+                <AutoTextGray>
+                  {
+                    "import { ThemeProvider } from '~/lib/ThemeProvider';\n\nconst RootLayout = () => {\n\t<ThemeProvider>\n\t\t<Stack>\n\t</ThemeProvider>\n};"
+                  }
+                </AutoTextGray>
+              </AutoTextGray>
+            </View>
+          </CopyCard>
+        </View>
+      </Step>
     </View>
   );
 };

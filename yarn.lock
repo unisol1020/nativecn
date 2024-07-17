@@ -2187,6 +2187,7 @@ __metadata:
     clsx: "npm:^2.0.0"
     expo: "npm:~51.0.14"
     expo-blur: "npm:^13.0.2"
+    expo-clipboard: "npm:^6.0.3"
     expo-constants: "npm:~16.0.2"
     expo-font: "npm:~12.0.7"
     expo-linking: "npm:~6.3.1"
@@ -2199,6 +2200,7 @@ __metadata:
     jest-expo: "npm:~51.0.1"
     lucide-react-native: "npm:^0.400.0"
     nativewind: "npm:^4.0.36"
+    prettier: "npm:^3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-native: "npm:0.74.2"
@@ -2237,6 +2239,7 @@ __metadata:
     clsx: "npm:^2.0.0"
     lucide-react-native: "npm:^0.400.0"
     nativewind: "npm:^4.0.36"
+    prettier: "npm:^3.2.5"
     react: "npm:18.2.0"
     react-native: "npm:0.74.2"
     react-native-reanimated: "npm:~3.10.1"
@@ -5708,6 +5711,15 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 10c0/1217af89cd8bc760440ba97999a74e6669dbb00349868c85630a9a6b337afbe2ac011357ed48aade5862dac533f4a96c8cde8a6b1a607beb3952a4dd9fb692f2
+  languageName: node
+  linkType: hard
+
+"expo-clipboard@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "expo-clipboard@npm:6.0.3"
+  peerDependencies:
+    expo: "*"
+  checksum: 10c0/7ac2018c74bae620eca888ae973658405c44ffd17168a4c32b20c2a48c080782dd7dd4e81e7081f3f41b3b83e67e367af001fcd808ebc2f733f90b0268842bf1
   languageName: node
   linkType: hard
 

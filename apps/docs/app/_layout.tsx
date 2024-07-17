@@ -5,7 +5,7 @@ import "../global.css";
 import { useEffect } from "react";
 import "react-native-reanimated";
 import { Header } from "~/components/Header";
-import { ThemeProvider } from "@nativecn/ui";
+import { ThemeProvider } from "~/components/ThemeProvider";
 
 SplashScreen.preventAutoHideAsync();
 

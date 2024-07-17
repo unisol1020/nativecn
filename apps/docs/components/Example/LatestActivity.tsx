@@ -43,11 +43,6 @@ const LatestActivity = () => {
 
         <View className="flex-row items-center gap-4">
           <Avatar>
-            <AvatarImage
-              source={{
-                uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-              }}
-            />
             <AvatarFallback>UN</AvatarFallback>
           </Avatar>
 

@@ -12,7 +12,7 @@ import {
 import { useState } from "react";
 import LatestActivity from "~/components/Example/LatestActivity";
 
-const ProfileTabExample = () => {
+const Profile = () => {
   const [urls, setUrls] = useState<string[]>([
     "https://nativecn.vercel.app/",
     "https://github.com/unisol1020/nativecn",
@@ -84,4 +84,4 @@ const ProfileTabExample = () => {
   );
 };
 
-export default ProfileTabExample;
+export default Profile;
