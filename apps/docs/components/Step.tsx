@@ -5,7 +5,7 @@ import React, { PropsWithChildren } from "react";
 const Step = ({ children, step }: PropsWithChildren & { step: number }) => {
   return (
     <View className="flex flex-row w-full gap-8">
-      <View className="flex flex-col items-center pb-2">
+      <View className="flex flex-col items-center pb-2 relative">
         <View className="w-[25px] h-[25px] rounded-full bg-muted flex justify-center items-center">
           <Text>{step}</Text>
         </View>

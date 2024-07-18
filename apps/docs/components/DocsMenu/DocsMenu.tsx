@@ -19,7 +19,11 @@ const items = [
   },
   {
     title: "Components",
-    className: "mt-2",
+    className: "mt-4",
+  },
+  {
+    title: "Avatar",
+    link: "/docs/avatar",
   },
 ];
 
