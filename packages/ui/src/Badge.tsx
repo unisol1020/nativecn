@@ -21,10 +21,10 @@ const badgeVariants = cva(
     defaultVariants: {
       variant: "default",
     },
-  },
+  }
 );
 
-const badgeTextVariants = cva("text-xs font-semibold ", {
+const badgeTextVariants = cva("web:text-xs font-semibold ", {
   variants: {
     variant: {
       default: "text-primary-foreground",
