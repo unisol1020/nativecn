@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Layout from "@/components/Layout";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nativecn",
-  description:
-    "Nativecn is a library of components and utilities for React Native.",
+  title: "nativecn",
+  description: "Universal shadcn/ui for React Native",
 };
 
 export default function RootLayout({
@@ -17,7 +19,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+
+          <Layout>{children}</Layout>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
