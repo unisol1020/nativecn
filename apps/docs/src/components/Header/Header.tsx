@@ -1,8 +1,8 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ModeToggle } from "./ModeToggle";
+import { ModeToggle } from "../ModeToggle";
+import Logo from "./Logo";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,13 +19,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-2 z-50 w-full">
+    <header className="sticky top-2 z-50 w-full flex justify-center items-center">
       <div
         className={cn(
           "container rounded-full flex flex-row justify-between h-16 max-w-screen-xl items-center border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-500",
           scrolled && "border border-[cadetblue]"
         )}
       >
+        <Logo />
+
         <div className="flex flex-row items-center gap-10"></div>
 
         <div>
