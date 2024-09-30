@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { GeistSans } from "geist/font/sans";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 const font = GeistSans;
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={twMerge(font.className, "min-h-screen")}>
+      <body className={cn(font.className, "min-h-screen")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

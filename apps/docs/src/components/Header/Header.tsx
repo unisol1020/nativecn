@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
-import { twMerge } from "tailwind-merge";
 import { Actions } from "./Actions";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header
-      className={twMerge(
+      className={cn(
         "sticky top-0 z-50 w-full flex justify-center items-center border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
         scrolled && "border-b"
       )}
