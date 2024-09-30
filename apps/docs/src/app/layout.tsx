@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/Layout";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
+import { GeistSans } from "geist/font/sans";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = GeistSans;
 
 export const metadata: Metadata = {
   title: "nativecn",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "min-h-screen")}>
+      <body className={cn(font.className, "min-h-screen")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
