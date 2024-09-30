@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
 import { Nav } from "./Nav";
 import { Actions } from "./Actions";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
+
+const Logo = dynamic(() => import("./Logo"), { ssr: false });
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
