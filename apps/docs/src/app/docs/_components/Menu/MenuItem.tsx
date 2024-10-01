@@ -18,7 +18,7 @@ const MenuItem = ({ name, items }: MenuItemType) => {
           return (
             <Link href={item.href ?? ""} key={item.name} className="group">
               <div
-                className={`text-sm font-light relative inline-block ${isActive ? "text-white" : "text-muted-foreground"}`}
+                className={`text-sm font-light relative inline-block ${isActive ? "text-foreground" : "text-muted-foreground"}`}
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
