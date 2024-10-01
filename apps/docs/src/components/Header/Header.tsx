@@ -4,6 +4,7 @@ import { Nav } from "./Nav";
 import { Actions } from "./Actions";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const Logo = dynamic(() => import("./Logo"), { ssr: false });
 
@@ -30,7 +31,15 @@ const Header = () => {
     >
       <div className="container px-4 flex h-14 max-w-screen-xl items-center justify-between">
         <div className="flex flex-row items-center gap-8">
-          <Logo />
+          <Link href="/">
+            <div className="flex flex-row items-center gap-2">
+              <div className="w-[18px] h-[18px]">
+                <Logo />
+              </div>
+
+              <div className="hidden font-bold lg:inline-block">Nativecn</div>
+            </div>
+          </Link>
 
           <Nav />
         </div>
