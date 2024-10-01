@@ -1,5 +1,5 @@
 export type MenuItem = {
   name: string;
-  href: string;
-  items: MenuItem[];
+  href?: string;
+  items?: MenuItem[];
 };

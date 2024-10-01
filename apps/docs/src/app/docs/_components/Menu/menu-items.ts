@@ -1,4 +1,6 @@
-const MENU_ITEMS = [
+import { MenuItem } from "@/types/menu-item";
+
+const MENU_ITEMS: MenuItem[] = [
   {
     name: "Getting Started",
     items: [
