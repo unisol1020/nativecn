@@ -20,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(font.className, "min-h-screen")}>
+      <body
+        className={cn(
+          font.className,
+          "min-h-screen antialiased subpixel-antialiased"
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
