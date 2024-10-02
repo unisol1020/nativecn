@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { Breadcrumb } from "@/types/breadcrumb";
 import DocsTemplate from "./_components/DocsTemplate/DocsTemplate";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: "Introduction - nativecn",
@@ -22,7 +24,26 @@ const DocsPage = () => {
       breadcrumbs={BREADCRUMBS}
       title="Introduction"
       subtitle="nativecn is a modern, open-source, customizable components inspired by shadcn/ui and built on top of NativeWind v4."
-    ></DocsTemplate>
+    >
+      <div className="flex flex-col gap-4">
+        <Card>
+          <CardHeader>
+            <CardTitle>Purpose</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-row items-center font-light gap-1">
+              <p>Build your own component libraries with</p>
+              <Badge variant="outline">nativecn</Badge>
+              <span className="ml-[-0.2rem]">.</span>
+              <p>
+                Copy, paste, and tailor the code to suit your specific
+                requirements.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </DocsTemplate>
   );
 };
 
