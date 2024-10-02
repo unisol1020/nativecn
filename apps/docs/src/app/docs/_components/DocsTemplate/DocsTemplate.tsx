@@ -29,7 +29,9 @@ const MainSection = ({
         </p>
       )}
 
-      <div className="flex flex-col mt-6 gap-4">{children}</div>
+      <div className="grid grid-cols-6 mt-6">
+        <div className="col-span-4">{children}</div>
+      </div>
     </div>
   );
 };
