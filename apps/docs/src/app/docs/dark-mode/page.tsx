@@ -18,7 +18,11 @@ const BREADCRUMBS: Breadcrumb[] = [
 
 const DocsPage = () => {
   return (
-    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Dark Mode"></DocsTemplate>
+    <DocsTemplate
+      breadcrumbs={BREADCRUMBS}
+      title="Dark Mode"
+      subtitle="How to use dark mode in your app."
+    ></DocsTemplate>
   );
 };
 

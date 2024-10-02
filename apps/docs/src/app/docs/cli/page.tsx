@@ -17,7 +17,13 @@ const BREADCRUMBS: Breadcrumb[] = [
 ];
 
 const DocsPage = () => {
-  return <DocsTemplate breadcrumbs={BREADCRUMBS} title="CLI"></DocsTemplate>;
+  return (
+    <DocsTemplate
+      breadcrumbs={BREADCRUMBS}
+      title="CLI"
+      subtitle="How to use the nativecn CLI to generate components and install dependencies."
+    ></DocsTemplate>
+  );
 };
 
 export default DocsPage;

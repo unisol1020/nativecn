@@ -18,7 +18,11 @@ const BREADCRUMBS: Breadcrumb[] = [
 
 const DocsPage = () => {
   return (
-    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Installation"></DocsTemplate>
+    <DocsTemplate
+      breadcrumbs={BREADCRUMBS}
+      title="Installation"
+      subtitle="How to install dependencies and structure your app."
+    ></DocsTemplate>
   );
 };
 
