@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { Breadcrumb } from "@/types/breadcrumb";
-import DocsTemplate from "./_components/DocsTemplate/DocsTemplate";
-
+import DocsTemplate from "../_components/DocsTemplate/DocsTemplate";
 export const metadata: Metadata = {
-  title: "Introduction - nativecn",
+  title: "Installation - nativecn",
 };
 
 const BREADCRUMBS: Breadcrumb[] = [
@@ -11,14 +10,14 @@ const BREADCRUMBS: Breadcrumb[] = [
     name: "Docs",
   },
   {
-    name: "Introduction",
-    href: "/docs",
+    name: "Installation",
+    href: "/docs/installation",
   },
 ];
 
 const DocsPage = () => {
   return (
-    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Introduction"></DocsTemplate>
+    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Installation"></DocsTemplate>
   );
 };
 
