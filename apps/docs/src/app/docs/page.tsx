@@ -18,7 +18,11 @@ const BREADCRUMBS: Breadcrumb[] = [
 
 const DocsPage = () => {
   return (
-    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Introduction"></DocsTemplate>
+    <DocsTemplate
+      breadcrumbs={BREADCRUMBS}
+      title="Introduction"
+      subtitle="nativecn is a modern, open-source, customizable components inspired by shadcn/ui and built on top of NativeWind v4."
+    ></DocsTemplate>
   );
 };
 

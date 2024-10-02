@@ -3,7 +3,7 @@ import { Breadcrumb } from "@/types/breadcrumb";
 import DocsTemplate from "../_components/DocsTemplate/DocsTemplate";
 
 export const metadata: Metadata = {
-  title: "Dark Mode - nativecn",
+  title: "CLI - nativecn",
 };
 
 const BREADCRUMBS: Breadcrumb[] = [
@@ -11,15 +11,13 @@ const BREADCRUMBS: Breadcrumb[] = [
     name: "Docs",
   },
   {
-    name: "Dark Mode",
-    href: "/docs/dark-mode",
+    name: "CLI",
+    href: "/docs/cli",
   },
 ];
 
 const DocsPage = () => {
-  return (
-    <DocsTemplate breadcrumbs={BREADCRUMBS} title="Dark Mode"></DocsTemplate>
-  );
+  return <DocsTemplate breadcrumbs={BREADCRUMBS} title="CLI"></DocsTemplate>;
 };
 
 export default DocsPage;

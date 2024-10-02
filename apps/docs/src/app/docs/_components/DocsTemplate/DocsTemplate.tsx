@@ -1,6 +1,6 @@
 import { Breadcrumb } from "@/types/breadcrumb";
 import { PropsWithChildren } from "react";
-import Breadcrumbs from "./Breadcrumbs";
+import Breadcrumbs from "../../../../components/Breadcrumbs";
 
 const MainSection = ({
   children,
@@ -18,7 +18,12 @@ const MainSection = ({
 
       <h1 className="text-3xl font-bold">{title}</h1>
 
-      {subtitle && <p className="text-lg text-muted-foreground">{subtitle}</p>}
+      {subtitle && (
+        <p className="text-base font-light text-muted-foreground max-w-[480px]">
+          {subtitle}
+        </p>
+      )}
+
       {children}
     </div>
   );

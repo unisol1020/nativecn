@@ -16,6 +16,10 @@ const MENU_ITEMS: MenuItem[] = [
         name: "Dark Mode",
         href: "/docs/dark-mode",
       },
+      {
+        name: "CLI",
+        href: "/docs/cli",
+      },
     ],
   },
 ];
