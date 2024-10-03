@@ -15,7 +15,7 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
           padding: "1rem",
           lineHeight: "1.5rem",
           fontSize: "0.875rem",
-          backgroundColor: "#1e1e1e",
+          backgroundColor: "#27272A",
           color: "#d4d4d4",
         }}
         wrapLines

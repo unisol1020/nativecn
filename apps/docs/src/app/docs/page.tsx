@@ -63,9 +63,9 @@ const DocsPage = () => {
           </CardHeader>
           <CardContent>
             <p>
-              nativecn is NOT a component library. Its a collection of re-usable
-              components that you can copy and paste into your React Native
-              apps.
+              Nativecn is <span className="font-semibold">NOT</span> a component
+              library. Its a collection of re-usable components that you can
+              copy and paste into your React Native apps.
             </p>
           </CardContent>
         </Card>
