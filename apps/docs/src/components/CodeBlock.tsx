@@ -36,16 +36,10 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
           padding: theme === "dark" ? "1rem" : "1rem 0",
           lineHeight: "1.5rem",
           fontSize: "0.875rem",
-          backgroundColor: theme === "dark" ? "#1e1e1e" : "#ffffff",
+          backgroundColor: theme === "dark" ? "#1e1e1e" : "#d4d4d4",
           color: theme === "dark" ? "#d4d4d4" : "#1e1e1e",
         }}
-        lineNumberStyle={{
-          minWidth: "2.5em",
-          paddingRight: "1em",
-          textAlign: "right",
-        }}
         wrapLines
-        showLineNumbers
       >
         {code}
       </SyntaxHighlighter>
