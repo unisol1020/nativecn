@@ -1,5 +1,5 @@
-import MainText from "./_components/MainText";
-import Actions from "./_components/Actions";
+import GeneralText from "../components/GeneralText";
+import Actions from "../components/Actions";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
         <span className="block text-primary">Nativecn</span>
       </h1>
 
-      <MainText />
+      <GeneralText />
 
       <Actions />
     </div>

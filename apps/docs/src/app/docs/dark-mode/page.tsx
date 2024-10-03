@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Breadcrumb } from "@/types/breadcrumb";
-import DocsTemplate from "../_components/DocsTemplate/DocsTemplate";
+import MainContentLayout from "../../../components/MainContentLayout";
 
 export const metadata: Metadata = {
   title: "Dark Mode - nativecn",
@@ -18,11 +18,11 @@ const BREADCRUMBS: Breadcrumb[] = [
 
 const DocsPage = () => {
   return (
-    <DocsTemplate
+    <MainContentLayout
       breadcrumbs={BREADCRUMBS}
       title="Dark Mode"
       subtitle="How to use dark mode in your app."
-    ></DocsTemplate>
+    ></MainContentLayout>
   );
 };
 

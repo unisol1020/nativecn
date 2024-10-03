@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const MainText = () => {
+const GeneralText = () => {
   return (
     <p className="max-w-2xl text-xl text-muted-foreground animate-fade-in-up">
       A sleek and easy-to-use UI library for{" "}
@@ -37,4 +37,4 @@ const MainText = () => {
   );
 };
 
-export default MainText;
+export default GeneralText;

@@ -4,7 +4,7 @@ import { MenuItem as MenuItemType } from "@/types/menu-item";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const MenuItem = ({ name, items }: MenuItemType) => {
+const SideMenuItem = ({ name, items }: MenuItemType) => {
   const pathname = usePathname();
 
   return (
@@ -31,4 +31,4 @@ const MenuItem = ({ name, items }: MenuItemType) => {
   );
 };
 
-export default MenuItem;
+export default SideMenuItem;
