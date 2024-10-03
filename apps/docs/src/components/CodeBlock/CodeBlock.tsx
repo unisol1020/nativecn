@@ -1,22 +1,11 @@
-"use client";
-import { Copy } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import CopyButton from "./CopyButton";
 
 const CodeBlock = ({ code, language }: { code: string; language: string }) => {
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(code);
-  };
-
   return (
     <div className="relative max-h-[500px]">
-      <button
-        onClick={copyToClipboard}
-        className="absolute top-2 right-2 p-2 bg-transparent hover:bg-muted rounded-md transition-colors"
-        aria-label="Copy code"
-      >
-        <Copy size={16} className="text-muted-foreground" />
-      </button>
+      <CopyButton code={code} />
 
       <SyntaxHighlighter
         language={language}

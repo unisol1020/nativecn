@@ -2,12 +2,8 @@ import { Metadata } from "next";
 import { Breadcrumb } from "@/types/breadcrumb";
 import MainContentLayout from "../../../components/MainContentLayout";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import dynamic from "next/dynamic";
-import Timeline from "@/components/Timeline";
-
-const CodeBlock = dynamic(() => import("@/components/CodeBlock"), {
-  ssr: false,
-});
+import { CodeBlock } from "@/components/CodeBlock";
+import { Timeline, TimelineItem } from "@/components/Timeline";
 
 export const metadata: Metadata = {
   title: "Installation - nativecn",
@@ -27,14 +23,15 @@ const DocsPage = () => {
     >
       <div className="space-y-6">
         <Timeline>
-          <Timeline.Item title="Initialize nativecn">
+          <TimelineItem title="Initialize nativecn" stepNumber={1}>
             <p className="mb-2 font-light">
               Run the following command in your project directory:
             </p>
-            <CodeBlock code="npx nativecn init" language="bash" />
-          </Timeline.Item>
 
-          <Timeline.Item title="Include global styles">
+            <CodeBlock code="npx nativecn init" language="bash" />
+          </TimelineItem>
+
+          <TimelineItem title="Include global styles" stepNumber={2}>
             <p className="mb-2 font-light">
               After initialization, make sure to include the{" "}
               <code className="bg-muted text-foreground px-1 py-0.5 rounded ">
@@ -42,9 +39,9 @@ const DocsPage = () => {
               </code>{" "}
               file inside your root layout.
             </p>
-          </Timeline.Item>
+          </TimelineItem>
 
-          <Timeline.Item title="Adding Components">
+          <TimelineItem title="Adding Components" stepNumber={3}>
             <p className="mb-2 font-light">
               You can easily add specific components to your project using the{" "}
               <code className="bg-muted px-1 text-foreground py-0.5 rounded">
@@ -52,17 +49,20 @@ const DocsPage = () => {
               </code>{" "}
               command:
             </p>
+
             <CodeBlock code="npx nativecn add [Component]" language="bash" />
 
             <p className="mt-2 mb-2 font-light">
               For example, to add the Text component:
             </p>
+
             <CodeBlock code="npx nativecn add Text" language="bash" />
-          </Timeline.Item>
+          </TimelineItem>
         </Timeline>
 
         <Alert>
           <AlertTitle>Pro Tip</AlertTitle>
+
           <AlertDescription>
             Explore our component library to find the perfect building blocks
             for your app. Each component is designed to be flexible and
