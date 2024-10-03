@@ -37,7 +37,9 @@ const DocsPage = () => {
           <Timeline.Item title="Include global styles">
             <p className="mb-2 font-light">
               After initialization, make sure to include the{" "}
-              <code className="bg-muted px-1 py-0.5 rounded">global.css</code>{" "}
+              <code className="bg-muted text-foreground px-1 py-0.5 rounded ">
+                global.css
+              </code>{" "}
               file inside your root layout.
             </p>
           </Timeline.Item>
@@ -45,7 +47,10 @@ const DocsPage = () => {
           <Timeline.Item title="Adding Components">
             <p className="mb-2 font-light">
               You can easily add specific components to your project using the{" "}
-              <code className="bg-muted px-1 py-0.5 rounded">add</code> command:
+              <code className="bg-muted px-1 text-foreground py-0.5 rounded">
+                add
+              </code>{" "}
+              command:
             </p>
             <CodeBlock code="npx nativecn add [Component]" language="bash" />
 
