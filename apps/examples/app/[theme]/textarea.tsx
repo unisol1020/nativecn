@@ -1,10 +1,18 @@
 import { Label, Textarea } from "@nativecn/ui";
-import * as React from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect, useRef, useState } from "react";
 import { ScrollView, TextInput, View } from "react-native";
 
-export default function InputScreen() {
-  const inputRef = React.useRef<TextInput>(null);
-  const [value, setValue] = React.useState<string>("");
+const TextareaScreen = () => {
+  const inputRef = useRef<TextInput>(null);
+  const [value, setValue] = useState<string>("");
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   function handleOnLabelPress() {
     if (!inputRef.current) {
@@ -42,4 +50,6 @@ export default function InputScreen() {
       </View>
     </ScrollView>
   );
-}
+};
+
+export default TextareaScreen;

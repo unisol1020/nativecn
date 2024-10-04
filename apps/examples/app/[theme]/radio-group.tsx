@@ -1,15 +1,25 @@
 import { Label, RadioGroup, RadioGroupItem } from "@nativecn/ui";
+import { useGlobalSearchParams } from "expo-router";
+import { useEffect } from "react";
+import { useColorScheme } from "nativewind";
 import * as React from "react";
 import { View } from "react-native";
 
 export default function RadioGroupScreen() {
   const [value, setValue] = React.useState("Comfortable");
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   function onLabelPress(label: string) {
     return () => {
       setValue(label);
     };
   }
+
   return (
     <View className="flex-1 justify-center items-center p-6">
       <RadioGroup value={value} onValueChange={setValue} className="gap-3">
@@ -39,8 +49,8 @@ function RadioGroupItemWithLabel({
 }>) {
   return (
     <View className={"flex-row gap-2 items-center"}>
-      <RadioGroupItem aria-labelledby={`label-for-${value}`} value={value} />
-      <Label nativeID={`label-for-${value}`} onPress={onLabelPress}>
+      <RadioGroupItem aria-labelledby={"label-for-" + value} value={value} />
+      <Label nativeID={"label-for-" + value} onPress={onLabelPress}>
         {value}
       </Label>
     </View>

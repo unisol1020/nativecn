@@ -1,12 +1,23 @@
 import { H4, P, Small, Separator } from "@nativecn/ui";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect } from "react";
 import { View } from "react-native";
-export default function SeparatorScreen() {
+
+const SeparatorScreen = () => {
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
+
   return (
     <View className="flex-1 justify-center items-center p-6 gap-12">
       <View className="w-full max-w-xs ">
         <View className="gap-1">
           <H4 className="text-sm native:text-base font-medium leading-none">
-            Radix Primitives
+            Separator
           </H4>
           <P className="text-sm native:text-base text-muted-foreground">
             An open-source UI component library.
@@ -23,4 +34,6 @@ export default function SeparatorScreen() {
       </View>
     </View>
   );
-}
+};
+
+export default SeparatorScreen;

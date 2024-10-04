@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import "../global.css";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import { ThemeProvider } from "@nativecn/ui";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -16,6 +17,8 @@ const RootLayout = () => {
     if (loaded) {
       SplashScreen.hideAsync();
     }
+
+    
   }, [loaded]);
 
   if (!loaded) {
@@ -23,9 +26,11 @@ const RootLayout = () => {
   }
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Slot />
-    </Stack>
+    <ThemeProvider>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Slot />
+      </Stack>
+    </ThemeProvider>
   );
 };
 

@@ -1,7 +1,17 @@
 import { H1, H2, H3, Lead, Large, P } from "@nativecn/ui";
+import { useEffect } from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
 import { ScrollView, View } from "react-native";
 
-export default function TypographyScreen() {
+const TypographyScreen = () => {
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
+
   return (
     <ScrollView
       contentContainerClassName="p-6 items-center"
@@ -69,4 +79,6 @@ export default function TypographyScreen() {
       </View>
     </ScrollView>
   );
-}
+};
+
+export default TypographyScreen;

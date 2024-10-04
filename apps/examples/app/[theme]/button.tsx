@@ -1,7 +1,17 @@
 import { Button, Text } from "@nativecn/ui";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect } from "react";
 import { View } from "react-native";
 
 const ButtonScreen = () => {
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
+
   return (
     <View className="flex-1 justify-center items-center gap-5">
       <Button>

@@ -1,9 +1,17 @@
 import { Progress, Button, Text } from "@nativecn/ui";
-import * as React from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
 
-export default function ProgressScreen() {
-  const [progress, setProgress] = React.useState(13);
+const ProgressScreen = () => {
+  const [progress, setProgress] = useState(13);
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   function onPress() {
     setProgress(Math.floor(Math.random() * 100));
@@ -19,4 +27,6 @@ export default function ProgressScreen() {
       </View>
     </View>
   );
-}
+};
+
+export default ProgressScreen;

@@ -1,5 +1,4 @@
 import { View } from "react-native";
-
 import {
   Card,
   CardContent,
@@ -9,8 +8,18 @@ import {
   CardTitle,
   Text,
 } from "@nativecn/ui";
+import { useGlobalSearchParams } from "expo-router";
+import { useEffect } from "react";
+import { useColorScheme } from "nativewind";
 
 const CardScreen = () => {
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
+
   return (
     <View className="flex-1 justify-center items-center gap-5 p-6">
       <Card className="w-full max-w-sm">

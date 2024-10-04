@@ -1,13 +1,21 @@
 import { Input, Label, Text } from "@nativecn/ui";
 import { cn } from "@nativecn/ui/lib/utils";
-import * as React from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect, useRef, useState } from "react";
 import { Platform, ScrollView, TextInput, View } from "react-native";
 import Animated, { FadeInDown, FadeOut } from "react-native-reanimated";
 
 export default function InputScreen() {
-  const inputRef = React.useRef<TextInput>(null);
-  const [value, setValue] = React.useState<string>("");
-  const [err, setErr] = React.useState<string | null>(null);
+  const inputRef = useRef<TextInput>(null);
+  const [value, setValue] = useState<string>("");
+  const [err, setErr] = useState<string | null>(null);
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   function handleOnLabelPress() {
     if (!inputRef.current) {

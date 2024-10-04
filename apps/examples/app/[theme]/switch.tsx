@@ -1,9 +1,17 @@
 import { Label, Switch } from "@nativecn/ui";
-import * as React from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
 
-export default function SwitchScreen() {
-  const [checked, setChecked] = React.useState(false);
+const SwitchScreen = () => {
+  const [checked, setChecked] = useState(false);
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
 
   return (
     <View className="flex-1 justify-center items-center p-6 gap-12">
@@ -24,4 +32,6 @@ export default function SwitchScreen() {
       </View>
     </View>
   );
-}
+};
+
+export default SwitchScreen;

@@ -14,11 +14,20 @@ import {
   Button,
   CardFooter,
 } from "@nativecn/ui";
-import * as React from "react";
+import { useGlobalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
 
-export default function TabsScreen() {
-  const [value, setValue] = React.useState("account");
+const TabsScreen = () => {
+  const [value, setValue] = useState("account");
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useGlobalSearchParams();
+
+  useEffect(() => {
+    setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme]);
+
   return (
     <View className="flex-1 justify-center p-6">
       <Tabs
@@ -43,14 +52,11 @@ export default function TabsScreen() {
             <CardContent className="gap-4 native:gap-2">
               <View className="gap-1">
                 <Label nativeID="name">Name</Label>
-                <Input
-                  aria-aria-labelledby="name"
-                  defaultValue="Pedro Duarte"
-                />
+                <Input aria-aria-labelledby="name" defaultValue="Unisol" />
               </View>
               <View className="gap-1">
                 <Label nativeID="username">Username</Label>
-                <Input id="username" defaultValue="@peduarte" />
+                <Input id="username" defaultValue="@unisol" />
               </View>
             </CardContent>
             <CardFooter>
@@ -96,4 +102,6 @@ export default function TabsScreen() {
       </Tabs>
     </View>
   );
-}
+};
+
+export default TabsScreen;
