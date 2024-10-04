@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,9 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Switch - nativecn",
+  description:
+    "A control that allows the user to toggle between checked and not checked.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +20,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Switch",
+    href: "/components/switch",
   },
 ];
 
-export default function AvatarPage() {
+export default function ComponentPage() {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Switch"
+      subtitle="A control that allows the user to toggle between checked and not checked."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +40,41 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="switch" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+            code={`import { Switch } from "@/components/ui/Switch";
+import { Label } from "@/components/ui/Label";
+import { useState } from "react";
+import { View } from "react-native";
 
-const AvatarDemo = () => {
+const SwitchDemo = () => {
+  const [checked, setChecked] = useState(false);
+
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
+    <View className="flex-1 justify-center items-center p-6 gap-12">
+      <View className="flex-row items-center gap-2">
+        <Switch
+          checked={checked}
+          onCheckedChange={setChecked}
+          nativeID="airplane-mode"
         />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+        <Label
+          nativeID="airplane-mode"
+          onPress={() => {
+            setChecked((prev) => !prev);
+          }}
+        >
+          Airplane Mode
+        </Label>
+      </View>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default SwitchDemo;
 `}
             language="tsx"
           />
@@ -80,7 +88,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Switch" language="bash" />
       </section>
 
       <section>
@@ -91,19 +99,15 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Switch } from "@/components/ui/Switch"`}
           language="tsx"
         />
 
         <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
+          code={`<Switch
+  checked={checked}
+  onCheckedChange={setChecked}
+/>`}
           language="tsx"
         />
       </section>

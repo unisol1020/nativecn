@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,8 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Text - nativecn",
+  description: "Styled text component and inheritance system.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +19,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Text",
+    href: "/components/text",
   },
 ];
 
-export default function AvatarPage() {
+const TextPage = () => {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Text"
+      subtitle="Styled text component and inheritance system."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +39,23 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="text" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+            code={`import { Text } from "@/components/ui/text";
+import { View } from "react-native";
 
-const AvatarDemo = () => {
+const TextDemo = () => {
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
-        />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+    <View className="flex-1 justify-center items-center p-6">
+      <Text nativeID="text">This is a text</Text>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default TextDemo;
 `}
             language="tsx"
           />
@@ -80,7 +69,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Textarea" language="bash" />
       </section>
 
       <section>
@@ -91,22 +80,14 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Text } from "@/components/ui/Text"`}
           language="tsx"
         />
 
-        <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
-          language="tsx"
-        />
+        <CodeBlock code={`<Text>This is a text</Text>`} language="tsx" />
       </section>
     </MainContentLayout>
   );
-}
+};
+
+export default TextPage;

@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,9 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Label - nativecn",
+  description:
+    "A user-friendly label linked to controls for improved accessibility.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +20,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Label",
+    href: "/components/label",
   },
 ];
 
-export default function AvatarPage() {
+export default function ComponentPage() {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Label"
+      subtitle="A user-friendly label linked to controls for improved accessibility."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +40,23 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="label" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+            code={`import { Label } from "@/components/ui/Label";
+import { View } from "react-native";
 
-const AvatarDemo = () => {
+const LabelDemo = () => {
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
-        />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+    <View className="flex-1 justify-center items-center p-6">
+      <Label nativeID="label">This is a label</Label>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default LabelDemo;
 `}
             language="tsx"
           />
@@ -80,7 +70,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Label" language="bash" />
       </section>
 
       <section>
@@ -91,21 +81,11 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Label } from "@/components/ui/Label"`}
           language="tsx"
         />
 
-        <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
-          language="tsx"
-        />
+        <CodeBlock code={`<Label>This is a label</Label>`} language="tsx" />
       </section>
     </MainContentLayout>
   );

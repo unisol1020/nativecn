@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,8 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Skeleton - nativecn",
+  description: "Use to show a placeholder while content is loading.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +19,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Skeleton",
+    href: "/components/skeleton",
   },
 ];
 
-export default function AvatarPage() {
+export default function ComponentPage() {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Skeleton"
+      subtitle="Use to show a placeholder while content is loading."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +39,29 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="skeleton" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+            code={`import { Skeleton } from "@/components/ui/Skeleton";
+import { View } from "react-native";
 
-const AvatarDemo = () => {
+const SkeletonDemo = () => {
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
-        />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+    <View className="flex-1 justify-center items-center">
+      <View className="flex flex-row items-center gap-4">
+        <Skeleton className="h-12 w-12 rounded-full" />
+        <View className="gap-2">
+          <Skeleton className="h-4 w-[250px]" />
+          <Skeleton className="h-4 w-[200px]" />
+        </View>
+      </View>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default SkeletonDemo;
 `}
             language="tsx"
           />
@@ -80,7 +75,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Skeleton" language="bash" />
       </section>
 
       <section>
@@ -91,19 +86,12 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Skeleton } from "@/components/ui/Skeleton"`}
           language="tsx"
         />
 
         <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
+          code={`<Skeleton className="h-12 w-12 rounded-full" />`}
           language="tsx"
         />
       </section>

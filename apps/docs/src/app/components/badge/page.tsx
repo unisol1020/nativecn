@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,8 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Badge - nativecn",
+  description: "Displays a badge or a component that looks like a badge.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +19,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Badge",
+    href: "/components/badge",
   },
 ];
 
-export default function AvatarPage() {
+export default function BadgePage() {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Badge"
+      subtitle="Displays a badge or a component that looks like a badge."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +39,35 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="badge" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
             code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { Badge } from "@/components/ui/Badge";
+import { Text } from "@/components/ui/Text";
 
-const AvatarDemo = () => {
+const BadgeDemo = () => {
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
-        />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+    <View className="flex-1 justify-center items-center gap-5">
+      <Badge>
+        <Text>Default</Text>
+      </Badge>
+      <Badge variant={"secondary"}>
+        <Text>Secondary</Text>
+      </Badge>
+      <Badge variant={"destructive"}>
+        <Text>Destructive</Text>
+      </Badge>
+      <Badge variant={"outline"}>
+        <Text>Outline</Text>
+      </Badge>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default BadgeDemo;
 `}
             language="tsx"
           />
@@ -80,7 +81,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Badge" language="bash" />
       </section>
 
       <section>
@@ -91,19 +92,14 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Badge } from "@/components/ui/Badge"`}
           language="tsx"
         />
 
         <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
+          code={`<Badge>
+  <Text>Badge</Text>
+</Badge>`}
           language="tsx"
         />
       </section>

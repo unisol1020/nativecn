@@ -1,8 +1,8 @@
-import MainContentLayout from "@/components/MainContentLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
-import { Metadata } from "next";
+import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsTrigger, TabsList, TabsContent } from "@/components/ui/tabs";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const Example = dynamic(() => import("@/components/Example"), {
@@ -10,8 +10,8 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Avatar - nativecn",
-  description: "An image element with a fallback for representing the user.",
+  title: "Toggle - nativecn",
+  description: "A two-state button that can be either on or off.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +19,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Avatar",
-    href: "/components",
+    name: "Toggle",
+    href: "/components/toggle",
   },
 ];
 
-export default function AvatarPage() {
+export default function ComponentPage() {
   return (
     <MainContentLayout
-      title="Avatar"
-      subtitle="An image element with a fallback for representing the user."
+      title="Toggle"
+      subtitle="A two-state button that can be either on or off."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,34 +39,34 @@ export default function AvatarPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="avatar" />
+          <Example component="toggle" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+            code={`import { Toggle, ToggleIcon } from "@/components/ui/toggle";
+import { Bitcoin } from "lucide-react-native";
+import { useState } from "react";
+import { View } from "react-native";
 
-const AvatarDemo = () => {
+const ToggleDemo = () => {
+  const [pressed, setPressed] = useState(false);
+  
   return (
-    <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
-        <AvatarImage
-          source={{
-            uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-          }}
-        />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
+    <View className="flex-1 justify-center items-center p-6 gap-12">
+      <Toggle
+        pressed={pressed}
+        onPressedChange={setPressed}
+        aria-label="Toggle bold"
+        variant="outline"
+      >
+        <ToggleIcon icon={Bitcoin} size={18} />
+      </Toggle>
     </View>
   );
 };
 
-export default AvatarDemo;
+export default ToggleDemo;
 `}
             language="tsx"
           />
@@ -80,7 +80,7 @@ export default AvatarDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Avatar" language="bash" />
+        <CodeBlock code="npx nativecn add Toggle" language="bash" />
       </section>
 
       <section>
@@ -91,19 +91,19 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Toggle } from "@/components/ui/toggle"`}
           language="tsx"
         />
 
         <CodeBlock
-          code={`<Avatar>
-  <AvatarImage
-    source={{
-      uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
-    }}
-  />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>`}
+          code={`<Toggle
+  pressed={pressed}
+  onPressedChange={setPressed}
+  aria-label='Toggle bold'
+  variant='outline'
+>
+  <ToggleIcon icon={Bold} size={18} />
+</Toggle>`}
           language="tsx"
         />
       </section>
