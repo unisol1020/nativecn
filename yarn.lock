@@ -6232,8 +6232,8 @@ __metadata:
     next-themes: "npm:^0.3.0"
     postcss: "npm:^8"
     prism-react-renderer: "npm:^2.4.0"
-    react: "npm:19.0.0-rc-935180c7e0-20240524"
-    react-dom: "npm:19.0.0-rc-935180c7e0-20240524"
+    react: "npm:^19.0.0-rc.0"
+    react-dom: "npm:^19.0.0-rc.0"
     react-icons: "npm:^5.3.0"
     react-syntax-highlighter: "npm:^15.5.0"
     tailwind-merge: "npm:^2.5.2"
@@ -12338,14 +12338,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.0.0-rc-935180c7e0-20240524":
-  version: 19.0.0-rc-935180c7e0-20240524
-  resolution: "react-dom@npm:19.0.0-rc-935180c7e0-20240524"
+"react-dom@npm:^19.0.0-rc.0":
+  version: 19.0.0-rc-fb9a90fa48-20240614
+  resolution: "react-dom@npm:19.0.0-rc-fb9a90fa48-20240614"
   dependencies:
-    scheduler: "npm:0.25.0-rc-935180c7e0-20240524"
+    scheduler: "npm:0.25.0-rc-fb9a90fa48-20240614"
   peerDependencies:
-    react: 19.0.0-rc-935180c7e0-20240524
-  checksum: 10c0/66829896c60f38a133064fcaf36d293708e4de12ea0bf6cda871389b323e8bf0781a046c258e95ff2d81fc247415b019a33de31be23db98d783d35cd1274610f
+    react: 19.0.0-rc-fb9a90fa48-20240614
+  checksum: 10c0/ab4f49752f71fcf3de910af463d3ec4f2ea17777dbd854df7f08987b1ae4d91e5b59a1f5998063f68c7db3af06e9cb67f26a57f0e78bb71c28884ef5029edf0d
   languageName: node
   linkType: hard
 
@@ -12652,10 +12652,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0-rc-935180c7e0-20240524":
-  version: 19.0.0-rc-935180c7e0-20240524
-  resolution: "react@npm:19.0.0-rc-935180c7e0-20240524"
-  checksum: 10c0/c1228568389f75901d3dba7577064a1e2dccf8e62f9294649415095431abfdbad11d96fe479c46a8d5a64db38355b811621f5a9b38cd0eb5393c8833835d65fe
+"react@npm:^19.0.0-rc.0":
+  version: 19.0.0-rc-fb9a90fa48-20240614
+  resolution: "react@npm:19.0.0-rc-fb9a90fa48-20240614"
+  checksum: 10c0/99c3d3398d46c8c704c0deb04160f5a7c9cf2ff785a777fb0f1a4d0c91ade044c4d50cd52e008b4c45623eaa8f4d18a80272444df4972a2cc696bf35ef3e59b0
   languageName: node
   linkType: hard
 
@@ -13147,10 +13147,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.25.0-rc-935180c7e0-20240524":
-  version: 0.25.0-rc-935180c7e0-20240524
-  resolution: "scheduler@npm:0.25.0-rc-935180c7e0-20240524"
-  checksum: 10c0/9a4c92fbc873c566156d3e845cca43c51e0b5bb580ff5b77433dcba64854d1a41769abc4b69b29f450d7f20613be881b979e124fed6d9504d3134b88bbcf7ce1
+"scheduler@npm:0.25.0-rc-fb9a90fa48-20240614":
+  version: 0.25.0-rc-fb9a90fa48-20240614
+  resolution: "scheduler@npm:0.25.0-rc-fb9a90fa48-20240614"
+  checksum: 10c0/efd80573e35479d0e47e864ba5747579be2a8b20cfb61f32bcb17a8b945711d2337dd7f92ac6373f3128ed20a8915624dc82fda6b7f761aab352692a6445d411
   languageName: node
   linkType: hard
 
