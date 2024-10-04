@@ -2447,9 +2447,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nativecn/docs@workspace:apps/examples":
+"@nativecn/examples@workspace:apps/examples":
   version: 0.0.0-use.local
-  resolution: "@nativecn/docs@workspace:apps/examples"
+  resolution: "@nativecn/examples@workspace:apps/examples"
   dependencies:
     "@babel/core": "npm:^7.20.0"
     "@expo/vector-icons": "npm:^14.0.0"
