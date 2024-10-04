@@ -8,7 +8,7 @@ const Example = ({ component }: { component: string }) => {
     <iframe
       suppressHydrationWarning
       className="w-full h-[500px] rounded-md border border-muted"
-      src={`${process.env.EXAMPLES_APP_URL}/${component}`}
+      src={`${process.env.EXAMPLES_APP_URL}/${theme}/${component}`}
       title={`Example of ${component} in ${theme} theme`}
     ></iframe>
   );
