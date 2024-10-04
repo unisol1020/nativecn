@@ -4,7 +4,13 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", "build/**", "node_modules/.cache/metro/**"]
+      "outputs": [
+        "dist/**",
+        "build/**",
+        "node_modules/.cache/metro/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "lint": {
       "dependsOn": ["^lint"]
