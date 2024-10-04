@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "build:docs": "turbo run build --filter=@nativecn/docs",
-    "build:examples": "turbo run build --filter=@nativecn/examples",
+    "build:docs": "turbo run build --filter=docs",
+    "build:examples": "turbo run build --filter=examples",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
