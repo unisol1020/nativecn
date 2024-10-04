@@ -1,6 +1,6 @@
 {
   "name": "nativecn",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Add nativecn components to your React Native apps.",
   "homepage": "https://nativecn.vercel.app",
   "publishConfig": {

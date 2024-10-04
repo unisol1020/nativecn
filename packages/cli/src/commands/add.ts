@@ -28,7 +28,7 @@ export const add = new Command()
   .option(
     "-c, --cwd <cwd>",
     "the working directory. defaults to the current directory.",
-    process.cwd(),
+    process.cwd()
   )
   .option("-a, --all", "add all available components", false)
   .option("-p, --path <path>", "the path to add the component to.")
@@ -91,7 +91,7 @@ export const add = new Command()
 
         const targetDir = options.path
           ? path.resolve(cwd, options.path)
-          : `${cwd}/components`;
+          : `${cwd}/components/ui`;
         if (!targetDir) {
           continue;
         }
@@ -101,7 +101,7 @@ export const add = new Command()
         }
 
         const existingComponent = existsSync(
-          path.resolve(targetDir, item.name),
+          path.resolve(targetDir, item.name)
         );
 
         if (existingComponent && !options.overwrite) {
@@ -117,8 +117,8 @@ export const add = new Command()
             if (!overwrite) {
               logger.info(
                 `Skipped ${item.name}. To overwrite, run with the ${chalk.green(
-                  "--overwrite",
-                )} flag.`,
+                  "--overwrite"
+                )} flag.`
               );
               continue;
             }
