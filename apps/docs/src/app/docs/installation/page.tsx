@@ -20,6 +20,14 @@ const DocsPage = () => {
       breadcrumbs={BREADCRUMBS}
       title="Installation"
       subtitle="How to install dependencies and structure your app."
+      nextStep={{
+        label: "Dark Mode",
+        href: "/docs/dark-mode",
+      }}
+      previousStep={{
+        label: "Introduction",
+        href: "/docs",
+      }}
     >
       <div className="space-y-6">
         <Timeline>

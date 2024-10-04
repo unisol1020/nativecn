@@ -65,27 +65,27 @@ const MainContentLayout = ({
 
       <div className="grid grid-cols-7 mt-6">
         <div className="col-span-5">{children}</div>
+
+        {(previousStep || nextStep) && (
+          <div className="col-span-5 flex justify-between mt-8">
+            {previousStep && (
+              <Link href={previousStep.href}>
+                <Button variant="outline">
+                  <ChevronLeft className="h-4 w-4" /> {previousStep.label}
+                </Button>
+              </Link>
+            )}
+
+            {nextStep && (
+              <Link href={nextStep.href} className="ml-auto">
+                <Button variant="outline">
+                  {nextStep.label} <ChevronRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            )}
+          </div>
+        )}
       </div>
-
-      {previousStep && (
-        <div className="flex justify-start mt-8">
-          <Link href={previousStep.href}>
-            <Button variant="outline">
-              <ChevronLeft className="h-4 w-4" /> {previousStep.label}
-            </Button>
-          </Link>
-        </div>
-      )}
-
-      {nextStep && (
-        <div className="flex justify-end mt-8">
-          <Link href={nextStep.href}>
-            <Button variant="outline">
-              {nextStep.label} <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-      )}
     </div>
   );
 };
