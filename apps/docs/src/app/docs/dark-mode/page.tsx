@@ -44,7 +44,7 @@ const DocsPage = () => {
             </p>
 
             <CodeBlock
-              code={`import { ThemeProvider } from "@/components/ThemeProvider"
+              code={`import { ThemeProvider } from "@/components/ui/ThemeProvider"
 
 export default function RootLayout({ children }) {
   return (
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
             <CodeBlock
               code={`import React, { useEffect } from 'react';
 import { useColorScheme } from "nativewind";
-import { Button } from "@/components/Button"
+import { Button } from "@/components/ui/Button"
 
 function ThemeToggle() {
   const { colorScheme, setColorScheme } = useColorScheme();
