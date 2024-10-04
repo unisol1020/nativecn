@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 
 const NavItem = ({ name, href }: { name: string; href: string }) => {
   const pathname = usePathname();
-  const isActive = pathname.includes(href);
+  const isActive = pathname?.includes(href);
 
   return (
     <Link href={href}>
