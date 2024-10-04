@@ -3820,13 +3820,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prismjs@npm:^1.26.0":
-  version: 1.26.4
-  resolution: "@types/prismjs@npm:1.26.4"
-  checksum: 10c0/996be7d119779c4cbe66e58342115a12d35a02226dae3aaa4a744c9652d5a3939c93c26182e18156965ac4f93575ebb309c3469c36f52e60ee5c0f8f27e874df
-  languageName: node
-  linkType: hard
-
 "@types/prompts@npm:^2.4.5":
   version: 2.4.9
   resolution: "@types/prompts@npm:2.4.9"
@@ -6168,7 +6161,6 @@ __metadata:
     next: "npm:15.0.0-rc.0"
     next-themes: "npm:^0.3.0"
     postcss: "npm:^8"
-    prism-react-renderer: "npm:^2.4.0"
     react: "npm:^19.0.0-rc.0"
     react-dom: "npm:^19.0.0-rc.0"
     react-icons: "npm:^5.3.0"
@@ -11944,18 +11936,6 @@ __metadata:
     ansi-styles: "npm:^5.0.0"
     react-is: "npm:^18.0.0"
   checksum: 10c0/edc5ff89f51916f036c62ed433506b55446ff739358de77207e63e88a28ca2894caac6e73dcb68166a606e51c8087d32d400473e6a9fdd2dbe743f46c9c0276f
-  languageName: node
-  linkType: hard
-
-"prism-react-renderer@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "prism-react-renderer@npm:2.4.0"
-  dependencies:
-    "@types/prismjs": "npm:^1.26.0"
-    clsx: "npm:^2.0.0"
-  peerDependencies:
-    react: ">=16.0.0"
-  checksum: 10c0/3d6969b057da0efe39e3e637bf93601cd5757de5919180e8df16daf1d1b8eedc39b70c7f6f28724fba0a01bc857c6b78312ab027f4e913159d1165c5aba235bb
   languageName: node
   linkType: hard
 
