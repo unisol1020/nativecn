@@ -1,5 +1,6 @@
 {
   "buildCommand": "expo export -p web",
+  "installCommand": "yarn install",
   "outputDirectory": "dist",
   "devCommand": "expo",
   "cleanUrls": true,
