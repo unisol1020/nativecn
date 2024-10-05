@@ -4726,9 +4726,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-react-compiler@npm:0.0.0-experimental-57db2f6-20240926":
-  version: 0.0.0-experimental-57db2f6-20240926
-  resolution: "babel-plugin-react-compiler@npm:0.0.0-experimental-57db2f6-20240926"
+"babel-plugin-react-compiler@npm:0.0.0-experimental-734b737-20241003":
+  version: 0.0.0-experimental-734b737-20241003
+  resolution: "babel-plugin-react-compiler@npm:0.0.0-experimental-734b737-20241003"
   dependencies:
     "@babel/generator": "npm:7.2.0"
     "@babel/types": "npm:^7.19.0"
@@ -4737,7 +4737,7 @@ __metadata:
     pretty-format: "npm:^24"
     zod: "npm:^3.22.4"
     zod-validation-error: "npm:^2.1.0"
-  checksum: 10c0/5b99fb52b917f9eb0d0e72af400af974ed7cd773a40682ff55373c973f302f89825d8c7451cd54b5fb5aae7eb316a478490b73c5cb28e0654bdd7956b6b9bbea
+  checksum: 10c0/f610d7a009399cbfb41477a2e67f32bf76ba6e0188666e231d23eaf5441ab282303aaad8fca860daa5fc6e6a22889c7db636ecf3d525b41cdc55ea805d5da20f
   languageName: node
   linkType: hard
 
@@ -6145,7 +6145,7 @@ __metadata:
     "@types/react-syntax-highlighter": "npm:^15.5.13"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.0"
     "@typescript-eslint/parser": "npm:^7.0.0"
-    babel-plugin-react-compiler: "npm:0.0.0-experimental-57db2f6-20240926"
+    babel-plugin-react-compiler: "npm:0.0.0-experimental-734b737-20241003"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"
     eslint: "npm:^8.57.0"
@@ -6158,7 +6158,6 @@ __metadata:
     prism-react-renderer: "npm:^2.4.0"
     react: "npm:19.0.0-rc.0"
     react-dom: "npm:19.0.0-rc.0"
-    react-icons: "npm:^5.3.0"
     react-syntax-highlighter: "npm:^15.5.0"
     tailwind-merge: "npm:^2.5.2"
     tailwindcss: "npm:^3.4.1"
@@ -12180,15 +12179,6 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
   checksum: 10c0/8f51257c261bfefff86f618e958683536248f708019632d309ee5ebdd52f25d3c130660d06fb6f0f4fdef79f00f8ec7177233a872c2321f7d46b7e77ccc522a1
-  languageName: node
-  linkType: hard
-
-"react-icons@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "react-icons@npm:5.3.0"
-  peerDependencies:
-    react: "*"
-  checksum: 10c0/a53af0de558f0e2bacfbafc973aa8ca1e6a429006a2f83d70becad5be431726a691e096336c95949bb0d967587b145264c5046d2bc1518969dbae731855d0712
   languageName: node
   linkType: hard
 
