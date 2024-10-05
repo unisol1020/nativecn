@@ -5,8 +5,5 @@
   "devCommand": "expo",
   "cleanUrls": true,
   "framework": null,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
