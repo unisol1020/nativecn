@@ -1,5 +1,5 @@
 {
-  "buildCommand": "expo export -p web",
+  "buildCommand": "expo export -p web --output-dir dist",
   "installCommand": "yarn install",
   "outputDirectory": "dist",
   "devCommand": "expo",
@@ -7,8 +7,8 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "/"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
