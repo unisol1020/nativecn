@@ -2,8 +2,13 @@
   "buildCommand": "expo export -p web",
   "installCommand": "yarn install",
   "outputDirectory": "dist",
-  "devCommand": "expo",
+  "devCommand": "npx expo start --web",
   "cleanUrls": true,
   "framework": null,
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/"
+    }
+  ]
 }
