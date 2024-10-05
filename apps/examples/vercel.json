@@ -1,13 +1,13 @@
 {
-  "buildCommand": "expo export -p web --output-dir dist",
+  "buildCommand": "expo export -p web",
   "installCommand": "yarn install",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/[theme]",
   "devCommand": "expo",
   "cleanUrls": true,
   "framework": null,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/"
     }
   ]
