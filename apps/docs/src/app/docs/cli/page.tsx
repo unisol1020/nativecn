@@ -20,14 +20,6 @@ const DocsPage = () => {
       breadcrumbs={BREADCRUMBS}
       title="CLI"
       subtitle="How to use the nativecn CLI to initialize your project, add components, and manage dependencies."
-      nextStep={{
-        label: "Components",
-        href: "/components",
-      }}
-      previousStep={{
-        label: "Dark Mode",
-        href: "/docs/dark-mode",
-      }}
     >
       <div className="space-y-6">
         <section>
