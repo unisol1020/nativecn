@@ -1,18 +1,19 @@
 import { Label, RadioGroup, RadioGroupItem } from "@nativecn/ui";
-import { useGlobalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "nativewind";
 import * as React from "react";
 import { View } from "react-native";
+import { useLocalSearchParams } from "expo-router";
 
 export default function RadioGroupScreen() {
   const [value, setValue] = React.useState("Comfortable");
   const { setColorScheme } = useColorScheme();
-  const { theme } = useGlobalSearchParams();
+  const { theme } = useLocalSearchParams();
 
   useEffect(() => {
-    setColorScheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
 
   function onLabelPress(label: string) {
     return () => {

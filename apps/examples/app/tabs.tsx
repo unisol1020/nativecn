@@ -14,7 +14,7 @@ import {
   Button,
   CardFooter,
 } from "@nativecn/ui";
-import { useGlobalSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useState } from "react";
 import { View } from "react-native";
@@ -22,11 +22,12 @@ import { View } from "react-native";
 const TabsScreen = () => {
   const [value, setValue] = useState("account");
   const { setColorScheme } = useColorScheme();
-  const { theme } = useGlobalSearchParams();
+  const { theme } = useLocalSearchParams();
 
   useEffect(() => {
-    setColorScheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
 
   return (
     <View className="flex-1 justify-center p-6">

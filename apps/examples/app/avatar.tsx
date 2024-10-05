@@ -1,16 +1,17 @@
 import { View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "@nativecn/ui";
-import { useGlobalSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "nativewind";
 
 const AvatarScreen = () => {
   const { setColorScheme } = useColorScheme();
-  const { theme } = useGlobalSearchParams();
+  const { theme } = useLocalSearchParams();
 
   useEffect(() => {
-    setColorScheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
 
   return (
     <View className="flex-1 flex-row justify-center items-center gap-5">

@@ -1,6 +1,6 @@
 import { Input, Label, Text } from "@nativecn/ui";
 import { cn } from "@nativecn/ui/lib/utils";
-import { useGlobalSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useRef, useState } from "react";
 import { Platform, ScrollView, TextInput, View } from "react-native";
@@ -11,11 +11,12 @@ export default function InputScreen() {
   const [value, setValue] = useState<string>("");
   const [err, setErr] = useState<string | null>(null);
   const { setColorScheme } = useColorScheme();
-  const { theme } = useGlobalSearchParams();
+  const { theme } = useLocalSearchParams();
 
   useEffect(() => {
-    setColorScheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
 
   function handleOnLabelPress() {
     if (!inputRef.current) {

@@ -50,7 +50,7 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
 
   const isDarkMode = useMemo(
     () => (!loaded && rnColorScheme === "dark") || colorScheme === "dark",
-    [loaded, rnColorScheme, colorScheme],
+    [loaded, rnColorScheme, colorScheme]
   );
 
   return (

@@ -1,5 +1,5 @@
 import { Checkbox, Label } from "@nativecn/ui";
-import { useGlobalSearchParams } from "expo-router";
+import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useState } from "react";
 
@@ -8,11 +8,12 @@ import { View } from "react-native";
 const CheckboxScreen = () => {
   const [checked, setChecked] = useState(false);
   const { setColorScheme } = useColorScheme();
-  const { theme } = useGlobalSearchParams();
+  const { theme } = useLocalSearchParams();
 
   useEffect(() => {
-    setColorScheme(theme === "dark" ? "dark" : "light");
-  }, [theme]);
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
 
   return (
     <View className="flex-1 justify-center items-center p-6 gap-12">
