@@ -29,7 +29,6 @@ The `nativecn` library includes the following components:
 - Toggle
 - Typography
 - Tabs
-- `ThemeProvider (for dark mode support)`
 
 ## Installation
 
