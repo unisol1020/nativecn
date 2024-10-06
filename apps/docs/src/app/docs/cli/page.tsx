@@ -70,7 +70,7 @@ const DocsPage = () => {
             To add specific components to your project, use:
           </p>
 
-          <CodeBlock code="npx nativecn add [components...]" language="bash" />
+          <CodeBlock code="npx nativecn add [...Components]" language="bash" />
 
           <p className="leading-7 [&:not(:first-child)]:mt-6">Options:</p>
 

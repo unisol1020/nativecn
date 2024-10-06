@@ -28,23 +28,104 @@ const DocsPage = () => {
     >
       <div className="space-y-6">
         <Timeline>
-          <TimelineItem title="Add ThemeProvider" stepNumber={1}>
+          <TimelineItem title="Add async-storage" stepNumber={1}>
             <p className="mb-2 font-light">
-              First, add the ThemeProvider to your project using the following
+              First, add the async-storage to your project using the following
               command:
             </p>
 
-            <CodeBlock code="npx nativecn add ThemeProvider" language="bash" />
+            <CodeBlock
+              code="npx expo install @react-native-async-storage/async-storage"
+              language="bash"
+            />
+
+            <p className="mb-2 font-light">
+              First, add the async-storage to your project using the following
+              command:
+            </p>
           </TimelineItem>
 
-          <TimelineItem title="Wrap your app with ThemeProvider" stepNumber={2}>
+          <TimelineItem title="Create ThemeProvider" stepNumber={2}>
+            <p className="mb-2 font-light">
+              Then create a ThemeProvider component:
+            </p>
+
+            <CodeBlock
+              code={`import { PropsWithChildren, useEffect, useMemo, useState } from "react";
+import { useColorScheme } from "nativewind";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider as RNThemeProvider,
+} from "@react-navigation/native";
+import { useColorScheme as RNUseColorScheme } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+DefaultTheme.colors.background = "white";
+DarkTheme.colors.background = "#09090B";
+
+export const ThemeProvider = ({ children }: PropsWithChildren) => {
+  const [loaded, setLoaded] = useState(false);
+  const { colorScheme, setColorScheme } = useColorScheme();
+  const rnColorScheme = RNUseColorScheme();
+
+  useEffect(() => {
+    if (loaded) {
+      (async () => {
+        const theme = await AsyncStorage.getItem("theme");
+
+        if (!theme) {
+          const cs = rnColorScheme === "dark" ? "dark" : "light";
+
+          await AsyncStorage.setItem("theme", cs);
+          setColorScheme(cs);
+          return;
+        }
+
+        if (colorScheme && theme !== colorScheme) {
+          await AsyncStorage.setItem("theme", colorScheme);
+          return;
+        }
+      })();
+    }
+  }, [colorScheme, loaded]);
+
+  useEffect(() => {
+    (async () => {
+      const theme = await AsyncStorage.getItem("theme");
+
+      if (theme) {
+        setColorScheme(theme as "light" | "dark");
+      }
+
+      setLoaded(true);
+    })();
+  }, []);
+
+  const isDarkMode = useMemo(
+    () => (!loaded && rnColorScheme === "dark") || colorScheme === "dark",
+    [loaded, rnColorScheme, colorScheme]
+  );
+
+  return (
+    <RNThemeProvider value={isDarkMode ? DarkTheme : DefaultTheme}>
+      {children}
+    </RNThemeProvider>
+  );
+};
+`}
+              language="tsx"
+            />
+          </TimelineItem>
+
+          <TimelineItem title="Wrap your app with ThemeProvider" stepNumber={3}>
             <p className="mb-2 font-light">
               In your root layout file, wrap your app component with the
               ThemeProvider:
             </p>
 
             <CodeBlock
-              code={`import { ThemeProvider } from "@/components/ui/ThemeProvider"
+              code={`import { ThemeProvider } from "@/providers/ThemeProvider"
 
 export default function RootLayout({ children }) {
   return (
@@ -57,7 +138,7 @@ export default function RootLayout({ children }) {
             />
           </TimelineItem>
 
-          <TimelineItem title="Use the useColorScheme hook" stepNumber={3}>
+          <TimelineItem title="Use the useColorScheme hook" stepNumber={4}>
             <p className="mb-2 font-light">
               You can now use NativeWind&apos;s useColorScheme hook to manage
               the color scheme:

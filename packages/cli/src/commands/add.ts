@@ -5,7 +5,6 @@ import ora from "ora";
 import path from "path";
 import prompts from "prompts";
 import * as z from "zod";
-
 import { handleError } from "@/src/utils/handle-error";
 import { logger } from "@/src/utils/logger";
 import { ALL_COMPONENTS, fetchComponents } from "@/src/utils/registry";

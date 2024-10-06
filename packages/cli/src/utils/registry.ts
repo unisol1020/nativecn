@@ -16,7 +16,6 @@ export const ALL_COMPONENTS = [
   "Toggle",
   "Typography",
   "Tabs",
-  "ThemeProvider",
 ];
 const baseUrl = "https://raw.githubusercontent.com/unisol1020/nativecn/main";
 
@@ -25,14 +24,14 @@ export async function fetchComponents(components: string[]) {
     return await Promise.all(
       components.map(async (component) => {
         const response = await fetch(
-          `${baseUrl}/packages/ui/src/${component}.tsx`,
+          `${baseUrl}/packages/ui/src/${component}.tsx`
         );
         const content = await response.text();
         return {
           name: `${component}.tsx`,
           content,
         };
-      }),
+      })
     );
   } catch (error) {
     console.error(error);
