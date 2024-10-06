@@ -4,7 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import "../global.css";
 import { useEffect } from "react";
 import "react-native-reanimated";
-import { ThemeProvider } from "@nativecn/ui";
+import { ThemeProvider } from "~/providers/ThemeProvider";
 
 SplashScreen.preventAutoHideAsync();
 
