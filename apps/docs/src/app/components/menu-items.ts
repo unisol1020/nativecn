@@ -4,7 +4,7 @@ const MENU_ITEMS: MenuItem[] = [
   {
     name: "Components",
     items: [
-      { name: "Avatar", href: "/components/avatar" },
+      { name: "Avatar", href: "/components" },
       { name: "Accordion", href: "/components/accordion" },
       { name: "Alert", href: "/components/alert" },
       { name: "Badge", href: "/components/badge" },
