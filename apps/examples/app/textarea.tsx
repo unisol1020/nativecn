@@ -1,4 +1,4 @@
-import { Label, Textarea } from "@nativecn/ui";
+import { Textarea } from "@nativecn/ui";
 import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useRef, useState } from "react";
@@ -15,17 +15,6 @@ const TextareaScreen = () => {
       setColorScheme(theme === "dark" ? "dark" : "light");
   }, [theme, setColorScheme]);
 
-  function handleOnLabelPress() {
-    if (!inputRef.current) {
-      return;
-    }
-    if (inputRef.current.isFocused()) {
-      inputRef.current?.blur();
-    } else {
-      inputRef.current?.focus();
-    }
-  }
-
   function onChangeText(text: string) {
     setValue(text);
   }
@@ -33,13 +22,6 @@ const TextareaScreen = () => {
   return (
     <ScrollView contentContainerClassName="flex-1 justify-center items-center p-6">
       <View className="web:max-w-xs w-full">
-        <Label
-          className="pb-2 native:pb-1 pl-0.5"
-          nativeID="textareaLabel"
-          onPress={handleOnLabelPress}
-        >
-          Label
-        </Label>
         <Textarea
           ref={inputRef}
           placeholder="Write some stuff..."

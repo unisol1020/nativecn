@@ -1,5 +1,4 @@
-import { Input, Label, Text } from "@nativecn/ui";
-import { cn } from "@nativecn/ui/lib/utils";
+import { Input, Text } from "@nativecn/ui";
 import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useRef, useState } from "react";
@@ -18,17 +17,6 @@ export default function InputScreen() {
       setColorScheme(theme === "dark" ? "dark" : "light");
   }, [theme, setColorScheme]);
 
-  function handleOnLabelPress() {
-    if (!inputRef.current) {
-      return;
-    }
-    if (inputRef.current.isFocused()) {
-      inputRef.current?.blur();
-    } else {
-      inputRef.current?.focus();
-    }
-  }
-
   function onChangeText(text: string) {
     if (err) {
       setErr(null);
@@ -43,13 +31,6 @@ export default function InputScreen() {
   return (
     <ScrollView contentContainerClassName="flex-1 justify-center items-center p-6">
       <View className="web:max-w-xs w-full">
-        <Label
-          className={cn(err && "text-destructive", "pb-2 native:pb-1 pl-0.5")}
-          nativeID="inputLabel"
-          onPress={handleOnLabelPress}
-        >
-          Label
-        </Label>
         <Input
           ref={inputRef}
           placeholder="Write some stuff..."
