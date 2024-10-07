@@ -24,7 +24,7 @@ const CheckboxScreen = () => {
           onCheckedChange={setChecked}
         />
         <Label nativeID="terms" onPress={() => setChecked((prev) => !prev)}>
-          Accept terms and conditions
+          Accept terms and conditions here (checked: {checked.toString()})
         </Label>
       </View>
     </View>

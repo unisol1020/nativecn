@@ -1,65 +1,51 @@
-import {
-  ComponentPropsWithoutRef,
-  ElementRef,
-  forwardRef,
-  useState,
-} from "react";
-import { Image, Text, View } from "react-native";
+import { forwardRef, ElementRef, ComponentPropsWithoutRef } from "react";
+import * as AvatarPrimitive from "@rn-primitives/avatar";
 import { cn } from "../lib/utils";
 
+const AvatarPrimitiveRoot = AvatarPrimitive.Root;
+const AvatarPrimitiveImage = AvatarPrimitive.Image;
+const AvatarPrimitiveFallback = AvatarPrimitive.Fallback;
+
 const Avatar = forwardRef<
-  ElementRef<typeof View>,
-  ComponentPropsWithoutRef<typeof View>
+  ElementRef<typeof AvatarPrimitiveRoot>,
+  ComponentPropsWithoutRef<typeof AvatarPrimitiveRoot>
 >(({ className, ...props }, ref) => (
-  <View
+  <AvatarPrimitiveRoot
     ref={ref}
     className={cn(
       "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
-      className,
+      className
     )}
     {...props}
   />
 ));
-Avatar.displayName = "Avatar";
+Avatar.displayName = AvatarPrimitiveRoot.displayName;
 
 const AvatarImage = forwardRef<
-  ElementRef<typeof Image>,
-  ComponentPropsWithoutRef<typeof Image>
->(({ className, ...props }, ref) => {
-  const [hasError, setHasError] = useState(false);
-
-  if (hasError) {
-    return null;
-  }
-
-  return (
-    <Image
-      ref={ref}
-      onError={() => setHasError(true)}
-      className={cn("aspect-square h-full w-full", className)}
-      {...props}
-    />
-  );
-});
-AvatarImage.displayName = "AvatarImage";
+  ElementRef<typeof AvatarPrimitiveImage>,
+  ComponentPropsWithoutRef<typeof AvatarPrimitiveImage>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitiveImage
+    ref={ref}
+    className={cn("aspect-square h-full w-full", className)}
+    {...props}
+  />
+));
+AvatarImage.displayName = AvatarPrimitiveImage.displayName;
 
 const AvatarFallback = forwardRef<
-  ElementRef<typeof View>,
-  ComponentPropsWithoutRef<typeof View> & { textClassname?: string }
->(({ children, className, textClassname, ...props }, ref) => (
-  <View
+  ElementRef<typeof AvatarPrimitiveFallback>,
+  ComponentPropsWithoutRef<typeof AvatarPrimitiveFallback>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitiveFallback
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
-      className,
+      className
     )}
     {...props}
-  >
-    <Text className={cn("text-lg text-primary", textClassname)}>
-      {children}
-    </Text>
-  </View>
+  />
 ));
-AvatarFallback.displayName = "AvatarFallback";
+AvatarFallback.displayName = AvatarPrimitiveFallback.displayName;
 
-export { Avatar, AvatarImage, AvatarFallback };
+export { Avatar, AvatarFallback, AvatarImage };

@@ -20,6 +20,8 @@ const DEPENDENCIES = [
   "lucide-react-native",
   "react-native-reanimated",
   "react-native-svg",
+  "@rn-primitives/types",
+  "@rn-primitives/slot",
 ];
 const DEV_DEPENDENCIES = ["tailwindcss"];
 
@@ -35,7 +37,7 @@ export const init = new Command()
   .option(
     "-c, --cwd <cwd>",
     "the working directory. defaults to the current directory.",
-    process.cwd(),
+    process.cwd()
   )
   .action(async (opts) => {
     try {
@@ -56,13 +58,13 @@ export async function runInit(cwd: string) {
   await fs.writeFile(
     `${cwd}/tailwind.config.js`,
     templates.TAILWIND_CONFIG,
-    "utf8",
+    "utf8"
   );
 
   await fs.writeFile(
     `${cwd}/nativewind-env.d.ts`,
     templates.NATIVEWIND_ENV,
-    "utf8",
+    "utf8"
   );
   await fs.writeFile(`${cwd}/babel.config.js`, templates.BABEL_CONFIG, "utf8");
   await fs.writeFile(`${cwd}/global.css`, templates.GLOBAL_STYLES, "utf8");
@@ -90,7 +92,7 @@ export async function runInit(cwd: string) {
       ...DEV_DEPENDENCIES,
       packageManager === "npm" ? "--save-dev" : "--dev",
     ],
-    { cwd },
+    { cwd }
   );
 
   dependenciesSpinner?.succeed();

@@ -46,23 +46,29 @@ export default function AvatarPage() {
           <CodeBlock
             code={`import { View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { Text } from "@/components/ui/Text";
 
 const AvatarDemo = () => {
   return (
     <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
+      <Avatar alt="avatar-with-image">
         <AvatarImage
           source={{
             uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
           }}
         />
-        <AvatarFallback>UN</AvatarFallback>
+        <AvatarFallback>
+          <Text>UN</Text>
+        </AvatarFallback>
       </Avatar>
 
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
+      <Avatar alt="avatar-without-image">
+        <AvatarFallback>
+          <Text>UN</Text>
+        </AvatarFallback>
       </Avatar>
     </View>
+  );
   );
 };
 
@@ -91,7 +97,9 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"`}
+          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import { Text } from "@/components/ui/Text"
+            `}
           language="tsx"
         />
 
@@ -102,7 +110,9 @@ export default AvatarDemo;
       uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
     }}
   />
-  <AvatarFallback>UN</AvatarFallback>
+  <AvatarFallback>
+    <Text>UN</Text>
+  </AvatarFallback>
 </Avatar>`}
           language="tsx"
         />

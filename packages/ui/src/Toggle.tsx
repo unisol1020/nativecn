@@ -1,15 +1,15 @@
-import { cva, type VariantProps } from "class-variance-authority";
-import type { LucideIcon } from "lucide-react-native";
-import * as React from "react";
-import { TextClassContext } from "./Text";
-import { cn } from "../lib/utils";
 import {
   ComponentPropsWithoutRef,
   ElementRef,
   forwardRef,
   useContext,
 } from "react";
-import { GestureResponderEvent, Pressable } from "react-native";
+
+import { cva, type VariantProps } from "class-variance-authority";
+import type { LucideIcon } from "lucide-react-native";
+import { TextClassContext } from "./Text";
+import * as TogglePrimitive from "@rn-primitives/toggle";
+import { cn } from "../lib/utils";
 
 const toggleVariants = cva(
   "web:group web:inline-flex items-center justify-center rounded-md web:ring-offset-background web:transition-colors web:hover:bg-muted active:bg-muted web:focus-visible:outline-none web:focus-visible:ring-2 web:focus-visible:ring-ring web:focus-visible:ring-offset-2",
@@ -30,7 +30,7 @@ const toggleVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 const toggleTextVariants = cva(
@@ -52,49 +52,12 @@ const toggleTextVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
-);
-
-const ToggleRoot = forwardRef<
-  ElementRef<typeof Pressable>,
-  ComponentPropsWithoutRef<typeof Pressable> & {
-    pressed: boolean;
-    onPressedChange: (pressed: boolean) => void;
-    disabled?: boolean;
   }
->(
-  (
-    { pressed, onPressedChange, disabled, onPress: onPressProp, ...props },
-    ref,
-  ) => {
-    function onPress(ev: GestureResponderEvent) {
-      if (disabled) return;
-      const newValue = !pressed;
-      onPressedChange(newValue);
-      onPressProp?.(ev);
-    }
-
-    return (
-      <Pressable
-        ref={ref}
-        aria-disabled={disabled}
-        role="switch"
-        aria-selected={pressed}
-        onPress={onPress}
-        accessibilityState={{
-          selected: pressed,
-          disabled,
-        }}
-        disabled={disabled}
-        {...props}
-      />
-    );
-  },
 );
 
-const Toggle = React.forwardRef<
-  React.ElementRef<typeof ToggleRoot>,
-  React.ComponentPropsWithoutRef<typeof ToggleRoot> &
+const Toggle = forwardRef<
+  ElementRef<typeof TogglePrimitive.Root>,
+  ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
     VariantProps<typeof toggleVariants>
 >(({ className, variant, size, ...props }, ref) => (
   <TextClassContext.Provider
@@ -103,33 +66,33 @@ const Toggle = React.forwardRef<
       props.pressed
         ? "text-accent-foreground"
         : "web:group-hover:text-muted-foreground",
-      className,
+      className
     )}
   >
-    <ToggleRoot
+    <TogglePrimitive.Root
       ref={ref}
       className={cn(
         toggleVariants({ variant, size }),
         props.disabled && "web:pointer-events-none opacity-50",
         props.pressed && "bg-accent",
-        className,
+        className
       )}
       {...props}
     />
   </TextClassContext.Provider>
 ));
-Toggle.displayName = "Toggle";
 
-const ToggleIcon = ({
+Toggle.displayName = TogglePrimitive.Root.displayName;
+
+function ToggleIcon({
   className,
   icon: Icon,
   ...props
-}: ComponentPropsWithoutRef<LucideIcon> & {
+}: React.ComponentPropsWithoutRef<LucideIcon> & {
   icon: LucideIcon;
-  className?: string;
-}) => {
+}) {
   const textClass = useContext(TextClassContext);
   return <Icon className={cn(textClass, className)} {...props} />;
-};
+}
 
 export { Toggle, ToggleIcon, toggleTextVariants, toggleVariants };

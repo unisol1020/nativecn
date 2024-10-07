@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@nativecn/ui";
+import { Avatar, AvatarFallback, AvatarImage, Text } from "@nativecn/ui";
 import { useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "nativewind";
@@ -15,17 +15,21 @@ const AvatarScreen = () => {
 
   return (
     <View className="flex-1 flex-row justify-center items-center gap-5">
-      <Avatar>
+      <Avatar alt="avatar-with-image">
         <AvatarImage
           source={{
             uri: "https://avatars.githubusercontent.com/u/66306912?v=4",
           }}
         />
-        <AvatarFallback>UN</AvatarFallback>
+        <AvatarFallback>
+          <Text>UN</Text>
+        </AvatarFallback>
       </Avatar>
 
-      <Avatar>
-        <AvatarFallback>UN</AvatarFallback>
+      <Avatar alt="avatar-without-image">
+        <AvatarFallback>
+          <Text>UN</Text>
+        </AvatarFallback>
       </Avatar>
     </View>
   );

@@ -17,7 +17,52 @@ export const ALL_COMPONENTS = [
   "Typography",
   "Tabs",
 ];
+
 const baseUrl = "https://raw.githubusercontent.com/unisol1020/nativecn/main";
+
+interface ComponentMetadata {
+  name: string;
+  dependencies?: string[];
+}
+
+export const COMPONENT_METADATA: Record<string, ComponentMetadata> = {
+  Avatar: {
+    name: "Avatar",
+    dependencies: ["@rn-primitives/avatar"],
+  },
+  Checkbox: {
+    name: "Checkbox",
+    dependencies: ["@rn-primitives/checkbox"],
+  },
+  Label: {
+    name: "Label",
+    dependencies: ["@rn-primitives/label"],
+  },
+  Progress: {
+    name: "Progress",
+    dependencies: ["@rn-primitives/progress"],
+  },
+  RadioGroup: {
+    name: "RadioGroup",
+    dependencies: ["@rn-primitives/radio-group"],
+  },
+  Separator: {
+    name: "Separator",
+    dependencies: ["@rn-primitives/separator"],
+  },
+  Switch: {
+    name: "Switch",
+    dependencies: ["@rn-primitives/switch"],
+  },
+  Tabs: {
+    name: "Tabs",
+    dependencies: ["@rn-primitives/tabs"],
+  },
+  Toggle: {
+    name: "Toggle",
+    dependencies: ["@rn-primitives/toggle"],
+  },
+};
 
 export async function fetchComponents(components: string[]) {
   try {
@@ -30,6 +75,8 @@ export async function fetchComponents(components: string[]) {
         return {
           name: `${component}.tsx`,
           content,
+          // Include component metadata
+          metadata: COMPONENT_METADATA[component] || { name: component },
         };
       })
     );

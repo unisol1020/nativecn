@@ -1,4 +1,4 @@
-import { H1, H2, H3, Lead, Large, P } from "@nativecn/ui";
+import { H1, H2, H3, Lead, Large, P, BlockQuote } from "@nativecn/ui";
 import { useEffect } from "react";
 import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
@@ -34,6 +34,10 @@ const TypographyScreen = () => {
           The flower had the power to make the forest come alive with vibrant
           colors and happy creatures.
         </P>
+        <BlockQuote>
+          "Oh, what a wonderful discovery!" exclaimed Whiskers. "I must share
+          this magic with all my forest friends!"
+        </BlockQuote>
         <View className="p-4" />
         <H3>The Colorful Transformation</H3>
         <View className="p-0.5" />

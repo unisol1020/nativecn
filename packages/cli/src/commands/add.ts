@@ -5,9 +5,11 @@ import ora from "ora";
 import path from "path";
 import prompts from "prompts";
 import * as z from "zod";
+import { execa } from "execa";
 import { handleError } from "@/src/utils/handle-error";
 import { logger } from "@/src/utils/logger";
 import { ALL_COMPONENTS, fetchComponents } from "@/src/utils/registry";
+import { getPackageManager } from "@/src/utils/get-package-manager";
 
 const addOptionsSchema = z.object({
   components: z.array(z.string()).optional(),
@@ -85,6 +87,29 @@ export const add = new Command()
       const payload = await fetchComponents(selectedComponents);
 
       const spinner = ora(`Installing components...`).start();
+
+      const dependencies = new Set<string>();
+      for (const item of payload) {
+        if (item.metadata.dependencies) {
+          item.metadata.dependencies.forEach((dep) => dependencies.add(dep));
+        }
+      }
+
+      if (dependencies.size > 0) {
+        spinner.text = `Installing component dependencies...`;
+        const packageManager = await getPackageManager(cwd);
+        const packageCommand = packageManager === "npm" ? "install" : "add";
+
+        await execa(
+          packageManager,
+          [packageCommand, ...Array.from(dependencies)],
+          { cwd }
+        );
+
+        spinner.succeed(`Component dependencies installed.`);
+        spinner.start(`Installing components...`);
+      }
+
       for (const item of payload) {
         spinner.text = `Installing ${item.name}...`;
 
