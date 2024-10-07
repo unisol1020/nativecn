@@ -15,3 +15,4 @@ export * from "./Progress";
 export * from "./Avatar";
 export * from "./RadioGroup";
 export * from "./Tabs";
+export * from "./Accordion";

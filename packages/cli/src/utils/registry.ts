@@ -1,5 +1,6 @@
 export const ALL_COMPONENTS = [
   "Avatar",
+  "Accordion",
   "Badge",
   "Button",
   "Card",
@@ -29,6 +30,10 @@ export const COMPONENT_METADATA: Record<string, ComponentMetadata> = {
   Avatar: {
     name: "Avatar",
     dependencies: ["@rn-primitives/avatar"],
+  },
+  Accordion: {
+    name: "Accordion",
+    dependencies: ["@rn-primitives/accordion"],
   },
   Checkbox: {
     name: "Checkbox",
