@@ -2,7 +2,7 @@ import { Input, Text } from "@nativecn/ui";
 import { useLocalSearchParams } from "expo-router";
 import { useColorScheme } from "nativewind";
 import { useEffect, useRef, useState } from "react";
-import { Platform, ScrollView, TextInput, View } from "react-native";
+import { Platform, TextInput, View } from "react-native";
 import Animated, { FadeInDown, FadeOut } from "react-native-reanimated";
 
 export default function InputScreen() {
@@ -29,21 +29,20 @@ export default function InputScreen() {
   }
 
   return (
-    <ScrollView contentContainerClassName="flex-1 justify-center items-center p-6">
-      <View className="web:max-w-xs w-full">
-        <Input
-          ref={inputRef}
-          placeholder="Write some stuff..."
-          value={value}
-          onChangeText={onChangeText}
-          onSubmitEditing={onSubmitEditing}
-          aria-labelledby="inputLabel"
-          aria-errormessage="inputError"
-        />
-        {err && <ErrorMessage msg={err} />}
-        <View className="h-20" />
-      </View>
-    </ScrollView>
+    <View className="flex-1 justify-center items-center p-6">
+      <Input
+        className="web:max-w-xs w-full"
+        ref={inputRef}
+        placeholder="Write some stuff..."
+        value={value}
+        onChangeText={onChangeText}
+        onSubmitEditing={onSubmitEditing}
+        aria-labelledby="inputLabel"
+        aria-errormessage="inputError"
+      />
+      {err && <ErrorMessage msg={err} />}
+      <View className="h-20" />
+    </View>
   );
 }
 
