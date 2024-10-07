@@ -9,6 +9,7 @@
     "@rn-primitives/accordion": "~1.0.4",
     "@rn-primitives/avatar": "~1.0.5",
     "@rn-primitives/checkbox": "~1.0.4",
+    "@rn-primitives/dropdown-menu": "~1.0.4",
     "@rn-primitives/label": "^1.0.4",
     "@rn-primitives/progress": "^1.0.4",
     "@rn-primitives/radio-group": "^1.0.4",

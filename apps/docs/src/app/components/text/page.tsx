@@ -44,7 +44,7 @@ const TextPage = () => {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Text } from "@/components/ui/text";
+            code={`import { Text } from "@/components/text";
 import { View } from "react-native";
 
 const TextDemo = () => {
@@ -80,7 +80,7 @@ export default TextDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Text } from "@/components/ui/Text"`}
+          code={`import { Text } from "@/components/Text"`}
           language="tsx"
         />
 

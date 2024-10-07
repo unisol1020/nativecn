@@ -53,7 +53,7 @@ import {
   CardHeader,
   CardTitle,
   Text,
-} from "@/components/ui/Card";
+} from "@/components/Card";
 
 const CardDemo = () => {
   return (
@@ -106,7 +106,7 @@ export default CardDemo;
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/Card"`}
+} from "@/components/Card"`}
           language="tsx"
         />
 

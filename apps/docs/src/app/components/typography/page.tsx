@@ -44,7 +44,7 @@ export default function TypographyPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { H1, H2, H3, Lead, Large, P, BlockQuote } from "@/components/ui/typography";
+            code={`import { H1, H2, H3, Lead, Large, P, BlockQuote } from "@/components/Typography";
 import { ScrollView, View } from "react-native";
 
 const TypographyDemo = () => {
@@ -142,7 +142,7 @@ export default TypographyDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { H1, H2, H3, Lead, Large, P, BlockQuote } from "@/components/ui/typography"`}
+          code={`import { H1, H2, H3, Lead, Large, P, BlockQuote } from "@/components/Typography"`}
           language="tsx"
         />
       </section>

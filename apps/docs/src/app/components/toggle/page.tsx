@@ -44,7 +44,7 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Toggle, ToggleIcon } from "@/components/ui/toggle";
+            code={`import { Toggle, ToggleIcon } from "@/components/Toggle";
 import { Bitcoin } from "lucide-react-native";
 import { useState } from "react";
 import { View } from "react-native";
@@ -91,7 +91,7 @@ export default ToggleDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Toggle } from "@/components/ui/toggle"`}
+          code={`import { Toggle } from "@/components/Toggle"`}
           language="tsx"
         />
 

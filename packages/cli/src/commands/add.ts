@@ -115,7 +115,7 @@ export const add = new Command()
 
         const targetDir = options.path
           ? path.resolve(cwd, options.path)
-          : `${cwd}/components/ui`;
+          : `${cwd}/components`;
         if (!targetDir) {
           continue;
         }

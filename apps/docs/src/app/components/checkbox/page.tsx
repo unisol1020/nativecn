@@ -45,8 +45,8 @@ export default function CheckboxPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Checkbox } from "@/components/ui/Checkbox";
-import { Label } from "@/components/ui/Label";
+            code={`import { Checkbox } from "@/components/Checkbox";
+import { Label } from "@/components/Label";
 import { useState } from "react";
 import { View } from "react-native";
 
@@ -94,7 +94,7 @@ export default CheckboxDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Checkbox } from "@/components/ui/Checkbox"`}
+          code={`import { Checkbox } from "@/components/Checkbox"`}
           language="tsx"
         />
 

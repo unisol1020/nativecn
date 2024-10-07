@@ -45,8 +45,8 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Switch } from "@/components/ui/Switch";
-import { Label } from "@/components/ui/Label";
+            code={`import { Switch } from "@/components/Switch";
+import { Label } from "@/components/Label";
 import { useState } from "react";
 import { View } from "react-native";
 
@@ -99,7 +99,7 @@ export default SwitchDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Switch } from "@/components/ui/Switch"`}
+          code={`import { Switch } from "@/components/Switch"`}
           language="tsx"
         />
 

@@ -44,7 +44,7 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Skeleton } from "@/components/ui/Skeleton";
+            code={`import { Skeleton } from "@/components/Skeleton";
 import { View } from "react-native";
 
 const SkeletonDemo = () => {
@@ -86,7 +86,7 @@ export default SkeletonDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Skeleton } from "@/components/ui/Skeleton"`}
+          code={`import { Skeleton } from "@/components/Skeleton"`}
           language="tsx"
         />
 

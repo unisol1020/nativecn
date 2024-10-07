@@ -45,9 +45,9 @@ export default function InputPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Input } from "@/components/ui/Input";
-import { Label } from "@/components/ui/Label";
-import { Text } from "@/components/ui/Text";
+            code={`import { Input } from "@/components/Input";
+import { Label } from "@/components/Label";
+import { Text } from "@/components/Text";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { Platform, ScrollView, TextInput, View } from "react-native";
@@ -154,7 +154,7 @@ function ErrorMessage({ msg }: { msg: string }) {
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Input } from "@/components/ui/Input"`}
+          code={`import { Input } from "@/components/Input"`}
           language="tsx"
         />
 

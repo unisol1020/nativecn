@@ -45,7 +45,7 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Label } from "@/components/ui/Label";
+            code={`import { Label } from "@/components/Label";
 import { View } from "react-native";
 
 const LabelDemo = () => {
@@ -81,7 +81,7 @@ export default LabelDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Label } from "@/components/ui/Label"`}
+          code={`import { Label } from "@/components/Label"`}
           language="tsx"
         />
 

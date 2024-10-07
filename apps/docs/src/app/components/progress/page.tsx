@@ -45,9 +45,9 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Progress } from "@/components/ui/Progress";
-import { Button } from "@/components/ui/Button";
-import { Text } from "@/components/ui/Text";
+            code={`import { Progress } from "@/components/Progress";
+import { Button } from "@/components/Button";
+import { Text } from "@/components/Text";
 import { useEffect, useState } from "react";
 import { View } from "react-native";
 
@@ -95,7 +95,7 @@ export default ProgressDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Progress } from "@/components/ui/Progress"`}
+          code={`import { Progress } from "@/components/Progress"`}
           language="tsx"
         />
 

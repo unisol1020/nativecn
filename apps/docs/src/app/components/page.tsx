@@ -45,8 +45,8 @@ export default function AvatarPage() {
         <TabsContent value="code">
           <CodeBlock
             code={`import { View } from "react-native";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { Text } from "@/components/ui/Text";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar";
+import { Text } from "@/components/Text";
 
 const AvatarDemo = () => {
   return (
@@ -97,8 +97,8 @@ export default AvatarDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
-import { Text } from "@/components/ui/Text"
+          code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar"
+import { Text } from "@/components/Text"
             `}
           language="tsx"
         />

@@ -50,17 +50,17 @@ export default function TabsPage() {
   TabsContent,
   TabsList,
   TabsTrigger
-} from "@/components/ui/Tabs";
+} from "@/components/Tabs";
 import { Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
   CardFooter
-} from "@/components/ui/Card";
-import { Input, Label } from "@/components/ui/Input";
-import { Button } from "@/components/ui/Button";
-import { Text } from "@/components/ui/Text";
+} from "@/components/Card";
+import { Input, Label } from "@/components/Input";
+import { Button } from "@/components/Button";
+import { Text } from "@/components/Text";
 import { useEffect, useState } from "react";
 import { View } from "react-native";
 
@@ -168,7 +168,7 @@ export default TabsDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"`}
+          code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs"`}
           language="tsx"
         />
       </section>

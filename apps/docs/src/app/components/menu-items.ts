@@ -6,10 +6,12 @@ const MENU_ITEMS: MenuItem[] = [
     items: [
       { name: "Avatar", href: "/components/avatar" },
       { name: "Accordion", href: "/components/accordion" },
+      { name: "Alert", href: "/components/alert" },
       { name: "Badge", href: "/components/badge" },
       { name: "Button", href: "/components/button" },
       { name: "Card", href: "/components/card" },
       { name: "Checkbox", href: "/components/checkbox" },
+      { name: "Dropdown Menu", href: "/components/dropdown-menu" },
       { name: "Input", href: "/components/input" },
       { name: "Label", href: "/components/label" },
       { name: "Progress", href: "/components/progress" },

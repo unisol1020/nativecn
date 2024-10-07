@@ -10,8 +10,8 @@ const Example = dynamic(() => import("@/components/Example"), {
 });
 
 export const metadata: Metadata = {
-  title: "Button - nativecn",
-  description: "Displays a button or a component that looks like a button.",
+  title: "Alert - nativecn",
+  description: "Displays a callout for user attention.",
 };
 
 const BREADCRUMBS = [
@@ -19,16 +19,16 @@ const BREADCRUMBS = [
     name: "Components",
   },
   {
-    name: "Button",
-    href: "/components/button",
+    name: "Alert",
+    href: "/components/alert",
   },
 ];
 
-export default function ButtonPage() {
+export default function Alert() {
   return (
     <MainContentLayout
-      title="Button"
-      subtitle="Displays a button or a component that looks like a button."
+      title="Alert"
+      subtitle="Displays a callout for user attention."
       breadcrumbs={BREADCRUMBS}
     >
       <Tabs defaultValue="preview">
@@ -39,47 +39,39 @@ export default function ButtonPage() {
         </TabsList>
 
         <TabsContent value="preview">
-          <Example component="button" />
+          <Example component="alert" />
         </TabsContent>
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Button, Text } from "@/components/Button";
-import { Text } from "@/components/Text";
+            code={`import { Alert, AlertTitle, AlertDescription } from "@/components/Alert";
+import { useLocalSearchParams } from "expo-router";
+import { AlertTriangle, Terminal } from "lucide-react-native";
+import { useColorScheme } from "nativewind";
+import { useEffect } from "react";
 import { View } from "react-native";
 
-const ButtonDemo = () => {
+const AlertDemo = () => {
   return (
-    <View className="flex-1 justify-center items-center gap-5">
-      <Button>
-        <Text>Default</Text>
-      </Button>
-      <Button variant="destructive">
-        <Text>Destructive</Text>
-      </Button>
-      <Button variant="destructive" disabled>
-        <Text>Destructive disabled</Text>
-      </Button>
-      <Button variant="secondary">
-        <Text>Secondary</Text>
-      </Button>
-      <Button variant="outline" size="lg">
-        <Text>Outline lg</Text>
-      </Button>
-      <Button variant="outline" size="sm">
-        <Text>Outline sm</Text>
-      </Button>
-      <Button variant="ghost">
-        <Text>Ghost</Text>
-      </Button>
-      <Button variant="link" size="sm">
-        <Text>Link sm</Text>
-      </Button>
+    <View className="flex-1 justify-center p-6 items-center gap-6">
+      <Alert icon={Terminal} className="max-w-xl">
+        <AlertTitle>Heads up!</AlertTitle>
+        <AlertDescription>
+          You can use a terminal to run commands on your computer.
+        </AlertDescription>
+      </Alert>
+      <Alert icon={AlertTriangle} variant="destructive" className="max-w-xl">
+        <AlertTitle>Danger!</AlertTitle>
+        <AlertDescription>
+          High voltage. Do not touch. Risk of electric shock. Keep away from
+          children.
+        </AlertDescription>
+      </Alert>
     </View>
   );
 };
 
-export default ButtonDemo;
+export default AlertDemo;
 `}
             language="tsx"
           />
@@ -93,7 +85,7 @@ export default ButtonDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add Button" language="bash" />
+        <CodeBlock code="npx nativecn add Alert" language="bash" />
       </section>
 
       <section>
@@ -104,14 +96,7 @@ export default ButtonDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Button } from "@/components/Button"`}
-          language="tsx"
-        />
-
-        <CodeBlock
-          code={`<Button>
-  <Text>Badge</Text>
-</Button>`}
+          code={`import { Alert, AlertTitle, AlertDescription } from "@/components/Alert";"`}
           language="tsx"
         />
       </section>

@@ -5,9 +5,20 @@ import {
   AccordionTrigger,
   Text,
 } from "@nativecn/ui";
+import { useLocalSearchParams } from "expo-router";
+import { useColorScheme } from "nativewind";
+import { useEffect } from "react";
 import { View } from "react-native";
 
 const AccordionScreen = () => {
+  const { setColorScheme } = useColorScheme();
+  const { theme } = useLocalSearchParams();
+
+  useEffect(() => {
+    if (setColorScheme && theme)
+      setColorScheme(theme === "dark" ? "dark" : "light");
+  }, [theme, setColorScheme]);
+
   return (
     <View className="flex-1 justify-center items-center p-6">
       <Accordion

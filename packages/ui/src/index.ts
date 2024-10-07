@@ -16,3 +16,5 @@ export * from "./Avatar";
 export * from "./RadioGroup";
 export * from "./Tabs";
 export * from "./Accordion";
+export * from "./DropdownMenu";
+export * from "./Alert";

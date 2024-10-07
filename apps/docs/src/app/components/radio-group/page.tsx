@@ -45,8 +45,8 @@ export default function RadioGroupPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Label } from "@/components/ui/Label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup";
+            code={`import { Label } from "@/components/Label";
+import { RadioGroup, RadioGroupItem } from "@/components/RadioGroup";
 import * as React from "react";
 import { View } from "react-native";
 
@@ -119,7 +119,7 @@ function RadioGroupItemWithLabel({
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup"`}
+          code={`import { RadioGroup, RadioGroupItem } from "@/components/RadioGroup"`}
           language="tsx"
         />
       </section>

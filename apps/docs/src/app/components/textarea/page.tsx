@@ -45,8 +45,8 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+            code={`import { Label } from "@/components/Label";
+import { Textarea } from "@/components/Textarea";
 import { useRef, useState } from "react";
 import { ScrollView, TextInput, View } from "react-native";
 
@@ -117,7 +117,7 @@ export default TextareaDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Textarea } from "@/components/ui/textarea"`}
+          code={`import { Textarea } from "@/components/Textarea"`}
           language="tsx"
         />
 

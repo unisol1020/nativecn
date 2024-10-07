@@ -1,6 +1,7 @@
 export const ALL_COMPONENTS = [
   "Avatar",
   "Accordion",
+  "Alert",
   "Badge",
   "Button",
   "Card",
@@ -17,6 +18,7 @@ export const ALL_COMPONENTS = [
   "Toggle",
   "Typography",
   "Tabs",
+  "DropdownMenu",
 ];
 
 const baseUrl = "https://raw.githubusercontent.com/unisol1020/nativecn/main";
@@ -67,6 +69,10 @@ export const COMPONENT_METADATA: Record<string, ComponentMetadata> = {
     name: "Toggle",
     dependencies: ["@rn-primitives/toggle"],
   },
+  DropdownMenu: {
+    name: "DropdownMenu",
+    dependencies: ["@rn-primitives/dropdown-menu"],
+  },
 };
 
 export async function fetchComponents(components: string[]) {
@@ -80,7 +86,6 @@ export async function fetchComponents(components: string[]) {
         return {
           name: `${component}.tsx`,
           content,
-          // Include component metadata
           metadata: COMPONENT_METADATA[component] || { name: component },
         };
       })

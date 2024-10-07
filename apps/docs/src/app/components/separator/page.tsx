@@ -44,8 +44,8 @@ export default function ComponentPage() {
 
         <TabsContent value="code">
           <CodeBlock
-            code={`import { Separator } from "@/components/ui/Separator";
-import { H4, P, Small } from "@/components/ui/Typography";
+            code={`import { Separator } from "@/components/Separator";
+import { H4, P, Small } from "@/components/Typography";
 import { View } from "react-native";
 
 const SeparatorDemo = () => {
@@ -98,7 +98,7 @@ export default SeparatorDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Separator } from "@/components/ui/Separator"`}
+          code={`import { Separator } from "@/components/Separator"`}
           language="tsx"
         />
 

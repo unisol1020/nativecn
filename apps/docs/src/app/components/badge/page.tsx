@@ -45,8 +45,8 @@ export default function BadgePage() {
         <TabsContent value="code">
           <CodeBlock
             code={`import { View } from "react-native";
-import { Badge } from "@/components/ui/Badge";
-import { Text } from "@/components/ui/Text";
+import { Badge } from "@/components/Badge";
+import { Text } from "@/components/Text";
 
 const BadgeDemo = () => {
   return (
@@ -92,7 +92,7 @@ export default BadgeDemo;
         <Separator className="my-2" />
 
         <CodeBlock
-          code={`import { Badge } from "@/components/ui/Badge"`}
+          code={`import { Badge } from "@/components/Badge"`}
           language="tsx"
         />
 

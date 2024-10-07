@@ -50,8 +50,8 @@ export default function Accordion() {
   AccordionContent,
   AccordionItem,
   AccordionTrigger
-} from "@/components/ui/accordion";
-import { Text } from "@/components/ui/text";
+} from "@/components/Accordion";
+import { Text } from "@/components/Text";
 import { View } from "react-native";
 
 const AccordionDemo = () => {
@@ -125,7 +125,7 @@ export default AccordionDemo;
   AccordionContent,
   AccordionItem,
   AccordionTrigger
-} from "@/components/ui/accordion";`}
+} from "@/components/accordion";`}
           language="tsx"
         />
       </section>
