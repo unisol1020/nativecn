@@ -29,7 +29,6 @@ const TextareaScreen = () => {
         onChangeText={onChangeText}
         aria-labelledby="textareaLabel"
       />
-      <View className="h-20" />
     </View>
   );
 };

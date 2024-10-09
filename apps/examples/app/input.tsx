@@ -41,7 +41,6 @@ export default function InputScreen() {
         aria-errormessage="inputError"
       />
       {err && <ErrorMessage msg={err} />}
-      <View className="h-20" />
     </View>
   );
 }
