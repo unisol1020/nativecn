@@ -1,6 +1,5 @@
 import { Drawer, DrawerTrigger, DrawerContent } from "@/components/ui/drawer";
 import { SideMenu } from "@/components/SideMenu";
-import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
@@ -10,9 +9,7 @@ const MobileNav = () => {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger>
-        <Button variant="outline">
-          <Menu />
-        </Button>
+        <Menu />
       </DrawerTrigger>
 
       <DrawerContent>
