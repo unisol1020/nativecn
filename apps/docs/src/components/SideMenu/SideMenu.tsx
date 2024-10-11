@@ -1,9 +1,10 @@
 import MENU_ITEMS from "@/const/menu-items";
 import SideMenuItem from "./SideMenuItem";
+import { cn } from "@/lib/utils";
 
-const SideMenu = () => {
+const SideMenu = ({ className }: { className?: string }) => {
   return (
-    <div className="hidden md:block z-[1] max-h-[calc(100vh-114px)] sticky top-[92px] overflow-y-auto">
+    <div className={cn("overflow-y-auto", className)}>
       <div className="flex flex-col gap-4">
         {MENU_ITEMS.map((item) => (
           <SideMenuItem key={item.name} {...item} />
