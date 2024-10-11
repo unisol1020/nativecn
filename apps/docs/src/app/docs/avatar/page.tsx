@@ -98,8 +98,7 @@ export default AvatarDemo;
 
         <CodeBlock
           code={`import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar"
-import { Text } from "@/components/Text"
-            `}
+import { Text } from "@/components/Text"`}
           language="tsx"
         />
 
