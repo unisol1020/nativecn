@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 
 const BREADCRUMBS = [
   {
-    name: "Components",
+    name: "Docs",
   },
   {
     name: "Separator",
-    href: "/components/separator",
+    href: "/docs/separator",
   },
 ];
 
