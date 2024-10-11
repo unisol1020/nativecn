@@ -47,6 +47,8 @@ const DocsPage = () => {
               </code>{" "}
               file inside your root layout.
             </p>
+
+            <CodeBlock code={`import "../global.css";`} language="tsx" />
           </TimelineItem>
 
           <TimelineItem title="Adding Components" stepNumber={3}>
