@@ -1,11 +1,11 @@
-import { MenuItem } from "@/types/menu-item";
+import MENU_ITEMS from "@/const/menu-items";
 import SideMenuItem from "./SideMenuItem";
 
-const SideMenu = ({ items }: { items: MenuItem[] }) => {
+const SideMenu = () => {
   return (
-    <div className="block z-[1] max-h-[calc(100vh-114px)] sticky top-[92px]">
+    <div className="hidden md:block z-[1] max-h-[calc(100vh-114px)] sticky top-[92px] overflow-y-auto">
       <div className="flex flex-col gap-4">
-        {items.map((item) => (
+        {MENU_ITEMS.map((item) => (
           <SideMenuItem key={item.name} {...item} />
         ))}
       </div>

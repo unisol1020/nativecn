@@ -1,13 +1,12 @@
 import { SideMenu } from "@/components/SideMenu";
-import MENU_ITEMS from "./menu-items";
 import { PropsWithChildren } from "react";
 
 const DocsLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className="grid grid-cols-6 gap-4">
-      <SideMenu items={MENU_ITEMS} />
+      <SideMenu />
 
-      <div className="col-span-5">{children}</div>
+      <div className="col-span-6 md:col-span-5">{children}</div>
     </div>
   );
 };
