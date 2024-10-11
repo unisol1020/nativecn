@@ -1,5 +1,5 @@
 import NavItem from "./NavItem";
-import NAV_ITEMS from "./nav-items";
+import NAV_ITEMS from "../../../const/nav-items";
 
 const Nav = () => {
   return (
