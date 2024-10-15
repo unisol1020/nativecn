@@ -51,8 +51,13 @@ const DocsPage = () => {
             <CodeBlock code={`import "../global.css";`} language="tsx" />
           </TimelineItem>
 
-          <TimelineItem title="Include global styles" stepNumber={3}>
-            <p className="mb-2 font-light">Configure path aliases:</p>
+          <TimelineItem title="Configure path aliases:" stepNumber={3}>
+            <p className="mb-2 font-light">
+              This is how I configure it in{" "}
+              <code className="bg-muted text-foreground px-1 py-0.5 rounded ">
+                tsconfig.json
+              </code>
+            </p>
 
             <CodeBlock
               code={`"compilerOptions": {
