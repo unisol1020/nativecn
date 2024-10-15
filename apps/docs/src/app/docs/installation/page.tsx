@@ -51,7 +51,20 @@ const DocsPage = () => {
             <CodeBlock code={`import "../global.css";`} language="tsx" />
           </TimelineItem>
 
-          <TimelineItem title="Adding Components" stepNumber={3}>
+          <TimelineItem title="Include global styles" stepNumber={3}>
+            <p className="mb-2 font-light">Configure path aliases:</p>
+
+            <CodeBlock
+              code={`"compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+}`}
+              language="ts"
+            />
+          </TimelineItem>
+
+          <TimelineItem title="Adding Components" stepNumber={4}>
             <p className="mb-2 font-light">
               You can easily add specific components to your project using the{" "}
               <code className="bg-muted px-1 text-foreground py-0.5 rounded">

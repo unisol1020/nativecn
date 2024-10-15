@@ -7,7 +7,7 @@ import {
   View,
   ViewStyle,
 } from "react-native";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 import { TextClassContext } from "./Text";
 import {
   Check,

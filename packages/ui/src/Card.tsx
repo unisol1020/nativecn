@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, forwardRef } from "react";
 import { Text, View } from "react-native";
 import { TextClassContext } from "./Text";
 import { TextRef, ViewRef } from "@rn-primitives/types";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const Card = forwardRef<ViewRef, ComponentPropsWithoutRef<typeof View>>(
   ({ className, ...props }, ref) => (

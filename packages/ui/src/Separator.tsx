@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import * as SeparatorPrimitive from "@rn-primitives/separator";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const Separator = forwardRef<
   ElementRef<typeof SeparatorPrimitive.Root>,

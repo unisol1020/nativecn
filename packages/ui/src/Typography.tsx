@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import * as Slot from "@rn-primitives/slot";
 import { SlottableTextProps, TextRef } from "@rn-primitives/types";
 import { Platform, Text as RNText, Role } from "react-native";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const H1 = forwardRef<TextRef, SlottableTextProps>(
   ({ className, asChild = false, ...props }, ref) => {

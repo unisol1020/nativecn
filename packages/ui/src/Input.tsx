@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import { TextInput } from "react-native";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const Input = forwardRef<
   ElementRef<typeof TextInput>,

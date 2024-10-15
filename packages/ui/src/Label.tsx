@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import * as LabelPrimitive from "@rn-primitives/label";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const Label = forwardRef<
   ElementRef<typeof LabelPrimitive.Text>,

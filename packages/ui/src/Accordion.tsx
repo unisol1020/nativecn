@@ -17,7 +17,7 @@ import Animated, {
   useDerivedValue,
   withTiming,
 } from "react-native-reanimated";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 import { TextClassContext } from "./Text";
 import { ChevronDown } from "lucide-react-native";
 

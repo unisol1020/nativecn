@@ -8,7 +8,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { useColorScheme } from "nativewind";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const SwitchWeb = forwardRef<
   ElementRef<typeof SwitchPrimitives.Root>,

@@ -1,6 +1,6 @@
 import { TextClassContext } from "./Text";
 import * as TabsPrimitive from "@rn-primitives/tabs";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 
 const Tabs = TabsPrimitive.Root;

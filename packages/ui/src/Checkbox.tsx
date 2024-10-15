@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react";
 import * as CheckboxPrimitive from "@rn-primitives/checkbox";
 import { Platform } from "react-native";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 import { Check } from "lucide-react-native";
 
 const Checkbox = forwardRef<
