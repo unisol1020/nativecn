@@ -13,6 +13,8 @@ Beautiful and customizable React Native components, inspired by [shadcn-ui](http
 The `nativecn` library includes the following components:
 
 - Avatar
+- Accordion
+- Alert
 - Badge
 - Button
 - Card
@@ -28,6 +30,7 @@ The `nativecn` library includes the following components:
 - Textarea
 - Toggle
 - Typography
+- Dropdown Menu
 - Tabs
 
 ## Installation
