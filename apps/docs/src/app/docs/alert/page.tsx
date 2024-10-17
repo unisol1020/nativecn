@@ -1,13 +1,9 @@
 import { CodeBlock } from "@/components/CodeBlock";
+import { Example } from "@/components/Example";
 import MainContentLayout from "@/components/MainContentLayout";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const Example = dynamic(() => import("@/components/Example"), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   title: "Alert - nativecn",

@@ -1,13 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MainContentLayout from "@/components/MainContentLayout";
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Separator } from "@/components/ui/separator";
-
-const Example = dynamic(() => import("@/components/Example"), {
-  ssr: false,
-});
+import { Example } from "@/components/Example";
 
 export const metadata: Metadata = {
   title: "Checkbox - nativecn",

@@ -3,11 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Metadata } from "next";
 import { Separator } from "@/components/ui/separator";
-import dynamic from "next/dynamic";
-
-const Example = dynamic(() => import("@/components/Example"), {
-  ssr: false,
-});
+import { Example } from "@/components/Example";
 
 export const metadata: Metadata = {
   title: "Avatar - nativecn",

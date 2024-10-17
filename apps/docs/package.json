@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,15 +14,16 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
+    "@vercel/functions": "^1.4.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
     "lucide-react": "^0.446.0",
-    "next": "15.0.0-rc.0",
+    "next": "15.0.0-rc.1",
     "next-themes": "^0.3.0",
     "prism-react-renderer": "^2.4.0",
-    "react": "19.0.0-rc.0",
-    "react-dom": "19.0.0-rc.0",
+    "react": "19.0.0-rc-cd22717c-20241013",
+    "react-dom": "19.0.0-rc-cd22717c-20241013",
     "react-syntax-highlighter": "^15.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
@@ -30,17 +31,21 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "18.2.74",
-    "@types/react-dom": "18.2.23",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "babel-plugin-react-compiler": "0.0.0-experimental-734b737-20241003",
     "eslint": "^8.57.0",
-    "eslint-config-next": "15.0.0-rc.0",
+    "eslint-config-next": "15.0.0-rc.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.3.1",
+  "resolutions": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+  }
 }

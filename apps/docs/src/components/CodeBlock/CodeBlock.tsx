@@ -6,7 +6,7 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
   return (
     <div className="relative max-h-[500px] overflow-auto">
       <CopyButton code={code} />
-
+      {/* @ts-ignore */}
       <SyntaxHighlighter
         language={language}
         style={vscDarkPlus}
