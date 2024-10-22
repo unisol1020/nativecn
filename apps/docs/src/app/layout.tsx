@@ -11,6 +11,10 @@ const font = GeistSans;
 
 export const metadata: Metadata = {
   title: "nativecn",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   description: "Universal shadcn/ui for React Native",
   openGraph: {
     title: "nativecn",
