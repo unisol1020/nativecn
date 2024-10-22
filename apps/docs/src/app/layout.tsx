@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
+  verification: {
+    google: "XExTxZ1pj8JqzJxQjwJICAL-9nUdEH1MoKs1PNpn-MA",
+  },
   description: "Universal shadcn/ui for React Native",
   openGraph: {
     title: "nativecn",
