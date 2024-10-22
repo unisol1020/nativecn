@@ -12,6 +12,25 @@ const font = GeistSans;
 export const metadata: Metadata = {
   title: "nativecn",
   description: "Universal shadcn/ui for React Native",
+  openGraph: {
+    title: "nativecn",
+    description: "Universal shadcn/ui for React Native",
+    images: [
+      {
+        url: "/cover-image.png",
+        width: 800,
+        height: 600,
+        alt: "Cover Image",
+      },
+    ],
+    url: "https://nativecn.vercel.app/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "nativecn",
+    description: "Universal shadcn/ui for React Native",
+    images: ["/cover-image.png"],
+  },
 };
 
 export default function RootLayout({
