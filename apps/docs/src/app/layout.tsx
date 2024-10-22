@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { GeistSans } from "geist/font/sans";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = GeistSans;
 
@@ -30,6 +31,8 @@ export default function RootLayout({
 
           <Layout>{children}</Layout>
         </ThemeProvider>
+
+        <Analytics />
       </body>
     </html>
   );
