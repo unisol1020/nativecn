@@ -147,7 +147,8 @@ export default function RootLayout({ children }) {
             <CodeBlock
               code={`import React, { useEffect } from 'react';
 import { useColorScheme } from "nativewind";
-import { Button } from "@/components/ui/Button"
+import { Button } from "@/components/Button"
+import { Text } from "@/components/Text"
 
 function ThemeToggle() {
   const { colorScheme, setColorScheme } = useColorScheme();
@@ -162,7 +163,7 @@ function ThemeToggle() {
 
   return (
     <Button onPress={toggleColorScheme}>
-      Toggle theme (Current: {colorScheme})
+      <Text>Toggle theme (Current: {colorScheme})</Text>
     </Button>
   );
 }`}
