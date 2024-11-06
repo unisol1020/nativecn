@@ -2596,19 +2596,19 @@ __metadata:
     "@nativecn/ui": "npm:*"
     "@react-native-async-storage/async-storage": "npm:^1.24.0"
     "@react-navigation/native": "npm:^6.0.2"
-    "@rn-primitives/accordion": "npm:~1.0.4"
-    "@rn-primitives/avatar": "npm:~1.0.5"
-    "@rn-primitives/checkbox": "npm:~1.0.4"
-    "@rn-primitives/dropdown-menu": "npm:~1.0.4"
-    "@rn-primitives/label": "npm:^1.0.4"
-    "@rn-primitives/progress": "npm:^1.0.4"
-    "@rn-primitives/radio-group": "npm:^1.0.4"
-    "@rn-primitives/separator": "npm:^1.0.4"
-    "@rn-primitives/slot": "npm:^1.0.4"
-    "@rn-primitives/switch": "npm:^1.0.4"
-    "@rn-primitives/tabs": "npm:^1.0.4"
-    "@rn-primitives/toggle": "npm:^1.0.4"
-    "@rn-primitives/types": "npm:^1.0.4"
+    "@rn-primitives/accordion": "npm:~1.1.0"
+    "@rn-primitives/avatar": "npm:~1.1.0"
+    "@rn-primitives/checkbox": "npm:~1.1.0"
+    "@rn-primitives/dropdown-menu": "npm:~1.1.0"
+    "@rn-primitives/label": "npm:^1.1.0"
+    "@rn-primitives/progress": "npm:^1.1.0"
+    "@rn-primitives/radio-group": "npm:^1.1.0"
+    "@rn-primitives/separator": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:^1.1.0"
+    "@rn-primitives/switch": "npm:^1.1.0"
+    "@rn-primitives/tabs": "npm:^1.1.0"
+    "@rn-primitives/toggle": "npm:^1.1.0"
+    "@rn-primitives/types": "npm:^1.1.0"
     "@types/jest": "npm:^29.5.12"
     "@types/react": "npm:~18.2.45"
     "@types/react-test-renderer": "npm:^18.0.7"
@@ -4271,27 +4271,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/accordion@npm:~1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/accordion@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-accordion": "npm:^1.2.0"
-    "@rn-primitives/hooks": "npm:1.0.4"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/d75faa920bf6ec234022661a4448ad0bc251f771c1c53ba04f362a960905b12b3a27b0985077f373f7f5d0cd35300e84807775c7b2ee7d732012e0446cb55a99
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/accordion@npm:~1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/accordion@npm:1.1.0"
@@ -4310,25 +4289,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/67851318bd48a7b10c12bc668b3453e7e42aa0ad8cf8dcfa81172b3ff0825368cc432e84980e582fae366a7ce5b5fc1ef5bc931fd2bf0bc1c09943e61b7a4e3a
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/avatar@npm:~1.0.5":
-  version: 1.0.5
-  resolution: "@rn-primitives/avatar@npm:1.0.5"
-  dependencies:
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/78e852d7962bf56cb336babff3672649154340f88e473a06c2898c1704fbc4e511c2a90e16acb3e02f854b92f5e44d44b87ef22751289cdca5042e15d6c986d7
   languageName: node
   linkType: hard
 
@@ -4352,27 +4312,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/checkbox@npm:~1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/checkbox@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-checkbox": "npm:^1.1.1"
-    "@rn-primitives/hooks": "npm:1.0.4"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/5c95bf8b43df52b75d12f2962415a0b01ddcc634b62398f48be8ece27817c5bf1e2060d368cb2e334842b6dc620b9b3e5c00f49fb0564803e826c7d93ae9d54a
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/checkbox@npm:~1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/checkbox@npm:1.1.0"
@@ -4391,29 +4330,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/10a4aae24e3e52c51d76a6e84edb9ab72c410a901f9808dfd559bd9c03c46e559108fea574036cef264d36772478eed7422bd713be46981144d7ce6415a664da
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/dropdown-menu@npm:~1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/dropdown-menu@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-dropdown-menu": "npm:^2.1.1"
-    "@rn-primitives/hooks": "npm:1.0.4"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-    "@rn-primitives/utils": "npm:1.0.4"
-  peerDependencies:
-    "@rn-primitives/portal": "*"
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/4e2d77e410e1eb909788787cc3eae8c91f4da209123fa32535eb4f5d7d0a5fb8353f04c6ed835b67a7deef542f380944aa143e41f7917a98579de037b7944262
   languageName: node
   linkType: hard
 
@@ -4440,24 +4356,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/hooks@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/hooks@npm:1.0.4"
-  dependencies:
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/1895decf05c6bf6d661903581a908f6b4c6d662e163373e7132844ab6c194f39a700d0450797e9334d6a17bbe9e779749f44110f7196f4f2ba1c2bf14f2307b9
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/hooks@npm:1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/hooks@npm:1.1.0"
@@ -4473,26 +4371,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/b1129307bda87183452ea3dba282ab4f27aed8a831bf516e63b24ccccaa1fecd354d619d8291e8179b97b0619c02b944236a204408112ce3bfa238968c4ee40e
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/label@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/label@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-label": "npm:^2.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/8bf7fad2deb24133fdb6b0d447190f5acd1637b144a3545ba39c2c2ad630ad974f76ad46e104c5dc6cbfc8f1b885aac520e30d833b769d7b7ebdf6470e5f8a40
   languageName: node
   linkType: hard
 
@@ -4516,26 +4394,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/progress@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/progress@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-progress": "npm:^1.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/ddec5d9f98097c12232b89e7516cce2c831c932d2505e2bfea71af52fc66251b56e72086d9939d2d3804db17ec5d46231a58ac937eb3638f3910d15ed0cc437b
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/progress@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/progress@npm:1.1.0"
@@ -4553,26 +4411,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/707422b2eb98eab13d6f0fa1b1603736f7e9b4b49194c6e654d515f2db613602ae7132b3181d8c8301e3f1c5e72ce6c8f8882f97217be933cbdc39172fe05350
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/radio-group@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/radio-group@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-radio-group": "npm:^1.2.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/e1545cf9d7f94f8b0060680ba68ab44b5b41e3d1e9e9b31063b076cba01b80931206a6417ea925e6665d97ad580e28e1b15e7449ffa09b44892a4320b01064bc
   languageName: node
   linkType: hard
 
@@ -4596,26 +4434,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/separator@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/separator@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-separator": "npm:^1.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/45bf05696a67ee32ef7c44c5ff8cdb3149f9b17895fd19526e8627390a1f1816cfaa6467197c14c8752b78a21ce283ceaa4529bf61864ab3e9d17f7450b80e3a
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/separator@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/separator@npm:1.1.0"
@@ -4636,22 +4454,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/slot@npm:1.0.4, @rn-primitives/slot@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/slot@npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/7226c1758e9e28ec7038f915bb3b5258d08bb3cb94d9c7c8917f8d40c07ffddd4f158057897f5198a464b7d9edf41241316b472b4e16379bc833afd2795d7905
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/slot@npm:1.1.0, @rn-primitives/slot@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/slot@npm:1.1.0"
@@ -4665,26 +4467,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/f44528e5bc686bdfe636d4253513d80974d0ef3d51351a08defb0fb6724ac1e21cf5ec4ddcf8a1dd065e552dc89a7f11401b71561ae482f8f388c35e1e84559f
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/switch@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/switch@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-switch": "npm:^1.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/fca06978796db6cb3fbdf1d1f7bbd9a3986d814e12de121fe6d886f891a2f7a78455601e61b42c371a457f325d36af73c149f2086adbef416e1df46d14f52be1
   languageName: node
   linkType: hard
 
@@ -4708,26 +4490,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/tabs@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/tabs@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-tabs": "npm:^1.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/8a9a67b6323b8fc38119773c6cbd961e512c23ab83b3b4da5c740f350c07b728d8c6cc574ed467b0cba625e9a3a54ebe1c41e547743973384aa2e0bc20003b37
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/tabs@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/tabs@npm:1.1.0"
@@ -4745,26 +4507,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/e69b9900c8214a87aaefb35eb3d4cb0aaa5ab0b5e29ad9fcb6a8d6fd8fc0e466f5fea3a14cbb0af7252d51b2a1391a979ca4eb70669550edf291612eba3dfe78
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/toggle@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/toggle@npm:1.0.4"
-  dependencies:
-    "@radix-ui/react-toggle": "npm:^1.1.0"
-    "@rn-primitives/slot": "npm:1.0.4"
-    "@rn-primitives/types": "npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/3f15c0babcfff26a3d536afe4b065265cb0f6f9ef999dc0fe9e54e14a9782b0bf11d1957c9b8a806e7f6c1ca93ad6c030f619f4a1269685b28c2b7e8e46767b0
   languageName: node
   linkType: hard
 
@@ -4788,22 +4530,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rn-primitives/types@npm:1.0.4, @rn-primitives/types@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/types@npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/7375610050cd8d2922644ce2315f496c04a854a99e5731cb0be50e56e1f0cc1f8140d16abd4bdd5ccf6343b5945963fc24666441b9c557cd6a4651749c93ba74
-  languageName: node
-  linkType: hard
-
 "@rn-primitives/types@npm:1.1.0, @rn-primitives/types@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rn-primitives/types@npm:1.1.0"
@@ -4817,22 +4543,6 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/2b91e96ac645d8a11b2d6f71cffd5ea5b54801787c37e4345aee893348d9fd48d7ebb770634a10165373f2002654deb20283905f212e0e7a710f2f1c79f55f2a
-  languageName: node
-  linkType: hard
-
-"@rn-primitives/utils@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@rn-primitives/utils@npm:1.0.4"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-    react-native-web: "*"
-  peerDependenciesMeta:
-    react-native:
-      optional: true
-    react-native-web:
-      optional: true
-  checksum: 10c0/2790c85bebb1cacccef07ef3191720c6f5695bb63b2c496b26fbd0c4a9ae74a1b09cd4268b181efa5d43a27256aa0afcf9951f2e32a716e1e06d12d43dc9fc10
   languageName: node
   linkType: hard
 
