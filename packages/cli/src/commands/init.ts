@@ -14,7 +14,7 @@ import * as templates from "@/src/utils/templates";
 const DEPENDENCIES = [
   "class-variance-authority",
   "clsx",
-  "nativewind@^4.0.1",
+  "nativewind@^4.1.23",
   "tailwindcss-animate",
   "tailwind-merge",
   "lucide-react-native",

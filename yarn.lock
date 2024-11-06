@@ -2628,7 +2628,7 @@ __metadata:
     jest: "npm:^29.2.1"
     jest-expo: "npm:~51.0.1"
     lucide-react-native: "npm:^0.400.0"
-    nativewind: "npm:^4.0.36"
+    nativewind: "npm:^4.1.23"
     prettier: "npm:^3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -2661,19 +2661,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nativecn/ui@workspace:packages/ui"
   dependencies:
-    "@rn-primitives/accordion": "npm:~1.0.4"
-    "@rn-primitives/avatar": "npm:~1.0.5"
-    "@rn-primitives/checkbox": "npm:~1.0.4"
-    "@rn-primitives/dropdown-menu": "npm:~1.0.4"
-    "@rn-primitives/label": "npm:^1.0.4"
-    "@rn-primitives/progress": "npm:^1.0.4"
-    "@rn-primitives/radio-group": "npm:^1.0.4"
-    "@rn-primitives/separator": "npm:^1.0.4"
-    "@rn-primitives/slot": "npm:^1.0.4"
-    "@rn-primitives/switch": "npm:^1.0.4"
-    "@rn-primitives/tabs": "npm:^1.0.4"
-    "@rn-primitives/toggle": "npm:^1.0.4"
-    "@rn-primitives/types": "npm:^1.0.4"
+    "@rn-primitives/accordion": "npm:~1.1.0"
+    "@rn-primitives/avatar": "npm:~1.1.0"
+    "@rn-primitives/checkbox": "npm:~1.1.0"
+    "@rn-primitives/dropdown-menu": "npm:~1.1.0"
+    "@rn-primitives/label": "npm:^1.1.0"
+    "@rn-primitives/progress": "npm:^1.1.0"
+    "@rn-primitives/radio-group": "npm:^1.1.0"
+    "@rn-primitives/separator": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:^1.1.0"
+    "@rn-primitives/switch": "npm:^1.1.0"
+    "@rn-primitives/tabs": "npm:^1.1.0"
+    "@rn-primitives/toggle": "npm:^1.1.0"
+    "@rn-primitives/types": "npm:^1.1.0"
     "@tsconfig/recommended": "npm:^1.0.1"
     "@types/react": "npm:~18.2.79"
     class-variance-authority: "npm:^0.7.0"
@@ -3509,6 +3509,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-use-escape-keydown@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@radix-ui/react-use-escape-keydown@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-use-callback-ref": "npm:1.1.0"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/910fd696e5a0994b0e06b9cb68def8a865f47951a013ec240c77db2a9e1e726105602700ef5e5f01af49f2f18fe0e73164f9a9651021f28538ef8a30d91f3fbb
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-use-layout-effect@npm:1.1.0":
   version: 1.1.0
   resolution: "@radix-ui/react-use-layout-effect@npm:1.1.0"
@@ -4277,6 +4292,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/accordion@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/accordion@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-accordion": "npm:^1.2.0"
+    "@rn-primitives/hooks": "npm:1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/67851318bd48a7b10c12bc668b3453e7e42aa0ad8cf8dcfa81172b3ff0825368cc432e84980e582fae366a7ce5b5fc1ef5bc931fd2bf0bc1c09943e61b7a4e3a
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/avatar@npm:~1.0.5":
   version: 1.0.5
   resolution: "@rn-primitives/avatar@npm:1.0.5"
@@ -4293,6 +4329,26 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/78e852d7962bf56cb336babff3672649154340f88e473a06c2898c1704fbc4e511c2a90e16acb3e02f854b92f5e44d44b87ef22751289cdca5042e15d6c986d7
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/avatar@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/avatar@npm:1.1.0"
+  dependencies:
+    "@rn-primitives/hooks": "npm:1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/585411e03ed61dca017e567cdd4a8b88307a92b918ddd38e5975b3c092fdc4d7eb1899ba6ce89b16a91dcbea4f7cc92a7572c76dfab5522f8e7cb024e3b2d245
   languageName: node
   linkType: hard
 
@@ -4314,6 +4370,27 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/5c95bf8b43df52b75d12f2962415a0b01ddcc634b62398f48be8ece27817c5bf1e2060d368cb2e334842b6dc620b9b3e5c00f49fb0564803e826c7d93ae9d54a
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/checkbox@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/checkbox@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-checkbox": "npm:^1.1.1"
+    "@rn-primitives/hooks": "npm:1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/10a4aae24e3e52c51d76a6e84edb9ab72c410a901f9808dfd559bd9c03c46e559108fea574036cef264d36772478eed7422bd713be46981144d7ce6415a664da
   languageName: node
   linkType: hard
 
@@ -4340,6 +4417,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/dropdown-menu@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/dropdown-menu@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-dropdown-menu": "npm:^2.1.1"
+    "@rn-primitives/hooks": "npm:1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+    "@rn-primitives/utils": "npm:1.1.0"
+  peerDependencies:
+    "@rn-primitives/portal": "*"
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/835e77dd06470f17730cc06cf9abd733cc9b432ba8d09ae85190c81ea87a6ac01cc96f680120faff64df772daf7509338ffee3e05887f1c5b5d855ff8cafad31
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/hooks@npm:1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/hooks@npm:1.0.4"
@@ -4355,6 +4455,24 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/1895decf05c6bf6d661903581a908f6b4c6d662e163373e7132844ab6c194f39a700d0450797e9334d6a17bbe9e779749f44110f7196f4f2ba1c2bf14f2307b9
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/hooks@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/hooks@npm:1.1.0"
+  dependencies:
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/b1129307bda87183452ea3dba282ab4f27aed8a831bf516e63b24ccccaa1fecd354d619d8291e8179b97b0619c02b944236a204408112ce3bfa238968c4ee40e
   languageName: node
   linkType: hard
 
@@ -4378,6 +4496,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/label@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/label@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-label": "npm:^2.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/a171e93352743133197b7d4d64ac9072f4b50b060e7aa6fffe65be7f7cbef0655bbfa913203348cf59fc8f81485fc3e27128710f9906b741711849649137f556
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/progress@npm:^1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/progress@npm:1.0.4"
@@ -4395,6 +4533,26 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/ddec5d9f98097c12232b89e7516cce2c831c932d2505e2bfea71af52fc66251b56e72086d9939d2d3804db17ec5d46231a58ac937eb3638f3910d15ed0cc437b
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/progress@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/progress@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-progress": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/707422b2eb98eab13d6f0fa1b1603736f7e9b4b49194c6e654d515f2db613602ae7132b3181d8c8301e3f1c5e72ce6c8f8882f97217be933cbdc39172fe05350
   languageName: node
   linkType: hard
 
@@ -4418,6 +4576,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/radio-group@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/radio-group@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-radio-group": "npm:^1.2.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/6c0a792b51de963e8afe6553663dc4009d5d0bb77b73b4d48ca9a4afd420d0f4b8882bf76d0682a0500726c8328ba145517f09fdc079805c15c6abcf28c8bf94
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/separator@npm:^1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/separator@npm:1.0.4"
@@ -4438,6 +4616,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/separator@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/separator@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-separator": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/c543465ecdf482cb744b303656718876e7e05fc8d7f2d282f815975c9f0b35164c43a140fe53c1e1a026e18d825ca0158c5c5489ea25586295bd413a4aff7453
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/slot@npm:1.0.4, @rn-primitives/slot@npm:^1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/slot@npm:1.0.4"
@@ -4451,6 +4649,22 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/7226c1758e9e28ec7038f915bb3b5258d08bb3cb94d9c7c8917f8d40c07ffddd4f158057897f5198a464b7d9edf41241316b472b4e16379bc833afd2795d7905
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/slot@npm:1.1.0, @rn-primitives/slot@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/slot@npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/f44528e5bc686bdfe636d4253513d80974d0ef3d51351a08defb0fb6724ac1e21cf5ec4ddcf8a1dd065e552dc89a7f11401b71561ae482f8f388c35e1e84559f
   languageName: node
   linkType: hard
 
@@ -4474,6 +4688,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/switch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/switch@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-switch": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/917c0dbcab928e8fc140d08f4338c4ebdc4db062b1b1e12c349697df83bb10f7209de3578747fe33f483c06c77ba2e805e16318e83a1cc2fe2e43f1f4f4ab500
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/tabs@npm:^1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/tabs@npm:1.0.4"
@@ -4491,6 +4725,26 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/8a9a67b6323b8fc38119773c6cbd961e512c23ab83b3b4da5c740f350c07b728d8c6cc574ed467b0cba625e9a3a54ebe1c41e547743973384aa2e0bc20003b37
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/tabs@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/tabs@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-tabs": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/e69b9900c8214a87aaefb35eb3d4cb0aaa5ab0b5e29ad9fcb6a8d6fd8fc0e466f5fea3a14cbb0af7252d51b2a1391a979ca4eb70669550edf291612eba3dfe78
   languageName: node
   linkType: hard
 
@@ -4514,6 +4768,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/toggle@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/toggle@npm:1.1.0"
+  dependencies:
+    "@radix-ui/react-toggle": "npm:^1.1.0"
+    "@rn-primitives/slot": "npm:1.1.0"
+    "@rn-primitives/types": "npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/9f57cd4a113ff1dc1e4d96c359e0021af92d8c25de2048c06edb13a5b6cce9cd0264cd2c53073d445db263ff651bbc90f81550058838044884620d0a031d96ec
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/types@npm:1.0.4, @rn-primitives/types@npm:^1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/types@npm:1.0.4"
@@ -4530,6 +4804,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rn-primitives/types@npm:1.1.0, @rn-primitives/types@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/types@npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/2b91e96ac645d8a11b2d6f71cffd5ea5b54801787c37e4345aee893348d9fd48d7ebb770634a10165373f2002654deb20283905f212e0e7a710f2f1c79f55f2a
+  languageName: node
+  linkType: hard
+
 "@rn-primitives/utils@npm:1.0.4":
   version: 1.0.4
   resolution: "@rn-primitives/utils@npm:1.0.4"
@@ -4543,6 +4833,22 @@ __metadata:
     react-native-web:
       optional: true
   checksum: 10c0/2790c85bebb1cacccef07ef3191720c6f5695bb63b2c496b26fbd0c4a9ae74a1b09cd4268b181efa5d43a27256aa0afcf9951f2e32a716e1e06d12d43dc9fc10
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/utils@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@rn-primitives/utils@npm:1.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10c0/7a802b59bc1cab676a01af44969bb172cb2e357f895d777ee9c3b6afd77d728ebd37c7383952d0d878bd3f0a961412d136829b1923ee804a7e068cd2958e0b41
   languageName: node
   linkType: hard
 
@@ -7062,7 +7368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.5":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.7":
   version: 4.3.7
   resolution: "debug@npm:4.3.7"
   dependencies:
@@ -11059,6 +11365,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightningcss-darwin-arm64@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-darwin-arm64@npm:1.28.1"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "lightningcss-darwin-x64@npm:1.19.0":
   version: 1.19.0
   resolution: "lightningcss-darwin-x64@npm:1.19.0"
@@ -11073,9 +11386,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightningcss-darwin-x64@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-darwin-x64@npm:1.28.1"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
 "lightningcss-freebsd-x64@npm:1.22.0":
   version: 1.22.0
   resolution: "lightningcss-freebsd-x64@npm:1.22.0"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-freebsd-x64@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-freebsd-x64@npm:1.28.1"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
@@ -11094,6 +11421,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightningcss-linux-arm-gnueabihf@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-linux-arm-gnueabihf@npm:1.28.1"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
 "lightningcss-linux-arm64-gnu@npm:1.19.0":
   version: 1.19.0
   resolution: "lightningcss-linux-arm64-gnu@npm:1.19.0"
@@ -11104,6 +11438,13 @@ __metadata:
 "lightningcss-linux-arm64-gnu@npm:1.22.0":
   version: 1.22.0
   resolution: "lightningcss-linux-arm64-gnu@npm:1.22.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-arm64-gnu@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-linux-arm64-gnu@npm:1.28.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -11122,6 +11463,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightningcss-linux-arm64-musl@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-linux-arm64-musl@npm:1.28.1"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "lightningcss-linux-x64-gnu@npm:1.19.0":
   version: 1.19.0
   resolution: "lightningcss-linux-x64-gnu@npm:1.19.0"
@@ -11132,6 +11480,13 @@ __metadata:
 "lightningcss-linux-x64-gnu@npm:1.22.0":
   version: 1.22.0
   resolution: "lightningcss-linux-x64-gnu@npm:1.22.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-x64-gnu@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-linux-x64-gnu@npm:1.28.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -11150,6 +11505,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightningcss-linux-x64-musl@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-linux-x64-musl@npm:1.28.1"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"lightningcss-win32-arm64-msvc@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-win32-arm64-msvc@npm:1.28.1"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "lightningcss-win32-x64-msvc@npm:1.19.0":
   version: 1.19.0
   resolution: "lightningcss-win32-x64-msvc@npm:1.19.0"
@@ -11160,6 +11529,13 @@ __metadata:
 "lightningcss-win32-x64-msvc@npm:1.22.0":
   version: 1.22.0
   resolution: "lightningcss-win32-x64-msvc@npm:1.22.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-win32-x64-msvc@npm:1.28.1":
+  version: 1.28.1
+  resolution: "lightningcss-win32-x64-msvc@npm:1.28.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -11198,6 +11574,46 @@ __metadata:
     lightningcss-win32-x64-msvc:
       optional: true
   checksum: 10c0/0054146513f960a2afee382dff23efbfb0c88ae4b667a45ad3c424598e67093efbdc081073a84ba728d00d4d298b10fbad480bac0cd6282af54fc1ede0ac3764
+  languageName: node
+  linkType: hard
+
+"lightningcss@npm:^1.27.0":
+  version: 1.28.1
+  resolution: "lightningcss@npm:1.28.1"
+  dependencies:
+    detect-libc: "npm:^1.0.3"
+    lightningcss-darwin-arm64: "npm:1.28.1"
+    lightningcss-darwin-x64: "npm:1.28.1"
+    lightningcss-freebsd-x64: "npm:1.28.1"
+    lightningcss-linux-arm-gnueabihf: "npm:1.28.1"
+    lightningcss-linux-arm64-gnu: "npm:1.28.1"
+    lightningcss-linux-arm64-musl: "npm:1.28.1"
+    lightningcss-linux-x64-gnu: "npm:1.28.1"
+    lightningcss-linux-x64-musl: "npm:1.28.1"
+    lightningcss-win32-arm64-msvc: "npm:1.28.1"
+    lightningcss-win32-x64-msvc: "npm:1.28.1"
+  dependenciesMeta:
+    lightningcss-darwin-arm64:
+      optional: true
+    lightningcss-darwin-x64:
+      optional: true
+    lightningcss-freebsd-x64:
+      optional: true
+    lightningcss-linux-arm-gnueabihf:
+      optional: true
+    lightningcss-linux-arm64-gnu:
+      optional: true
+    lightningcss-linux-arm64-musl:
+      optional: true
+    lightningcss-linux-x64-gnu:
+      optional: true
+    lightningcss-linux-x64-musl:
+      optional: true
+    lightningcss-win32-arm64-msvc:
+      optional: true
+    lightningcss-win32-x64-msvc:
+      optional: true
+  checksum: 10c0/8bd23ca3dc3d701e89490b88a59470d27887ff7703e9e27c8a7f04d9cd35ca9c7e88390fbcb82fe179c20c912538c0d028f12a4f26a556f00567274804699691
   languageName: node
   linkType: hard
 
@@ -12081,6 +12497,19 @@ __metadata:
   peerDependencies:
     tailwindcss: ">3.3.0"
   checksum: 10c0/4889498dc1311ced14450d6ecfc2f48b7950835ebdc44a58bcd7ee586bdfe0a61e425b74dbc9a3f749354f0bd89872301f3fec6216627ce139edf9a195f2edbe
+  languageName: node
+  linkType: hard
+
+"nativewind@npm:^4.1.23":
+  version: 4.1.23
+  resolution: "nativewind@npm:4.1.23"
+  dependencies:
+    comment-json: "npm:^4.2.5"
+    debug: "npm:^4.3.7"
+    react-native-css-interop: "npm:0.1.22"
+  peerDependencies:
+    tailwindcss: ">3.3.0"
+  checksum: 10c0/135c9a07afdc59d9f9f5a9d0d80c97766694c39243dd0eb21b01001814447792d7eca358c276b89f62d4d060c30a1de9732a0bb676590ac3a194da15ef3dea5f
   languageName: node
   linkType: hard
 
@@ -13366,6 +13795,30 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10c0/2bdb6b93fbb1820b024b496042cce405c57e2f85e777c9aabd55f9b26d145408f9f74f5934676ffdc46f3dcff656d78413a6e43968e7b3f92eea35b3052e9053
+  languageName: node
+  linkType: hard
+
+"react-native-css-interop@npm:0.1.22":
+  version: 0.1.22
+  resolution: "react-native-css-interop@npm:0.1.22"
+  dependencies:
+    "@babel/helper-module-imports": "npm:^7.22.15"
+    "@babel/traverse": "npm:^7.23.0"
+    "@babel/types": "npm:^7.23.0"
+    debug: "npm:^4.3.7"
+    lightningcss: "npm:^1.27.0"
+    semver: "npm:^7.6.3"
+  peerDependencies:
+    react: ">=18"
+    react-native: "*"
+    react-native-reanimated: ">=3.6.2"
+    tailwindcss: ~3
+  peerDependenciesMeta:
+    react-native-safe-area-context:
+      optional: true
+    react-native-svg:
+      optional: true
+  checksum: 10c0/d6052499b8615b58e02ee43b7d2906fd2b5ef90410c26af94dd11d6d93ed116ab0c96f7228573734030f1d41b4e8e2878a63b2223eb86c797730df207ed0c2f0
   languageName: node
   linkType: hard
 
