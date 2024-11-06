@@ -2594,6 +2594,7 @@ __metadata:
     "@babel/core": "npm:^7.20.0"
     "@expo/vector-icons": "npm:^14.0.0"
     "@nativecn/ui": "npm:*"
+    "@radix-ui/react-use-escape-keydown": "npm:^1.1.0"
     "@react-native-async-storage/async-storage": "npm:^1.24.0"
     "@react-navigation/native": "npm:^6.0.2"
     "@rn-primitives/accordion": "npm:~1.1.0"
@@ -3509,7 +3510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-use-escape-keydown@npm:1.1.0":
+"@radix-ui/react-use-escape-keydown@npm:1.1.0, @radix-ui/react-use-escape-keydown@npm:^1.1.0":
   version: 1.1.0
   resolution: "@radix-ui/react-use-escape-keydown@npm:1.1.0"
   dependencies:
