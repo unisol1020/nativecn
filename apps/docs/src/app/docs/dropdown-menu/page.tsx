@@ -1,9 +1,11 @@
 import { CodeBlock } from "@/components/CodeBlock";
 import { Example } from "@/components/Example";
 import MainContentLayout from "@/components/MainContentLayout";
+import { Timeline, TimelineItem } from "@/components/Timeline";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Dropdown Menu - nativecn",
@@ -177,7 +179,28 @@ export default DropdownMenuDemo;
 
         <Separator className="my-2" />
 
-        <CodeBlock code="npx nativecn add DropdownMenu" language="bash" />
+        <Timeline>
+          <TimelineItem title="Install rn-primatives/portal" stepNumber={1}>
+            <p className="mb-2 font-light">
+              Follow the instructions to install the Portal Primative from{" "}
+              <Link
+                href="https://rn-primitives.vercel.app/portal/"
+                target="_blank"
+                className="text-primary group relative inline-block"
+              >
+                <span>@rn-primatives/portal</span>
+                <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
+              </Link>
+            </p>
+          </TimelineItem>
+
+          <TimelineItem
+            title="Add DropdownMenu to your codebase"
+            stepNumber={2}
+          >
+            <CodeBlock code="npx nativecn add DropdownMenu" language="bash" />
+          </TimelineItem>
+        </Timeline>
       </section>
 
       <section>
