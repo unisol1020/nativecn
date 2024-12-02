@@ -22,6 +22,7 @@ const DEPENDENCIES = [
   "react-native-svg",
   "@rn-primitives/types",
   "@rn-primitives/slot",
+  "@rn-primitives/portal",
 ];
 const DEV_DEPENDENCIES = ["tailwindcss"];
 
