@@ -25,7 +25,7 @@ const GeneralText = () => {
       </Link>{" "}
       and powered by{" "}
       <Link
-        href="https://www.nativewind.dev/v4/overview"
+        href="https://www.nativewind.dev/"
         target="_blank"
         className="text-primary group relative inline-block"
       >
