@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { Breadcrumb } from "@/types/breadcrumb";
 import MainContentLayout from "../../components/MainContentLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Fragment } from "react";
+import { ArrowRight, Code2, Paintbrush, Boxes } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Introduction - nativecn",
@@ -18,84 +18,101 @@ const DocsPage = () => {
   return (
     <MainContentLayout
       breadcrumbs={BREADCRUMBS}
-      title="Introduction"
+      title={"Beautiful React Native Components"}
       subtitle={
         <Fragment>
-          A collection of re-usable components for{" "}
+          A modern collection of ready-to-use components for{" "}
           <Link
             href="https://expo.dev/"
             target="_blank"
-            className="text-primary group relative inline-block"
+            className="text-primary hover:underline"
           >
-            <span>React Native Expo</span>
-            <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
+            React Native Expo
           </Link>
-          , inspired by{" "}
-          <Link
-            href="https://ui.shadcn.com/"
-            target="_blank"
-            className="text-primary group relative inline-block"
-          >
-            <span>shadcn/ui</span>
-            <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
-          </Link>{" "}
-          and built with{" "}
+          , powered by{" "}
           <Link
             href="https://www.nativewind.dev/"
             target="_blank"
-            className="text-primary group relative inline-block"
+            className="text-primary hover:underline"
           >
-            <span>NativeWind v4</span>
-            <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
+            NativeWind v4
           </Link>
           .
         </Fragment>
       }
-      nextStep={{
-        label: "Installation",
-        href: "/docs/installation",
-      }}
     >
-      <div className="flex flex-col gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>What is nativecn?</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              Nativecn is <span className="font-semibold">NOT</span> a component
-              library. Its a collection of re-usable components that you can
-              copy and paste into your React Native apps.
+      <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-4 p-6 rounded-lg bg-card border">
+            <Code2 className="h-8 w-8 text-primary" />
+            <h3 className="text-xl font-semibold">Copy & Paste</h3>
+            <p className="text-muted-foreground">
+              No complex setup. Just copy the components you need and customize
+              them to match your requirements.
             </p>
-          </CardContent>
-        </Card>
+          </div>
 
-        <section>
-          <h2 className="text-base font-medium mb-2">How It Works</h2>
-          <ol className="list-decimal pl-6 space-y-1">
-            <li className="font-light">Browse our component collection</li>
-            <li className="font-light">Choose the components you need</li>
-            <li className="font-light">Copy the code into your project</li>
-            <li className="font-light">
-              Customize as needed - the code is yours
-            </li>
-          </ol>
-        </section>
+          <div className="flex flex-col gap-4 p-6 rounded-lg bg-card border">
+            <Paintbrush className="h-8 w-8 text-primary" />
+            <h3 className="text-xl font-semibold">Fully Customizable</h3>
+            <p className="text-muted-foreground">
+              Each component is built with NativeWind, making it easy to modify
+              styles and behavior.
+            </p>
+          </div>
+        </div>
 
-        <section>
-          <h2 className="text-base font-medium mb-2">Why nativecn?</h2>
-          <ul className="list-disc pl-6 space-y-1">
-            <li className="font-light">Beautiful, customizable components</li>
-            <li className="font-light">Full control over code and styling</li>
-            <li className="font-light">
-              No dependencies on large UI libraries
-            </li>
-            <li className="font-light">Seamless integration with NativeWind</li>
-            <li className="font-light">
-              Reference for building your own component libraries
-            </li>
-          </ul>
-        </section>
+        <div className="flex flex-col gap-6 p-6 rounded-lg bg-muted/50">
+          <div className="flex items-center gap-3">
+            <Boxes className="h-6 w-6" />
+            <h2 className="text-xl font-semibold">Getting Started</h2>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                1
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="font-medium">Browse Components</p>
+                <p className="text-sm text-muted-foreground">
+                  Explore our collection of pre-built components
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                2
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="font-medium">Copy Code</p>
+                <p className="text-sm text-muted-foreground">
+                  Choose and copy the components you need
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                3
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="font-medium">Customize</p>
+                <p className="text-sm text-muted-foreground">
+                  Modify the components to match your design
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            href="/docs/installation"
+            className="inline-flex items-center gap-2 text-primary hover:underline mt-2"
+          >
+            Start Installation <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </MainContentLayout>
   );
