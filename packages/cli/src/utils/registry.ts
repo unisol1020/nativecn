@@ -71,7 +71,7 @@ export const COMPONENT_METADATA: Record<string, ComponentMetadata> = {
   },
   DropdownMenu: {
     name: "DropdownMenu",
-    dependencies: ["@rn-primitives/dropdown-menu"],
+    dependencies: ["@rn-primitives/dropdown-menu", "@rn-primitives/portal"],
   },
 };
 
