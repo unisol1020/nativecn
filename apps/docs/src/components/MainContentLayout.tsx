@@ -64,7 +64,7 @@ const MainContentLayout = ({
       )}
 
       <div className="grid grid-cols-7 mt-6">
-        <div className="col-span-7 md:col-span-5">{children}</div>
+        <div className="col-span-7 md:col-span-6">{children}</div>
 
         {(previousStep || nextStep) && (
           <div className="col-span-7 md:col-span-5 flex justify-between mt-8">

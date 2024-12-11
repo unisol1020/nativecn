@@ -47,17 +47,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(font.className, "min-h-screen subpixel-antialiased")}>
+      <body className={cn(font.className, "min-h-screen subpixel-antialiased antialiased")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           disableTransitionOnChange
+          className="flex flex-col"
         >
           <Header />
-
-          <Layout>{children}</Layout>
+          <main className="flex-1">
+            <Layout>{children}</Layout>
+          </main>
         </ThemeProvider>
-
         <Analytics />
       </body>
     </html>
