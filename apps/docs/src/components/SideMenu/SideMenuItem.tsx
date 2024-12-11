@@ -16,12 +16,11 @@ const SideMenuItem = ({ name, items }: MenuItemType) => {
           const isActive = pathname === item.href;
 
           return (
-            <Link href={item.href ?? ""} key={item.name} className="group">
+            <Link href={item.href ?? ""} key={item.name}>
               <div
-                className={`text-sm font-light relative inline-block ${isActive ? "text-foreground" : "text-muted-foreground"}`}
+                className={`text-sm font-light hover:underline ${isActive ? "text-foreground" : "text-muted-foreground"}`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
               </div>
             </Link>
           );

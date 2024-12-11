@@ -1,5 +1,9 @@
-import { ModeToggle } from "@/components/ModeToggle";
 import Github from "./Github";
+import dynamic from "next/dynamic";
+
+const ModeToggle = dynamic(() => import("@/components/ModeToggle"), {
+  ssr: false,
+});
 
 const Actions = () => {
   return (
