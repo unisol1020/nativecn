@@ -35,7 +35,7 @@ const DocsPage = () => {
             target="_blank"
             className="text-primary hover:underline"
           >
-            NativeWind v4
+            NativeWind
           </Link>
           .
         </Fragment>

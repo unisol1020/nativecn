@@ -29,7 +29,7 @@ const GeneralText = () => {
         target="_blank"
         className="text-primary group relative inline-block"
       >
-        <span>NativeWind v4</span>
+        <span>NativeWind</span>
         <span className="absolute bottom-0 left-0 h-[1px] bg-current transition-all duration-300 w-0 group-hover:w-full"></span>
       </Link>{" "}
       for effortless styling.
