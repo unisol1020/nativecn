@@ -1,6 +1,6 @@
 # nativecn
 
-Beautiful and customizable React Native components, inspired by [shadcn-ui](https://github.com/shadcn-ui/ui). Built-in dark mode, CSS variables, and NativeWind support.
+Beautiful and customizable React Native components, inspired by [shadcn-ui](https://github.com/shadcn-ui/ui) and [react native reusable](https://github.com/mrzachnugent/react-native-reusables). Built-in dark mode, CSS variables, and NativeWind support.
 
 ## Universal [shadcn/ui](https://ui.shadcn.com) for React Native
 
@@ -44,6 +44,7 @@ npx nativecn init
 ### After initialization, ensure to include: **`global.css`** inside the root layout.
 
 ## Adding Components
+
 You can add specific components to your project using the following command:
 
 ```bash
@@ -52,6 +53,7 @@ npx nativecn add Text
 ```
 
 ## Contributing
+
 ```markdown
 We welcome contributions!
 ```
