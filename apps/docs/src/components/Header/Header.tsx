@@ -10,7 +10,15 @@ const Logo = dynamic(() => import("./Logo"), { ssr: false });
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full flex justify-center items-center bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+    <header className="sticky top-0 z-50 w-full flex flex-col justify-center items-center bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <div className="flex justify-center items-center w-full bg-zinc-500 p-1 gap-2">
+        <span>This library is ussless. Im starting to contribute to</span>
+
+        <a href="https://rnr-docs.vercel.app/" className="text-white underline">
+          React Native Reusables
+        </a>
+      </div>
+
       <div className="container px-4 flex h-14 max-w-screen-xl items-center justify-between">
         <div className="block md:hidden">
           <Suspense>
