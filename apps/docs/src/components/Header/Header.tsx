@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full flex flex-col justify-center items-center bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="flex justify-center items-center w-full bg-zinc-500 p-1 gap-2">
-        <span>This library is useless. Im starting to contribute to</span>
+        <span>This library is useless. I am starting to contribute to the</span>
 
         <a href="https://rnr-docs.vercel.app/" className="text-white underline">
           React Native Reusables
